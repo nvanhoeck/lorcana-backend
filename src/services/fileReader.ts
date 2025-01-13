@@ -7,7 +7,11 @@ export const readFile = async (paths: string[]) => {
             if (err) {
                 reject(err)
             }
-            resolve(JSON.parse(data))
+            if(data === undefined) {
+                resolve(undefined)
+            } else {
+                resolve(JSON.parse(data))
+            }
         });
     })
 }

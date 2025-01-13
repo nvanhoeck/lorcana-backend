@@ -6,6 +6,7 @@ export type Player = {
     banishedPile: Card[]
     hand: Card[]
     inkTotal: number
+    cardInInkRow: number
     alreadyInkedThisTurn: boolean
     activeRow: Card[]
     waitRow: Card[]

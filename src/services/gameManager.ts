@@ -7,6 +7,7 @@ import {SimpleDeck} from "../model/domain/PlayableDeck";
 import {Player} from "../model/domain/Player";
 import {shuffleArray} from "../utils/shuffleArray";
 import {transferLastElements} from '../utils/transferElements'
+import exp from "node:constants";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -48,6 +49,7 @@ const initializePlayer = async ({name, deck}: { name: string, deck: SimpleDeck }
         deck: await createDeck(deck),
         hand: [],
         inkTotal: 0,
+        cardInInkRow: 0,
         loreCount: 0,
         name,
         waitRow: []
@@ -59,7 +61,7 @@ export const initializeGame = async (playersAndDecks: { name: string, deck: Simp
     const game: Game = {
         id: uuidv4(),
         playerOne: await initializePlayer(playersAndDecks[0]),
-        playerTwo: await initializePlayer(playersAndDecks[0]),
+        playerTwo: await initializePlayer(playersAndDecks[1]),
         playerTurn: playersAndDecks[0].name
     }
     return game
@@ -69,4 +71,74 @@ export const setupHandAndShuffleDeck = (deck: Card[], hand: Card[]) => {
     let cards = shuffleArray(deck);
     transferLastElements(cards, hand, 6)
     return {deck: cards, hand: hand}
+}
+
+export const hasEnded = (game: Game) => {
+    return game.playerOne.loreCount >= 20 || game.playerTwo.loreCount >= 20 || game.playerOne.deck.length === 0 || game.playerTwo.deck.length === 0
+}
+
+/**
+ * Function to print player details in a structured, card game table-like format.
+ * @param player The player object to print.
+ */
+export function printPlayerDetails(player: Player) {
+    console.groupCollapsed(`%c=== Player: ${player.name} ===`, 'color: #2E86C1; font-weight: bold;');
+
+    // Stats Table
+    console.log(`%c**Stats**`, 'color: #28B463; font-weight: bold;');
+    console.table({
+        "Ink Total": player.inkTotal,
+        "Cards in Ink Row": player.cardInInkRow,
+        "Lore Count": player.loreCount,
+        "Already Inked This Turn": player.alreadyInkedThisTurn ? 'Yes' : 'No',
+        "Deck Count": player.deck.length,
+        "Banished Pile Count": player.banishedPile.length,
+    });
+
+    // Hand
+    console.log(`%c**Hand (${player.hand.length} cards)**`, 'color: #28B463; font-weight: bold;');
+    if (player.hand.length > 0) {
+        player.hand.forEach((card, index) => {
+            console.log(`%c${index + 1}. ${card.name}`, 'color: #F1C40F;');
+        });
+    } else {
+        console.log(`%cEmpty`, 'color: #E74C3C;');
+    }
+
+    // Active Row (Upper Row)
+    console.log(`%c**Active Row (Upper Row) (${player.activeRow.length} cards)**`, 'color: #28B463; font-weight: bold;');
+    if (player.activeRow.length > 0) {
+        player.activeRow.forEach((card, index) => {
+            console.log(`%c${index + 1}. ${card.name}`, 'color: #F39C12;');
+        });
+    } else {
+        console.log(`%cEmpty`, 'color: #E74C3C;');
+    }
+
+    // Waiting Row (Lower Row)
+    console.log(`%c**Waiting Row (Lower Row) (${player.waitRow.length} cards)**`, 'color: #28B463; font-weight: bold;');
+    if (player.waitRow.length > 0) {
+        player.waitRow.forEach((card, index) => {
+            console.log(`%c${index + 1}. ${card.name}`, 'color: #F39C12;');
+        });
+    } else {
+        console.log(`%cEmpty`, 'color: #E74C3C;');
+    }
+
+    console.groupEnd();
+}
+
+/**
+ * Function to print the entire game state for all players.
+ * @param players Array of players in the game.
+ */
+export function printGameDetails(players: Player[]) {
+    console.groupCollapsed(`%c=== Game State ===`, 'color: #8E44AD; font-size: 16px; font-weight: bold;');
+    players.forEach(player => printPlayerDetails(player));
+    console.groupEnd();
+}
+
+export function resetInkTotal(player: Player) {
+    player.inkTotal = player.cardInInkRow
+    player.alreadyInkedThisTurn = false
 }

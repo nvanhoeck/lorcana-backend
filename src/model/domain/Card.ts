@@ -17,4 +17,5 @@ export type Card = {
     keywords: string[]
     damage: number
     readied: boolean
+    canBeReadiedDuringReadyPhase: boolean
 }

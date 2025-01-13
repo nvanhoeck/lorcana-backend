@@ -1,33 +1,27 @@
 import {CardType} from "../domain/Card";
 
 export type PlayerGameState = {
-    deckCount: number
+    // deckCount: number
     hand: HandState
-    alreadyInked: boolean
+    // alreadyInked: boolean
     inkTotal: number
+    // TODO better???
     fieldState: FieldState
     loreCount: number
 }
 
-type HandState = {
+export type HandState = {
     amount: number
-    amountInkable: number
-    avgCardCost: number
-    avgStrength: number
-    avgWillpower: number
-    avgLore: number
-    typeCount: {
-        'Action': number,
-        'Song': number,
-        'Item': number,
-        'Location': number,
-        'Character': number
-    }
-    amountThatCanBePlayed: number
+    // amountInkable: number
+    // totalCardCost: number
+    // amountThatCanBePlayed: number
 }
 
-type FieldState = {
-    cards: (CharacterCard | ActionCard |  SongCard | ItemCard | LocationCard)[]
+export type FieldState = {
+    totalReadiedCards: number
+    totalStrength: number
+    totalWillpower: number
+    totalLore: number
 }
 
 type DefaultCardType = {

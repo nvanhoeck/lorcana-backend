@@ -5,7 +5,11 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "import-data": "ts-node src/functions/importData.ts",
-    "test": "ts-node src/functions/startGame.ts"
+    "test": "ts-node src/functions/startGame.ts",
+    "test:serialization": "ts-node test/testOptimalActionSerialization.ts",
+    "train": "ts-node src/agent/trainAgent.ts",
+    "train-parallel": "ts-node src/agent/parallelTrainAgent.ts",
+    "best-qstate-from-iterations": "ts-node src/agent/getTheBestQState.ts"
   },
   "keywords": [],
   "author": "",
