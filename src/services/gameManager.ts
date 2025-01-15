@@ -7,7 +7,6 @@ import {SimpleDeck} from "../model/domain/PlayableDeck";
 import {Player} from "../model/domain/Player";
 import {shuffleArray} from "../utils/shuffleArray";
 import {transferLastElements} from '../utils/transferElements'
-import exp from "node:constants";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -29,9 +28,9 @@ const createCard = async (cardId: string) => {
     return card
 }
 
-const createDeck = async (deck: SimpleDeck) => {
+export const createCardCollection = async (cardsIds: {id:string, count: number}[]) => {
     const cards: Card[] = []
-    for (const c of deck.cards) {
+    for (const c of cardsIds) {
         for (let i = 0; i < c.count; i++) {
             const card = await createCard(c.id);
             cards.push(card);
@@ -46,7 +45,7 @@ const initializePlayer = async ({name, deck}: { name: string, deck: SimpleDeck }
         activeRow: [],
         alreadyInkedThisTurn: false,
         banishedPile: [],
-        deck: await createDeck(deck),
+        deck: await createCardCollection(deck.cards),
         hand: [],
         inkTotal: 0,
         cardInInkRow: 0,
