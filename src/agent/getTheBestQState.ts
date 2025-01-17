@@ -1,5 +1,5 @@
 import {readFile} from "../services/fileReader";
-import {writeQstateToFile} from "../services/aiManager";
+import {writeQstateToFile} from "../services/ql-aiManager";
 
 function defineMostOptimalState(qStates: { state: Record<string, number>; player: string; iteration: string }[]): { state: Record<string, number>; player: string; iteration: string } {
     // Extract the average qValue from each state and compare

@@ -82,6 +82,10 @@ export const challengeCharacter = (attackingCard: Card, defendingCard: Card) => 
     }
 }
 
+export const isSuccumbed = (card: Card) => {
+    return card.damage >= card.willpower
+}
+
 export const banishIfSuccumbed = (card: Card, originalRow: Card[], banishedPile: Card[]) => {
     if(card.damage >= card.willpower) {
         const indexOfCard = originalRow.indexOf(card)

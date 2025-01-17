@@ -19,7 +19,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-002",
@@ -43,7 +44,8 @@
       "Singer"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-003",
@@ -67,7 +69,8 @@
       "Singer"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-004",
@@ -91,7 +94,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-005",
@@ -116,7 +120,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-006",
@@ -138,7 +143,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-007",
@@ -161,7 +167,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-008",
@@ -182,7 +189,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-009",
@@ -203,7 +211,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-010",
@@ -227,7 +236,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-011",
@@ -248,7 +258,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-012",
@@ -269,7 +280,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-013",
@@ -290,7 +302,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-014",
@@ -312,7 +325,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-015",
@@ -334,7 +348,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-016",
@@ -356,7 +371,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-017",
@@ -377,7 +393,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-018",
@@ -399,7 +416,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-019",
@@ -422,7 +440,8 @@
       "Singer"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-020",
@@ -446,7 +465,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-021",
@@ -468,7 +488,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-022",
@@ -490,7 +511,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-023",
@@ -514,7 +536,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-024",
@@ -535,7 +558,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-025",
@@ -554,7 +578,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-026",
@@ -571,7 +596,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-027",
@@ -590,7 +616,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-028",
@@ -607,7 +634,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-029",
@@ -624,7 +652,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-030",
@@ -643,7 +672,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-031",
@@ -660,7 +690,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-032",
@@ -677,7 +708,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-033",
@@ -694,7 +726,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-034",
@@ -711,7 +744,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-035",
@@ -733,7 +767,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-036",
@@ -754,7 +789,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-037",
@@ -778,7 +814,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-038",
@@ -802,7 +839,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-039",
@@ -824,7 +862,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-040",
@@ -847,7 +886,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-041",
@@ -870,7 +910,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-042",
@@ -895,7 +936,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-043",
@@ -918,7 +960,8 @@
       "Rush"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-044",
@@ -940,7 +983,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-045",
@@ -964,7 +1008,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-046",
@@ -987,7 +1032,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-047",
@@ -1008,7 +1054,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-048",
@@ -1030,7 +1077,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-049",
@@ -1052,7 +1100,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-050",
@@ -1073,7 +1122,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-051",
@@ -1094,7 +1144,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-052",
@@ -1115,7 +1166,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-053",
@@ -1136,7 +1188,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-054",
@@ -1160,7 +1213,8 @@
       "Rush"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-055",
@@ -1181,7 +1235,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-056",
@@ -1203,7 +1258,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-057",
@@ -1224,7 +1280,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-058",
@@ -1248,7 +1305,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-059",
@@ -1270,7 +1328,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-060",
@@ -1292,7 +1351,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-061",
@@ -1316,7 +1376,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-062",
@@ -1333,7 +1394,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-063",
@@ -1350,7 +1412,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-064",
@@ -1369,7 +1432,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-065",
@@ -1388,7 +1452,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-066",
@@ -1405,7 +1470,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-067",
@@ -1422,7 +1488,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-068",
@@ -1439,7 +1506,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-069",
@@ -1463,7 +1531,8 @@
       "Ward"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-070",
@@ -1487,7 +1556,8 @@
       "Rush"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-071",
@@ -1507,7 +1577,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-072",
@@ -1528,7 +1599,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-073",
@@ -1549,7 +1621,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-074",
@@ -1571,7 +1644,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-075",
@@ -1594,7 +1668,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-076",
@@ -1618,7 +1693,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-077",
@@ -1639,7 +1715,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-078",
@@ -1661,7 +1738,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-079",
@@ -1682,7 +1760,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-080",
@@ -1703,7 +1782,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-081",
@@ -1724,7 +1804,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-082",
@@ -1748,7 +1829,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-083",
@@ -1770,7 +1852,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-084",
@@ -1793,7 +1876,8 @@
       "Ward"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-085",
@@ -1814,7 +1898,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-086",
@@ -1834,7 +1919,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-087",
@@ -1855,7 +1941,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-088",
@@ -1878,7 +1965,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-089",
@@ -1900,7 +1988,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-090",
@@ -1921,7 +2010,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-091",
@@ -1944,7 +2034,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-092",
@@ -1964,7 +2055,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-093",
@@ -1988,7 +2080,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-094",
@@ -2005,7 +2098,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-095",
@@ -2024,7 +2118,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-096",
@@ -2041,7 +2136,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-097",
@@ -2058,7 +2154,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-098",
@@ -2077,7 +2174,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-099",
@@ -2094,7 +2192,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-100",
@@ -2111,7 +2210,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-101",
@@ -2128,7 +2228,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-102",
@@ -2145,7 +2246,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-103",
@@ -2166,7 +2268,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-104",
@@ -2189,7 +2292,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-105",
@@ -2210,7 +2314,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-106",
@@ -2232,7 +2337,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-107",
@@ -2257,7 +2363,8 @@
       "Rush"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-108",
@@ -2277,7 +2384,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-109",
@@ -2300,7 +2408,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-110",
@@ -2323,7 +2432,8 @@
       "Reckless"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-111",
@@ -2346,7 +2456,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-112",
@@ -2367,7 +2478,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-113",
@@ -2389,7 +2501,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-114",
@@ -2414,7 +2527,8 @@
       "Reckless"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-115",
@@ -2437,7 +2551,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-116",
@@ -2458,7 +2573,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-117",
@@ -2480,7 +2596,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-118",
@@ -2502,7 +2619,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-119",
@@ -2525,7 +2643,8 @@
       "Rush"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-120",
@@ -2548,7 +2667,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-121",
@@ -2570,7 +2690,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-122",
@@ -2591,7 +2712,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-123",
@@ -2615,7 +2737,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-124",
@@ -2636,7 +2759,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-125",
@@ -2658,7 +2782,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-126",
@@ -2682,7 +2807,8 @@
       "Reckless"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-127",
@@ -2705,7 +2831,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-128",
@@ -2724,7 +2851,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-129",
@@ -2741,7 +2869,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-130",
@@ -2758,7 +2887,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-131",
@@ -2775,7 +2905,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-132",
@@ -2792,7 +2923,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-133",
@@ -2809,7 +2941,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-134",
@@ -2826,7 +2959,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-135",
@@ -2843,7 +2977,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-136",
@@ -2860,7 +2995,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-137",
@@ -2882,7 +3018,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-138",
@@ -2904,7 +3041,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-139",
@@ -2928,7 +3066,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-140",
@@ -2950,7 +3089,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-141",
@@ -2973,7 +3113,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-142",
@@ -2995,7 +3136,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-143",
@@ -3019,7 +3161,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-144",
@@ -3043,7 +3186,8 @@
       "Ward"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-145",
@@ -3064,7 +3208,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-146",
@@ -3085,7 +3230,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-147",
@@ -3107,7 +3253,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-148",
@@ -3128,7 +3275,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-149",
@@ -3153,7 +3301,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-150",
@@ -3175,7 +3324,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-151",
@@ -3197,7 +3347,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-152",
@@ -3219,7 +3370,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-153",
@@ -3243,7 +3395,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-154",
@@ -3265,7 +3418,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-155",
@@ -3287,7 +3441,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-156",
@@ -3310,7 +3465,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-157",
@@ -3331,7 +3487,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-158",
@@ -3352,7 +3509,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-159",
@@ -3373,7 +3531,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-160",
@@ -3394,7 +3553,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-161",
@@ -3411,7 +3571,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-162",
@@ -3428,7 +3589,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-163",
@@ -3447,7 +3609,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-164",
@@ -3466,7 +3629,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-165",
@@ -3483,7 +3647,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-166",
@@ -3500,7 +3665,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-167",
@@ -3517,7 +3683,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-168",
@@ -3534,7 +3701,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-169",
@@ -3551,7 +3719,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-170",
@@ -3568,7 +3737,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-171",
@@ -3589,7 +3759,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-172",
@@ -3611,7 +3782,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-173",
@@ -3634,7 +3806,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-174",
@@ -3659,7 +3832,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-175",
@@ -3685,7 +3859,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-176",
@@ -3705,7 +3880,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-177",
@@ -3729,7 +3905,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-178",
@@ -3751,7 +3928,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-179",
@@ -3772,7 +3950,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-180",
@@ -3794,7 +3973,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-181",
@@ -3818,7 +3998,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-182",
@@ -3839,7 +4020,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-183",
@@ -3860,7 +4042,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-184",
@@ -3881,7 +4064,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-185",
@@ -3903,7 +4087,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-186",
@@ -3927,7 +4112,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-187",
@@ -3951,7 +4137,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-188",
@@ -3973,7 +4160,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-189",
@@ -3997,7 +4185,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-190",
@@ -4019,7 +4208,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-191",
@@ -4041,7 +4231,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-192",
@@ -4063,7 +4254,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-193",
@@ -4087,7 +4279,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-194",
@@ -4109,7 +4302,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-195",
@@ -4128,7 +4322,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-196",
@@ -4145,7 +4340,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-197",
@@ -4162,7 +4358,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-198",
@@ -4181,7 +4378,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-199",
@@ -4198,7 +4396,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-200",
@@ -4215,7 +4414,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-201",
@@ -4232,7 +4432,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-202",
@@ -4249,7 +4450,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-203",
@@ -4266,7 +4468,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-204",
@@ -4283,7 +4486,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-205",
@@ -4308,7 +4512,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-206",
@@ -4330,7 +4535,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-207",
@@ -4355,7 +4561,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-208",
@@ -4376,7 +4583,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-209",
@@ -4399,7 +4607,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-210",
@@ -4422,7 +4631,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-211",
@@ -4445,7 +4655,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-212",
@@ -4470,7 +4681,8 @@
       "Reckless"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-213",
@@ -4494,7 +4706,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-214",
@@ -4516,7 +4729,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-215",
@@ -4540,7 +4754,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-216",
@@ -4564,7 +4779,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-659",
@@ -4587,7 +4803,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-660",
@@ -4611,7 +4828,8 @@
       "Shift"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-661",
@@ -4634,7 +4852,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-662",
@@ -4655,7 +4874,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-663",
@@ -4677,7 +4897,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-664",
@@ -4698,7 +4919,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-665",
@@ -4723,7 +4945,8 @@
       "Challenger"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-666",
@@ -4745,7 +4968,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-667",
@@ -4768,7 +4992,8 @@
       "Support"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-668",
@@ -4790,7 +5015,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-669",
@@ -4814,7 +5040,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-670",
@@ -4838,7 +5065,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-671",
@@ -4862,7 +5090,8 @@
       "Bodyguard"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-678",
@@ -4886,7 +5115,8 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-679",
@@ -4908,7 +5138,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-680",
@@ -4930,7 +5161,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-681",
@@ -4952,7 +5184,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-682",
@@ -4975,7 +5208,8 @@
       "Reckless"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-1187",
@@ -4992,7 +5226,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-1188",
@@ -5011,7 +5246,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-1190",
@@ -5033,7 +5269,8 @@
     "movement": 0,
     "keywords": [],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   },
   {
     "id": "001-1191",
@@ -5056,6 +5293,7 @@
       "Evasive"
     ],
     "damage": 0,
-    "readied": false
+    "readied": false,
+    "canBeReadiedDuringReadyPhase": false
   }
 ]

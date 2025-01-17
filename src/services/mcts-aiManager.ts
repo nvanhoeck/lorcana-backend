@@ -5,6 +5,77 @@ import {FieldState, HandState, PlayerGameState} from "../model/ai/State";
 import path from "path";
 import fs from "fs";
 import {eligibleTargets} from "../utils/eligibleTargets";
+import {readFile} from "./fileReader";
+import {definePossibleActions} from "../functions";
+
+// Reinforcement Learning / DEPRECATED
+export const determineNextActionBasedByCurrentGameState = async (player: Player, opposingPlayer: Player, qState?: Record<string, number>) => {
+    const currentPlayerState = defineState(player, opposingPlayer.activeRow);
+    const currentOpposingPlayerState = defineState(opposingPlayer, player.activeRow);
+    if (!qState) {
+        const optimalQstate = await readFile(['..', 'data', 'MostOptimal_qstate.json']) as Record<string, number>
+        return defineActionsByOptimalState(player, opposingPlayer.activeRow, 0, {
+            player: currentPlayerState,
+            hostilePlayer: currentOpposingPlayerState
+        }, optimalQstate)
+    } else {
+        return defineActionsByOptimalState(player, opposingPlayer.activeRow, 0, {
+            player: currentPlayerState,
+            hostilePlayer: currentOpposingPlayerState
+        }, qState)
+    }
+
+
+}
+
+// REINFORCEMENT LEARNING // DEPRECATED
+export const defineActionsByOptimalState = (player: Player, opposingActiveRow: Card[], explorationRate: number, gameState: {
+    player: PlayerGameState,
+    hostilePlayer: PlayerGameState
+}, qState: Record<string, number>) => {
+    const possibleActions = definePossibleActions(player, opposingActiveRow);
+
+    const allActions: {
+        card?: Card,
+        action: Actions,
+        stats?: {
+            power: number
+        } | undefined
+    }[] = [{
+        action: "END_TURN" as Actions,
+        stats: undefined,
+    },
+        ...possibleActions.QUEST.map(cardForAction => ({
+            card: cardForAction,
+            action: "QUEST" as Actions,
+        })),
+        ...possibleActions.CHALLENGE.map(cardForAction => ({
+            card: cardForAction,
+            action: "CHALLENGE" as Actions,
+        })),
+        ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
+            card: cardForAction,
+            action: "INK_CARD" as Actions
+        })),
+        ...possibleActions.PLAY_CARD.map(cardForAction => ({
+            card: cardForAction,
+            action: "PLAY_CARD" as Actions,
+        })),
+    ];
+    let chosenAction = undefined
+    if (Math.random() < explorationRate) {
+        chosenAction = chooseOptimalAction(gameState, [allActions[Math.floor(Math.random() * allActions.length)]], qState, opposingActiveRow)
+    } else {
+        const bestAction = chooseOptimalAction(gameState, allActions, qState, opposingActiveRow)
+        if (!bestAction) throw new Error('Something went wrong chosing best action')
+        else chosenAction = bestAction
+    }
+
+    if (!chosenAction) throw new Error('Something went wrong chosing best action')
+
+    return chosenAction
+}
+
 
 export const defineState = (player: Player, opposingPlayerActiveRow: Card[]): PlayerGameState => {
     return {
@@ -134,6 +205,7 @@ function defineNextStatesByChallengingCards(action: {
 }
 
 
+// PARTLY DEPRECATED
 export const chooseOptimalAction = (currentStates: {
     player: PlayerGameState,
     hostilePlayer: PlayerGameState

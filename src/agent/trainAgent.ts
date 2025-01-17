@@ -3,7 +3,8 @@ import {readFile} from "../services/fileReader";
 import {SimpleDeck} from "../model/domain/PlayableDeck";
 import {Agent} from "./agent";
 import {Player} from "../model/domain/Player";
-import {defineState} from "../services/aiManager";
+import {defineState} from "../services/ql-aiManager";
+import {ExponentialDecayExploration, LinearDecayExploration} from "./exploration-rate";
 
 const doTurn = async (agent: Agent, firstPlayerFirstTurn = false) => {
     await agent.doTurnActions(true, firstPlayerFirstTurn)
@@ -26,9 +27,11 @@ export const trainAgent = async () => {
         console.warn('Optimal qstate file not found')
     }
     let optimalQStateOne: Record<string, number> | undefined = optimalQstate
-    let optimalQStateTwo:  Record<string, number> | undefined = optimalQstate
+    let optimalQStateTwo: Record<string, number> | undefined = optimalQstate
+    const linearDecayExploration = new LinearDecayExploration(1, 0.01, 1 / 100);
+    const exponentionalDecayExploration = new ExponentialDecayExploration(1, 0.01, 1 / 100);
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 100; i++) {
         const game = await initializeGame([{
             name: playerOne,
             deck: sharedDeck
@@ -50,14 +53,16 @@ export const trainAgent = async () => {
             getOpposingActiveRow: getAgentTwoActiveRow,
             validateWinConditions,
             getOpposingBanishedPile: getAgentTwoBanishedPile,
-            defineHostilePlayerState: playerTwoState
-        }, optimalQStateOne, Math.pow(1, i), 0.9, 0.1)
+            defineHostilePlayerState: playerTwoState,
+            getHostilePlayer: () => game.playerTwo
+        }, optimalQStateOne, linearDecayExploration.getRate(i), 0.9, 0.1)
         const agentTwo = new Agent(game.playerTwo, {
             getOpposingActiveRow: getAgentOneActiveRow,
             validateWinConditions,
             getOpposingBanishedPile: getAgentOneBanishedPile,
-            defineHostilePlayerState: playerOneState
-        }, optimalQStateTwo, Math.pow(1, i), 0.9, 0.1)
+            defineHostilePlayerState: playerOneState,
+            getHostilePlayer: () => game.playerOne
+        }, optimalQStateTwo, exponentionalDecayExploration.getRate(i), 0.9, 0.1)
         setupPlayer(game.playerOne);
         setupPlayer(game.playerTwo);
 
@@ -71,6 +76,7 @@ export const trainAgent = async () => {
             await doTurn(agentOne)
             printGameDetails([game.playerOne, game.playerTwo])
             if (hasEnded(game)) {
+                console.log(game)
                 break
             }
             game.playerTurn = playerTwo
@@ -88,8 +94,8 @@ export const trainAgent = async () => {
         if (agentTwo.player.loreCount >= 20) {
             console.log('LORE WINNING')
         }
-        const agentOneScore = (agentOne.player.deck.length === 0 ? -1 : 0) + agentOne.player.loreCount + (agentOne.player.loreCount >= 20 ? 5 : 0) - 19 // -19 is for preventing status quo rewards (didn't loose, but didn't had any lore)
-        const agentTwoScore = (agentTwo.player.deck.length === 0 ? -1 : 0) + agentTwo.player.loreCount + (agentTwo.player.loreCount >= 20 ? 5 : 0) - 19
+        const agentOneScore = (agentOne.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
+        const agentTwoScore = (agentTwo.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
 
         const newAgentOneQState: Record<string, number> = agentOne.rewardAgent(agentOneScore);
         const newAgentTwoQState: Record<string, number> = agentTwo.rewardAgent(agentTwoScore)

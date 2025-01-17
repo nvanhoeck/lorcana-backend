@@ -1,5 +1,5 @@
 import {Actions} from "../src/data/actions";
-import {deserializeOptimalAction, serializeOptimalAction} from "../src/services/aiManager";
+import {deserializeOptimalAction, serializeOptimalAction} from "../src/services/ql-aiManager";
 
 export const testOptimalActionSerialization = () => {
     const testCaseOne: {

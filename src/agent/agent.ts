@@ -5,16 +5,16 @@ import {
     chooseOptimalAction,
     defineFieldState,
     defineHandState,
-    defineState,
+    defineState, determineNextActionBasedByCurrentGameState,
     optimalChallengeTarget,
-} from "../services/aiManager";
+} from "../services/ql-aiManager";
 import {Actions} from "../data/actions";
 import {Card} from "../model/domain/Card";
 import {
     banishIfSuccumbed,
     challengeCharacter,
     drawCard,
-    inkCard,
+    inkCard, isSuccumbed,
     playCharacterCard,
     playNonCharacterCard,
     quest,
@@ -38,11 +38,13 @@ export class Agent {
      * record key = serialized string of
      * state and number
      */
-    qState: Record<string, number> = {}
+    // TODO deprecated
+    // qState: Record<string, number> = {}
 
     getOpposingActiveRow: () => Card[]
     getOpposingBanishedPile: () => Card[]
     defineHostilePlayerState: () => PlayerGameState
+    getHostilePlayer: () => Player
     gameHasEnded: () => boolean
 
     public constructor(player: Player, callbacks: {
@@ -50,7 +52,10 @@ export class Agent {
         validateWinConditions: () => boolean
         getOpposingBanishedPile: () => Card[]
         defineHostilePlayerState: () => PlayerGameState
-    }, optimalQState: Record<string, number> = {}, explorationRate = 0.1, discountRate = 0.9, learningRate = 0.1) {
+        getHostilePlayer: () => Player
+    },
+                       optimalQState: Record<string, number> = {},
+                       explorationRate = 0.1, discountRate = 0.9, learningRate = 0.1) {
         if (!!optimalQState && Object.keys(optimalQState).length > 0) {
             Object.entries(optimalQState).forEach(([key, value]) => {
                 this.qState[key] = value
@@ -64,6 +69,7 @@ export class Agent {
         this.gameHasEnded = callbacks.validateWinConditions
         this.getOpposingBanishedPile = callbacks.getOpposingBanishedPile
         this.defineHostilePlayerState = callbacks.defineHostilePlayerState
+        this.getHostilePlayer = callbacks.getHostilePlayer
 
         this.gameState = {
             player: {
@@ -95,45 +101,7 @@ export class Agent {
             player: defineState(this.player, this.getOpposingActiveRow()),
             hostilePlayer: this.defineHostilePlayerState()
         };
-        const possibleActions = definePossibleActions(this.player, this.getOpposingActiveRow());
-
-        const allActions: {
-            card?: Card,
-            action: Actions,
-            stats?: {
-                power: number
-            } | undefined
-        }[] = [{
-            action: "END_TURN" as Actions,
-            stats: undefined,
-        },
-            ...possibleActions.QUEST.map(cardForAction => ({
-                card: cardForAction,
-                action: "QUEST" as Actions,
-            })),
-            ...possibleActions.CHALLENGE.map(cardForAction => ({
-                card: cardForAction,
-                action: "CHALLENGE" as Actions,
-            })),
-            ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
-                card: cardForAction,
-                action: "INK_CARD" as Actions
-            })),
-            ...possibleActions.PLAY_CARD.map(cardForAction => ({
-                card: cardForAction,
-                action: "PLAY_CARD" as Actions,
-            })),
-        ];
-        let chosenAction = undefined
-        if (Math.random() < this.explorationRate) {
-            chosenAction = chooseOptimalAction(this.gameState, [allActions[Math.floor(Math.random() * allActions.length)]], this.qState, this.getOpposingActiveRow())
-        } else {
-            const bestAction = chooseOptimalAction(this.gameState, allActions, this.qState, this.getOpposingActiveRow())
-            if (!bestAction) throw new Error('Something went wrong chosing best action')
-            else chosenAction = bestAction
-        }
-
-        if (!chosenAction) throw new Error('Something went wrong chosing best action')
+        const chosenAction = await determineNextActionBasedByCurrentGameState(this.player, this.getHostilePlayer(), this.qState)
 
         // Execute the chosen action
         this.playedStates[this.playedStates.length - 1].push(chosenAction.nextSerializedState)
@@ -145,7 +113,7 @@ export class Agent {
     }
 
     private executeAction(action: Actions, card?: Card | undefined) {
-        console.log(action, card?.name, card?.subName)
+        // console.log(action, card?.name, card?.subName)
         switch (action) {
             case "INK_CARD":
                 const result = inkCard(this.player.hand, card!, this.player.inkTotal, this.player.cardInInkRow);
@@ -188,7 +156,7 @@ export class Agent {
             const discountFactor = Math.pow(this.discountRate, turnIndex); // Discount based on how far the action is
             turnActions.reverse().forEach((serializedState) => {
                 let currentQ = 0
-                if(this.qState[serializedState] !== undefined) {
+                if (this.qState[serializedState] !== undefined) {
                     currentQ = this.qState[serializedState]
                 }
                 const newQ = currentQ + this.learningRate * (score + discountFactor * currentQ);

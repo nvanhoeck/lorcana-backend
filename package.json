@@ -8,7 +8,7 @@
     "test": "ts-node src/functions/startGame.ts",
     "test:serialization": "ts-node test/testOptimalActionSerialization.ts",
     "train": "ts-node src/agent/trainAgent.ts",
-    "train-parallel": "ts-node src/agent/parallelTrainAgent.ts",
+    "train-parallel": "set NODE_OPTIONS=--max-old-space-size=4096 && ts-node src/agent/parallelTrainAgent.ts",
     "best-qstate-from-iterations": "ts-node src/agent/getTheBestQState.ts"
   },
   "keywords": [],

@@ -1,5 +1,5 @@
 import {trainAgent} from "./trainAgent";
-import {writeQstateToFile} from "../services/aiManager";
+import {writeQstateToFile} from "../services/ql-aiManager";
 
 
 export const parallelTrainAgent = async () => {
