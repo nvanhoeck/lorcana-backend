@@ -42,13 +42,15 @@ const defineReward = (player: Player, hostilePlayer: Player) => {
     const playerGameState = defineState(player, hostilePlayer.activeRow)
     const loreCount = playerGameState.loreCount
     const deckPenalty = defineDeckPenalty(playerGameState.deckCount)
-    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, hostilePlayer.hand.length)
-    const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
     const inkDifference = player.cardInInkRow - hostilePlayer.cardInInkRow
     const playerStatTotal = sumByProperty(player.activeRow, 'lore') + sumByProperty(player.activeRow, 'willpower') + sumByProperty(player.activeRow, 'strength') + sumByProperty(player.waitRow, 'lore') + sumByProperty(player.waitRow, 'willpower') + sumByProperty(player.waitRow, 'strength')
     const hostilePlayerStatTotal = sumByProperty(hostilePlayer.activeRow, 'lore') + sumByProperty(hostilePlayer.activeRow, 'willpower') + sumByProperty(hostilePlayer.activeRow, 'strength') + sumByProperty(hostilePlayer.waitRow, 'lore') + sumByProperty(hostilePlayer.waitRow, 'willpower') + sumByProperty(hostilePlayer.waitRow, 'strength')
+
+    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, hostilePlayer.hand.length)
+    const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
     // return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
-    return loreCount + deckPenalty + inkDifference + hostilePlayerStatTotal;
+
+    return loreCount + deckPenalty + inkDifference + playerStatTotal - hostilePlayerStatTotal;
 };
 
 const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
@@ -61,7 +63,7 @@ const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
 const backPropagate = (node: MCTSNode, reward: number) => {
     let current: MCTSNode | null = node;
 
-    console.log(node.action?.action.action, reward)
+    // console.log(node.action?.action.action, reward)
 
     while (current) {
         current.visits += 1;
@@ -132,7 +134,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     const clonedHostilePlayer = deepClone(hostilePlayer)
     simulate(clonedPlayer, clonedHostilePlayer, childNode)
     backPropagate(childNode, defineReward(clonedPlayer, clonedHostilePlayer))
-    if(node.parent === null) {
+    if (node.parent === null) {
         debugger
     }
 };
