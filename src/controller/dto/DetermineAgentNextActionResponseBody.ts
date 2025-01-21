@@ -1,10 +1,6 @@
 import {Card} from "../../model";
+import {Actions} from "../../data/actions";
 
 export type DetermineAgentNextActionResponseBody = {
-    chosenAction: {
-        qValue: number,
-        nextSerializedState: string,
-        action: { card?: Card, action: "INK_CARD" | "CHALLENGE" | "QUEST" | "PLAY_CARD" | "END_TURN" },
-        targetIndex?: number
-    }
+    chosenAction: { id: string; action: { card?: Card; action: Actions; stats?: { power: number } | undefined } } | null
 }

@@ -36,7 +36,7 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
         movement: 0, // Assuming "movement" is not provided in the input
         keywords: card.keywordAbilities || [],
         damage: 0, // Assuming "damage" starts at 0
-        readied: false, // Assuming "readied" defaults to false
+        readied: true, // Assuming "readied" defaults to false
         canBeReadiedDuringReadyPhase: false
     }));
 }

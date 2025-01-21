@@ -5,6 +5,7 @@ import {Agent} from "./agent";
 import {Player} from "../model/domain/Player";
 import {ExponentialDecayExploration, LinearDecayExploration} from "./exploration-rate";
 import {defineState} from "../services/mcts-aiManager";
+import {writeFile} from "../services";
 
 const doTurn = async (agent: Agent, opposingAgent: Agent, firstPlayerFirstTurn = false) => {
     const playerState = defineState(agent.player, opposingAgent.player.activeRow);
@@ -25,18 +26,11 @@ export const trainAgent = async () => {
     const playerOne = 'AgentOne'
     const playerTwo = 'AgentTwo'
     const sharedDeck = await readFile(['..', '..', 'GameData', 'Decks', 'FirstChapter-SteelSapphire-StarterDeck.json']) as SimpleDeck
-    let optimalQstate = undefined
-    try {
-        optimalQstate = await readFile(['..', 'data', 'MostOptimal_qstate.json']) as Record<string, number>
-    } catch (e) {
-        console.warn('Optimal qstate file not found')
-    }
-    let optimalQStateOne: Record<string, number> | undefined = optimalQstate
-    let optimalQStateTwo: Record<string, number> | undefined = optimalQstate
     const linearDecayExploration = new LinearDecayExploration(1, 0.01, 1 / 100);
     const exponentionalDecayExploration = new ExponentialDecayExploration(1, 0.01, 1 / 100);
 
     for (let i = 0; i < 1; i++) {
+        let turnCount = 0
         const game = await initializeGame([{
             name: playerOne,
             deck: sharedDeck
@@ -72,21 +66,22 @@ export const trainAgent = async () => {
         setupPlayer(game.playerTwo);
 
         await doTurn(agentOne, agentTwo, true)
-        printGameDetails([game.playerOne, game.playerTwo])
+        // printGameDetails([game.playerOne, game.playerTwo])
         game.playerTurn = playerTwo
         await doTurn(agentTwo, agentOne)
-        printGameDetails([game.playerOne, game.playerTwo])
+        turnCount++
+        // printGameDetails([game.playerOne, game.playerTwo])
         game.playerTurn = playerOne
         do {
             await doTurn(agentOne, agentTwo)
-            printGameDetails([game.playerOne, game.playerTwo])
+            // printGameDetails([game.playerOne, game.playerTwo])
             if (hasEnded(game)) {
                 console.log(game)
                 break
             }
             game.playerTurn = playerTwo
             await doTurn(agentTwo, agentOne)
-            printGameDetails([game.playerOne, game.playerTwo])
+            turnCount++
             if (hasEnded(game)) {
                 break
             }
@@ -103,14 +98,12 @@ export const trainAgent = async () => {
         const agentTwoScore = (agentTwo.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
 
         // TODO end game reward?
-        // const newAgentOneQState: Record<string, number> = agentOne.rewardAgent(agentOneScore);
-        // const newAgentTwoQState: Record<string, number> = agentTwo.rewardAgent(agentTwoScore)
-        // optimalQStateOne = newAgentOneQState
-        // optimalQStateTwo = newAgentTwoQState
         console.log('cycle ' + i)
+        console.log(turnCount)
+        printGameDetails([game.playerOne, game.playerTwo])
+        await writeFile(['..', 'data', 'FirstChapter-SteelSapphire-StarterDeck.json'], agentOne.turnRootNodes)
 
     }
-    return {optimalQStateOne, optimalQStateTwo}
 }
 
 trainAgent().then()

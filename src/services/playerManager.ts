@@ -7,6 +7,7 @@ export const drawCard = (deck: Card[], hand: Card[]) => {
 }
 
 export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {
+    transferLastElements(waitingRow, activeRow, waitingRow.length)
     activeRow.forEach((c) => {
         if(c.canBeReadiedDuringReadyPhase) {
             c.readied = true
@@ -23,7 +24,6 @@ export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {
         }
     })
 
-    transferLastElements(waitingRow, activeRow, waitingRow.length)
 }
 
 export const inkCard = (hand: Card[], cardToBeInkedCard: Card, inkwell: number, cardInInkRow: number) => {

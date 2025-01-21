@@ -1,13 +1,8 @@
 import express from 'express';
-import {StartGameRequestBody} from "./dto/StartGameRequestBody";
-import {StartGameResponseBody} from "./dto/StartGameResponeBody";
-import {createCardCollection, determineNextActionBasedByCurrentGameState, getAllCards, readFile} from "../services";
-import {SimpleDeck} from "../model";
 import {setCorsHeaders} from "../utils/setCorsHeaders";
-import {GetCardsRequestBody} from "./dto/GetCardsRequestBody";
-import {GetCardsResponseBody} from "./dto/GetCardsResponseBody";
 import {DetermineAgentNextActionRequestBody} from "./dto/DetermineAgentNextActionRequestBody";
 import {DetermineAgentNextActionResponseBody} from "./dto/DetermineAgentNextActionResponseBody";
+import {determineNextActionBasedByCurrentGameState, optimalChallengeTarget} from "../services/mcts-aiManager";
 
 const router = express.Router();
 
@@ -22,8 +17,13 @@ router.post('/determine-action', async (req: express.Request<{}, {}, DetermineAg
         const game = body.game
         const currentActivePlayer = game.playerOne.name === game.playerTurn ? game.playerOne : game.playerTwo
         const currentHostilePlayer = game.playerOne.name === game.playerTurn ? game.playerTwo : game.playerOne
-        const chosenAction = await determineNextActionBasedByCurrentGameState(currentActivePlayer, currentHostilePlayer);
-        res.status(200).json({chosenAction})
+        const chosenNode = await determineNextActionBasedByCurrentGameState(currentActivePlayer, currentHostilePlayer);
+        if (chosenNode.action!.action.action === 'CHALLENGE') {
+            const activeRow = game.playerTurn === game.playerOne.name ? game.playerTwo.activeRow : game.playerOne.activeRow;
+            optimalChallengeTarget(activeRow, chosenNode.action!.action.card!)
+        }
+
+        res.status(200).json({chosenAction: chosenNode.action})
     }
 )
 

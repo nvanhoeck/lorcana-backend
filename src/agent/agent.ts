@@ -87,8 +87,11 @@ export class Agent {
             resetInkTotal(this.player)
             readyAllCards(this.player.activeRow, this.player.waitRow)
         }
-        if (!(firstPlayerFirstTurn && newTurn)) {
-            drawCard(this.player.deck, this.player.hand)
+        if (newTurn) {
+            if(!firstPlayerFirstTurn) {
+                console.log('Drawing card')
+                drawCard(this.player.deck, this.player.hand)
+            }
         }
         this.gameState = {
             player: defineState(this.player, this.getOpposingActiveRow()),
@@ -97,7 +100,7 @@ export class Agent {
 
 
         const mctsNode = await determineNextActionBasedByCurrentGameState(this.player, this.getHostilePlayer());
-        this.turnRootNodes[this.turnRootNodes.length - 1].push(new MCTSNode(playerState))
+        this.turnRootNodes[this.turnRootNodes.length - 1].push(mctsNode)
         // TODO and later backpropagate
         if (mctsNode.action) {
             executeAction(mctsNode.action?.action.action, this.player, this.getHostilePlayer(), mctsNode.action?.action.card)
@@ -112,10 +115,5 @@ export class Agent {
         } else {
             throw new Error('Action not found for ' + mctsNode.serializedState)
         }
-    }
-
-    rewardAgent = (score: number, rootNode: MCTSNode): MCTSNode => {
-        // TODO temporary for compilation
-        return rootNode
     }
 }

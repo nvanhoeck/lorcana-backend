@@ -142,9 +142,9 @@ export function printPlayerDetails(player: Player) {
  * @param players Array of players in the game.
  */
 export function printGameDetails(players: Player[]) {
-    // console.groupCollapsed(`%c=== Game State ===`, 'color: #8E44AD; font-size: 16px; font-weight: bold;');
-    // players.forEach(player => printPlayerDetails(player));
-    // console.groupEnd();
+    console.groupCollapsed(`%c=== Game State ===`, 'color: #8E44AD; font-size: 16px; font-weight: bold;');
+    players.forEach(player => printPlayerDetails(player));
+    console.groupEnd();
 }
 
 export function resetInkTotal(player: Player) {

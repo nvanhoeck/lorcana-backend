@@ -13,6 +13,7 @@ import {eligibleTargets} from "../utils/eligibleTargets";
 import {definePossibleActionsWithoutEndTurn} from "../functions";
 import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
+import {sumByProperty} from "../functions/sumByProperty";
 
 const defineDeckPenalty = (deckCount: DeckAmountRange) => {
     switch (deckCount) {
@@ -39,12 +40,13 @@ const defineReward = (player: Player, hostilePlayer: Player) => {
     const playerGameState = defineState(player, hostilePlayer.activeRow)
     const loreCount = playerGameState.loreCount
     const deckPenalty = defineDeckPenalty(playerGameState.deckCount)
-    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, player.hand.length)
-    const hostileLoreCountDifference = player.loreCount - hostilePlayer.loreCount
+    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, hostilePlayer.hand.length)
     const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
     const inkDifference = player.inkTotal - hostilePlayer.inkTotal
-    // TODO stats difference + readied difference
-    return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
+    const playerStatTotal = sumByProperty(player.activeRow, 'lore') + sumByProperty(player.activeRow, 'willpower') + sumByProperty(player.activeRow, 'strength') + sumByProperty(player.waitRow, 'lore') + sumByProperty(player.waitRow, 'willpower') + sumByProperty(player.waitRow, 'strength')
+    const hostilePlayerStatTotal = sumByProperty(hostilePlayer.activeRow, 'lore') + sumByProperty(hostilePlayer.activeRow, 'willpower') + sumByProperty(hostilePlayer.activeRow, 'strength') + sumByProperty(hostilePlayer.waitRow, 'lore') + sumByProperty(hostilePlayer.waitRow, 'willpower') + sumByProperty(hostilePlayer.waitRow, 'strength')
+    // return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
+    return  5 * loreCount - 2 * deckPenalty + 3 * inkDifference;
 };
 
 const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
@@ -77,7 +79,7 @@ export const determineNextActionBasedByCurrentGameState = async (player: Player,
         hostilePlayer: defineState(hostilePlayer, player.activeRow)
     })
     // console.log('Root state')
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 1000; i++) {
         // console.log('Selecting...')
         const leaf = select(root, player, hostilePlayer)
         // console.log('Selected leaf:', leaf.action?.action.action);
@@ -124,7 +126,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
 
 
     const action = untriedActions[Math.floor(Math.random() * untriedActions.length)];
-    if(!action) {
+    if (!action) {
         const amountOfDuplicateCardsInHand = player.hand.reduce((count, card, index, array) => {
             const duplicates = array.filter((item) => item.id === card.id).length;
             return duplicates > 1 ? count + 1 / duplicates : count;
@@ -230,6 +232,8 @@ export const defineState = (player: Player, opposingPlayerActiveRow: Card[]): Pl
 }
 
 export const defineFieldState = (activeRow: Card[]): FieldState => {
+    // console.log('active', activeRow.length)
+    // console.log('readied', activeRow.filter((c) => c.readied).length)
     return {
         totalReadiedCards: defineCardAmountRange(activeRow.filter((c) => c.readied).length),
         totalLore: activeRow.map((c) => c.lore).reduce((c, n) => c + n, 0),
