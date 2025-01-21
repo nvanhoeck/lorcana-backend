@@ -7,6 +7,16 @@ import {SimpleDeck} from "../model/domain/PlayableDeck";
 import {Player} from "../model/domain/Player";
 import {shuffleArray} from "../utils/shuffleArray";
 import {transferLastElements} from '../utils/transferElements'
+import {Actions} from "../data/actions";
+import {
+    banishIfSuccumbed,
+    challengeCharacter,
+    inkCard,
+    playCharacterCard,
+    playNonCharacterCard,
+    quest
+} from "./playerManager";
+import {optimalChallengeTarget} from "./mcts-aiManager";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -140,4 +150,44 @@ export function printGameDetails(players: Player[]) {
 export function resetInkTotal(player: Player) {
     player.inkTotal = player.cardInInkRow
     player.alreadyInkedThisTurn = false
+}
+
+
+export const executeAction = (action: Actions, player: Player, hostilePlayer: Player, card?: Card | undefined) => {
+    // console.log(action, card?.name, card?.subName)
+    switch (action) {
+        case "INK_CARD":
+            const result = inkCard(player.hand, card!, player.inkTotal, player.cardInInkRow);
+            player.inkTotal = result.inkwell
+            player.cardInInkRow = result.cardInInkRow
+            player.alreadyInkedThisTurn = true
+            break;
+        case "CHALLENGE":
+            // TODO do not make predefined choices (agent as well?)
+            const challengeTarget = optimalChallengeTarget(hostilePlayer.activeRow, card!);
+            if (!challengeTarget) {
+                throw new Error('Defending character is undefined for challenge')
+            }
+            challengeCharacter(card!, challengeTarget)
+            // TODO not the right place to do this
+            banishIfSuccumbed(card!, player.activeRow, player.banishedPile)
+            banishIfSuccumbed(challengeTarget, hostilePlayer.activeRow, hostilePlayer.banishedPile)
+            break;
+        case "QUEST":
+            quest(card!, player)
+            break;
+        case "PLAY_CARD":
+            if (card!.type === 'Character') {
+                player.inkTotal = playCharacterCard(player.hand, player.waitRow, card!, player.inkTotal)
+            } else if (card!.type === 'Action' || card!.type === 'Song') {
+                //TODO improve playing a song
+                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, card!, player.inkTotal)
+            } else {
+                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, card!, player.inkTotal)
+            }
+            break;
+        case "END_TURN":
+            // Do nothing
+            break;
+    }
 }

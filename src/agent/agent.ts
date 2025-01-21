@@ -1,26 +1,15 @@
 import {Player} from "../model/domain/Player";
-import {PlayerGameState} from "../model/ai/State";
-import {definePossibleActions} from "../functions/definePossibleActions";
+import {defineDeckAmountRange, PlayerGameState} from "../model/ai/State";
 import {
-    chooseOptimalAction,
     defineFieldState,
     defineHandState,
-    defineState, determineNextActionBasedByCurrentGameState,
-    optimalChallengeTarget,
-} from "../services/ql-aiManager";
-import {Actions} from "../data/actions";
+    defineState,
+    determineNextActionBasedByCurrentGameState,
+} from "../services/mcts-aiManager";
 import {Card} from "../model/domain/Card";
-import {
-    banishIfSuccumbed,
-    challengeCharacter,
-    drawCard,
-    inkCard, isSuccumbed,
-    playCharacterCard,
-    playNonCharacterCard,
-    quest,
-    readyAllCards
-} from "../services/playerManager";
-import {resetInkTotal} from "../services/gameManager";
+import {drawCard, readyAllCards} from "../services/playerManager";
+import {executeAction, resetInkTotal} from "../services/gameManager";
+import {MCTSNode} from "./MCTS-Node";
 
 export class Agent {
     player: Player
@@ -28,7 +17,7 @@ export class Agent {
     /**
      * Each turn is an array, and in each turn you can do different actions which lead to different states
      */
-    playedStates: string[][] = []
+    turnRootNodes: MCTSNode[][] = []
 
     explorationRate = 0.1
     discountRate = 0.9
@@ -38,8 +27,8 @@ export class Agent {
      * record key = serialized string of
      * state and number
      */
-    // TODO deprecated
-    // qState: Record<string, number> = {}
+        // TODO deprecated
+        // qState: Record<string, number> = {}
 
     getOpposingActiveRow: () => Card[]
     getOpposingBanishedPile: () => Card[]
@@ -48,19 +37,19 @@ export class Agent {
     gameHasEnded: () => boolean
 
     public constructor(player: Player, callbacks: {
-        getOpposingActiveRow: () => Card[],
-        validateWinConditions: () => boolean
-        getOpposingBanishedPile: () => Card[]
-        defineHostilePlayerState: () => PlayerGameState
-        getHostilePlayer: () => Player
-    },
-                       optimalQState: Record<string, number> = {},
+                           getOpposingActiveRow: () => Card[],
+                           validateWinConditions: () => boolean
+                           getOpposingBanishedPile: () => Card[]
+                           defineHostilePlayerState: () => PlayerGameState
+                           getHostilePlayer: () => Player
+                       },
+                       // optimalQState: Record<string, number> = {},
                        explorationRate = 0.1, discountRate = 0.9, learningRate = 0.1) {
-        if (!!optimalQState && Object.keys(optimalQState).length > 0) {
-            Object.entries(optimalQState).forEach(([key, value]) => {
-                this.qState[key] = value
-            })
-        }
+        // if (!!optimalQState && Object.keys(optimalQState).length > 0) {
+        //     Object.entries(optimalQState).forEach(([key, value]) => {
+        //         this.qState[key] = value
+        //     })
+        // }
         this.player = player
         this.explorationRate = explorationRate
         this.discountRate = discountRate
@@ -74,7 +63,7 @@ export class Agent {
         this.gameState = {
             player: {
                 // alreadyInked: false,
-                // deckCount: this.player.deck.length,
+                deckCount: defineDeckAmountRange(this.player.deck.length),
                 fieldState: defineFieldState(this.player.activeRow),
                 hand: defineHandState(this.player, []),
                 inkTotal: 0,
@@ -84,13 +73,17 @@ export class Agent {
         }
     }
 
-    async doTurnActions(newTurn = false, firstPlayerFirstTurn = false) {
+    async doTurnActions(playerState: { player: PlayerGameState, hostilePlayer: PlayerGameState }, hostilePlayerState: {
+        player: PlayerGameState,
+        hostilePlayer: PlayerGameState
+    }, newTurn = false, firstPlayerFirstTurn = false) {
         if (this.gameHasEnded()) {
-            this.executeAction("END_TURN")
+            executeAction("END_TURN", this.player, this.getHostilePlayer())
             return
         }
         if (newTurn) {
-            this.playedStates.push([])
+            // TODO how to keep track of nodes and update them accordingly
+            this.turnRootNodes.push([])
             resetInkTotal(this.player)
             readyAllCards(this.player.activeRow, this.player.waitRow)
         }
@@ -101,68 +94,28 @@ export class Agent {
             player: defineState(this.player, this.getOpposingActiveRow()),
             hostilePlayer: this.defineHostilePlayerState()
         };
-        const chosenAction = await determineNextActionBasedByCurrentGameState(this.player, this.getHostilePlayer(), this.qState)
 
-        // Execute the chosen action
-        this.playedStates[this.playedStates.length - 1].push(chosenAction.nextSerializedState)
-        this.executeAction(chosenAction.action.action, chosenAction.action.card);
-        // Continue turn or end
-        if (chosenAction.action.action !== "END_TURN") {
-            await this.doTurnActions(); // Recursive call for the next action within the turn
+
+        const mctsNode = await determineNextActionBasedByCurrentGameState(this.player, this.getHostilePlayer());
+        this.turnRootNodes[this.turnRootNodes.length - 1].push(new MCTSNode(playerState))
+        // TODO and later backpropagate
+        if (mctsNode.action) {
+            executeAction(mctsNode.action?.action.action, this.player, this.getHostilePlayer(), mctsNode.action?.action.card)
+            if (mctsNode.action.action.action !== 'END_TURN') {
+                const playerGameState = defineState(this.player, this.getOpposingActiveRow())
+                const hostilePlayerGameState = defineState(this.getHostilePlayer(), this.player.activeRow)
+                await this.doTurnActions({
+                    player: playerGameState,
+                    hostilePlayer: hostilePlayerGameState
+                }, {player: hostilePlayerGameState, hostilePlayer: playerGameState})
+            }
+        } else {
+            throw new Error('Action not found for ' + mctsNode.serializedState)
         }
     }
 
-    private executeAction(action: Actions, card?: Card | undefined) {
-        // console.log(action, card?.name, card?.subName)
-        switch (action) {
-            case "INK_CARD":
-                const result = inkCard(this.player.hand, card!, this.player.inkTotal, this.player.cardInInkRow);
-                this.player.inkTotal = result.inkwell
-                this.player.cardInInkRow = result.cardInInkRow
-                this.player.alreadyInkedThisTurn = true
-                break;
-            case "CHALLENGE":
-                // TODO do not make predefined choices (agent as well?)
-                const challengeTarget = optimalChallengeTarget(this.getOpposingActiveRow(), card!);
-                if (!challengeTarget) {
-                    throw new Error('Defending character is undefined for challenge')
-                }
-                challengeCharacter(card!, challengeTarget)
-                // TODO not the right place to do this
-                banishIfSuccumbed(card!, this.player.activeRow, this.player.banishedPile)
-                banishIfSuccumbed(challengeTarget, this.getOpposingActiveRow(), this.getOpposingBanishedPile())
-                break;
-            case "QUEST":
-                quest(card!, this.player)
-                break;
-            case "PLAY_CARD":
-                if (card!.type === 'Character') {
-                    this.player.inkTotal = playCharacterCard(this.player.hand, this.player.waitRow, card!, this.player.inkTotal)
-                } else if (card!.type === 'Action' || card!.type === 'Song') {
-                    //TODO improve playing a song
-                    this.player.inkTotal = playNonCharacterCard(this.player.hand, this.player.banishedPile, card!, this.player.inkTotal)
-                } else {
-                    this.player.inkTotal = playNonCharacterCard(this.player.hand, this.player.activeRow, card!, this.player.inkTotal)
-                }
-                break;
-            case "END_TURN":
-                // Do nothing
-                break;
-        }
-    }
-
-    rewardAgent = (score: number): Record<string, number> => {
-        this.playedStates.reverse().forEach((turnActions, turnIndex) => {
-            const discountFactor = Math.pow(this.discountRate, turnIndex); // Discount based on how far the action is
-            turnActions.reverse().forEach((serializedState) => {
-                let currentQ = 0
-                if (this.qState[serializedState] !== undefined) {
-                    currentQ = this.qState[serializedState]
-                }
-                const newQ = currentQ + this.learningRate * (score + discountFactor * currentQ);
-                this.qState[serializedState] = newQ
-            })
-        })
-        return this.qState
+    rewardAgent = (score: number, rootNode: MCTSNode): MCTSNode => {
+        // TODO temporary for compilation
+        return rootNode
     }
 }

@@ -5,7 +5,7 @@ import {eligibleTargets} from "../utils/eligibleTargets";
 
 type PossibleActions = Record<Actions, any[]>; // Create a type where keys are from 'Actions' and values are arrays of any type.
 
-export const definePossibleActions = (player: Player, opposingPlayerActiveRow: Card[]) => {
+export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlayerActiveRow: Card[]) => {
     const possibleActions: PossibleActions = {
         PLAY_CARD: [],
         CHALLENGE: [],

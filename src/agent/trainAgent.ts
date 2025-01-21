@@ -3,11 +3,16 @@ import {readFile} from "../services/fileReader";
 import {SimpleDeck} from "../model/domain/PlayableDeck";
 import {Agent} from "./agent";
 import {Player} from "../model/domain/Player";
-import {defineState} from "../services/ql-aiManager";
 import {ExponentialDecayExploration, LinearDecayExploration} from "./exploration-rate";
+import {defineState} from "../services/mcts-aiManager";
 
-const doTurn = async (agent: Agent, firstPlayerFirstTurn = false) => {
-    await agent.doTurnActions(true, firstPlayerFirstTurn)
+const doTurn = async (agent: Agent, opposingAgent: Agent, firstPlayerFirstTurn = false) => {
+    const playerState = defineState(agent.player, opposingAgent.player.activeRow);
+    const opposingPlayerState = defineState(opposingAgent.player, agent.player.activeRow);
+    await agent.doTurnActions({player: playerState, hostilePlayer: opposingPlayerState}, {
+        player: opposingPlayerState,
+        hostilePlayer: playerState
+    }, true, firstPlayerFirstTurn)
 };
 
 function setupPlayer(player: Player) {
@@ -31,7 +36,7 @@ export const trainAgent = async () => {
     const linearDecayExploration = new LinearDecayExploration(1, 0.01, 1 / 100);
     const exponentionalDecayExploration = new ExponentialDecayExploration(1, 0.01, 1 / 100);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 1; i++) {
         const game = await initializeGame([{
             name: playerOne,
             deck: sharedDeck
@@ -55,32 +60,32 @@ export const trainAgent = async () => {
             getOpposingBanishedPile: getAgentTwoBanishedPile,
             defineHostilePlayerState: playerTwoState,
             getHostilePlayer: () => game.playerTwo
-        }, optimalQStateOne, linearDecayExploration.getRate(i), 0.9, 0.1)
+        }, linearDecayExploration.getRate(i), 0.9, 0.1)
         const agentTwo = new Agent(game.playerTwo, {
             getOpposingActiveRow: getAgentOneActiveRow,
             validateWinConditions,
             getOpposingBanishedPile: getAgentOneBanishedPile,
             defineHostilePlayerState: playerOneState,
             getHostilePlayer: () => game.playerOne
-        }, optimalQStateTwo, exponentionalDecayExploration.getRate(i), 0.9, 0.1)
+        }, exponentionalDecayExploration.getRate(i), 0.9, 0.1)
         setupPlayer(game.playerOne);
         setupPlayer(game.playerTwo);
 
-        await doTurn(agentOne, true)
+        await doTurn(agentOne, agentTwo, true)
         printGameDetails([game.playerOne, game.playerTwo])
         game.playerTurn = playerTwo
-        await doTurn(agentTwo)
+        await doTurn(agentTwo, agentOne)
         printGameDetails([game.playerOne, game.playerTwo])
         game.playerTurn = playerOne
         do {
-            await doTurn(agentOne)
+            await doTurn(agentOne, agentTwo)
             printGameDetails([game.playerOne, game.playerTwo])
             if (hasEnded(game)) {
                 console.log(game)
                 break
             }
             game.playerTurn = playerTwo
-            await doTurn(agentTwo)
+            await doTurn(agentTwo, agentOne)
             printGameDetails([game.playerOne, game.playerTwo])
             if (hasEnded(game)) {
                 break
@@ -97,10 +102,11 @@ export const trainAgent = async () => {
         const agentOneScore = (agentOne.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
         const agentTwoScore = (agentTwo.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
 
-        const newAgentOneQState: Record<string, number> = agentOne.rewardAgent(agentOneScore);
-        const newAgentTwoQState: Record<string, number> = agentTwo.rewardAgent(agentTwoScore)
-        optimalQStateOne = newAgentOneQState
-        optimalQStateTwo = newAgentTwoQState
+        // TODO end game reward?
+        // const newAgentOneQState: Record<string, number> = agentOne.rewardAgent(agentOneScore);
+        // const newAgentTwoQState: Record<string, number> = agentTwo.rewardAgent(agentTwoScore)
+        // optimalQStateOne = newAgentOneQState
+        // optimalQStateTwo = newAgentTwoQState
         console.log('cycle ' + i)
 
     }

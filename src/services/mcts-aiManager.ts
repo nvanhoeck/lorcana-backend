@@ -1,42 +1,189 @@
 import {Actions} from "../data/actions";
 import {Card} from "../model/domain/Card";
 import {Player} from "../model/domain/Player";
-import {FieldState, HandState, PlayerGameState} from "../model/ai/State";
-import path from "path";
-import fs from "fs";
+import {
+    DeckAmountRange,
+    defineCardAmountRange,
+    defineDeckAmountRange,
+    FieldState,
+    HandState,
+    PlayerGameState
+} from "../model/ai/State";
 import {eligibleTargets} from "../utils/eligibleTargets";
-import {readFile} from "./fileReader";
-import {definePossibleActions} from "../functions";
+import {definePossibleActionsWithoutEndTurn} from "../functions";
+import {MCTSNode} from "../agent/MCTS-Node";
+import {executeAction} from "./gameManager";
 
-// Reinforcement Learning / DEPRECATED
-export const determineNextActionBasedByCurrentGameState = async (player: Player, opposingPlayer: Player, qState?: Record<string, number>) => {
-    const currentPlayerState = defineState(player, opposingPlayer.activeRow);
-    const currentOpposingPlayerState = defineState(opposingPlayer, player.activeRow);
-    if (!qState) {
-        const optimalQstate = await readFile(['..', 'data', 'MostOptimal_qstate.json']) as Record<string, number>
-        return defineActionsByOptimalState(player, opposingPlayer.activeRow, 0, {
-            player: currentPlayerState,
-            hostilePlayer: currentOpposingPlayerState
-        }, optimalQstate)
-    } else {
-        return defineActionsByOptimalState(player, opposingPlayer.activeRow, 0, {
-            player: currentPlayerState,
-            hostilePlayer: currentOpposingPlayerState
-        }, qState)
+const defineDeckPenalty = (deckCount: DeckAmountRange) => {
+    switch (deckCount) {
+        case "0-1":
+            return -5
+        case "2-5":
+            return -4
+        case "6-10":
+            return -3
+        case "11-20":
+            return -2
+        case "21-30":
+            return -1
+        case "30+":
+            return 0
+    }
+};
+
+const defineRewardByHandSizeDifference = (playerLength: number, hostilePlayerLength: number) => {
+    return playerLength - hostilePlayerLength
+};
+
+const defineReward = (player: Player, hostilePlayer: Player) => {
+    const playerGameState = defineState(player, hostilePlayer.activeRow)
+    const loreCount = playerGameState.loreCount
+    const deckPenalty = defineDeckPenalty(playerGameState.deckCount)
+    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, player.hand.length)
+    const hostileLoreCountDifference = player.loreCount - hostilePlayer.loreCount
+    const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
+    const inkDifference = player.inkTotal - hostilePlayer.inkTotal
+    // TODO stats difference + readied difference
+    return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
+};
+
+const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
+    let currentNode = node
+    let clonedPlayer = {...player}
+    let clonedHostilePlayer = {...hostilePlayer}
+    if (currentNode.action) {
+        while (!currentNode.action) {
+            const validActions = flatMapPossibleActions(clonedPlayer, clonedHostilePlayer.activeRow)
+            const randomAction = validActions[Math.floor(Math.random() * validActions.length)];
+            executeAction(randomAction.action, clonedPlayer, clonedHostilePlayer)
+        }
+        return defineReward(player, hostilePlayer)
+    } else throw new Error('No action for node found')
+};
+
+const backPropagate = (node: MCTSNode, reward: number) => {
+    let current: MCTSNode | null = node;
+
+    while (current) {
+        current.visits += 1;
+        current.totalReward += reward;
+        current = current.parent;
+    }
+};
+
+export const determineNextActionBasedByCurrentGameState = async (player: Player, hostilePlayer: Player) => {
+    const root = new MCTSNode({
+        player: defineState(player, hostilePlayer.activeRow),
+        hostilePlayer: defineState(hostilePlayer, player.activeRow)
+    })
+    // console.log('Root state')
+    for (let i = 0; i < 50; i++) {
+        // console.log('Selecting...')
+        const leaf = select(root, player, hostilePlayer)
+        // console.log('Selected leaf:', leaf.action?.action.action);
+        // console.log('Simulation')
+        const reward = simulate(player, hostilePlayer, leaf)
+        // console.log('Back propagate')
+        backPropagate(leaf, reward)
     }
 
-
+    return root.bestChild()
 }
 
-// REINFORCEMENT LEARNING // DEPRECATED
-export const defineActionsByOptimalState = (player: Player, opposingActiveRow: Card[], explorationRate: number, gameState: {
-    player: PlayerGameState,
-    hostilePlayer: PlayerGameState
-}, qState: Record<string, number>) => {
-    const possibleActions = definePossibleActions(player, opposingActiveRow);
+const select = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+    let current = node
+    if (!current.isFullyExpanded({...player}, [...hostilePlayer.activeRow])) {
+        // console.log('Not fully expanded')
+        const mctsNode = expand(current, {...player}, {...hostilePlayer});
+        // console.log('Selected expanded node:', mctsNode.action?.action.action)
+        return mctsNode
+    } else {
+        // console.log('Fully expanded')
+        const bestChild = current.bestChild();
+        // console.log('Best child', bestChild.action?.action.action)
+        return bestChild;
+    }
+};
+
+const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+    const allActions = flatMapPossibleActions(player, hostilePlayer.activeRow);
+    if (!allActions.find((a) => a.action === 'END_TURN')) {
+        throw new Error('No end turn action found')
+    }
+    const untriedActions = allActions
+        .map((action) => {
+            if (!action.action) {
+                throw new Error("Found action with undefined action type");
+            }
+            return {
+                id: serializeOptimalAction(action),
+                action
+            };
+        })
+        .filter((action) => !node.children.has(action.id));
+
+
+    const action = untriedActions[Math.floor(Math.random() * untriedActions.length)];
+    if(!action) {
+        const amountOfDuplicateCardsInHand = player.hand.reduce((count, card, index, array) => {
+            const duplicates = array.filter((item) => item.id === card.id).length;
+            return duplicates > 1 ? count + 1 / duplicates : count;
+        }, 0);
+        debugger
+    }
+    // console.log('untriedActions', untriedActions.map((ut) => ut.action.action))
+    // console.log('chosen action', action.action.action)
+    let newState = defineNextState(action.action, player, hostilePlayer)
+    const childNode = new MCTSNode(newState, node, action);
+    node.children.set(action.id, childNode);
+    return childNode;
+};
+
+const defineNextState = (action: {
+    card?: Card;
+    action: Actions;
+    stats?: { power: number } | undefined
+}, player: Player, hostilePlayer: Player) => {
+    switch (action.action) {
+        case "INK_CARD":
+            return {
+                player: defineNextStatesByInkingCard({...player}, [...hostilePlayer.activeRow]),
+                hostilePlayer: defineState({...player}, [...hostilePlayer.activeRow])
+            }
+        case "CHALLENGE":
+            return defineNextStatesByChallengingCards(
+                {...player},
+                action,
+                defineState({...player}, [...hostilePlayer.activeRow]),
+                defineState({...hostilePlayer}, [...player.activeRow]),
+                hostilePlayer.activeRow)
+        case "QUEST":
+            return {
+                player: defineNextStateByQuesting({...player}, defineState({...player}, [...hostilePlayer.activeRow]), action.card!),
+                hostilePlayer: defineState({...hostilePlayer}, [...player.activeRow])
+            }
+        case "PLAY_CARD":
+            return {
+                player: defineNextStateByPlayingCard({...player}, action.card!, [...hostilePlayer.activeRow]),
+                hostilePlayer: defineState({...hostilePlayer}, [...player.activeRow])
+            }
+        case "END_TURN":
+            return {
+                player: defineState(player, hostilePlayer.activeRow),
+                hostilePlayer: defineState(hostilePlayer, player.activeRow)
+            }
+        default:
+            throw new Error(`Unhandled action type: ${action.action}`);
+    }
+}
+
+
+export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]) => {
+    const possibleActions = definePossibleActionsWithoutEndTurn(player, opposingActiveRow);
 
     const allActions: {
         card?: Card,
+        cardIdx?: number,
         action: Actions,
         stats?: {
             power: number
@@ -46,41 +193,35 @@ export const defineActionsByOptimalState = (player: Player, opposingActiveRow: C
         stats: undefined,
     },
         ...possibleActions.QUEST.map(cardForAction => ({
+            cardIdx: player.activeRow.indexOf(cardForAction),
             card: cardForAction,
             action: "QUEST" as Actions,
         })),
         ...possibleActions.CHALLENGE.map(cardForAction => ({
+            cardIdx: player.activeRow.indexOf(cardForAction),
             card: cardForAction,
             action: "CHALLENGE" as Actions,
         })),
         ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
+            cardIdx: player.hand.indexOf(cardForAction),
             card: cardForAction,
             action: "INK_CARD" as Actions
         })),
         ...possibleActions.PLAY_CARD.map(cardForAction => ({
+            cardIdx: player.hand.indexOf(cardForAction),
             card: cardForAction,
             action: "PLAY_CARD" as Actions,
         })),
     ];
-    let chosenAction = undefined
-    if (Math.random() < explorationRate) {
-        chosenAction = chooseOptimalAction(gameState, [allActions[Math.floor(Math.random() * allActions.length)]], qState, opposingActiveRow)
-    } else {
-        const bestAction = chooseOptimalAction(gameState, allActions, qState, opposingActiveRow)
-        if (!bestAction) throw new Error('Something went wrong chosing best action')
-        else chosenAction = bestAction
-    }
 
-    if (!chosenAction) throw new Error('Something went wrong chosing best action')
-
-    return chosenAction
+    return allActions
 }
 
 
 export const defineState = (player: Player, opposingPlayerActiveRow: Card[]): PlayerGameState => {
     return {
         // alreadyInked: player.alreadyInkedThisTurn,
-        // deckCount: player.deck.length,
+        deckCount: defineDeckAmountRange(player.deck.length),
         fieldState: defineFieldState(player.activeRow),
         hand: defineHandState(player, opposingPlayerActiveRow),
         inkTotal: player.inkTotal,
@@ -90,7 +231,7 @@ export const defineState = (player: Player, opposingPlayerActiveRow: Card[]): Pl
 
 export const defineFieldState = (activeRow: Card[]): FieldState => {
     return {
-        totalReadiedCards: activeRow.length,
+        totalReadiedCards: defineCardAmountRange(activeRow.filter((c) => c.readied).length),
         totalLore: activeRow.map((c) => c.lore).reduce((c, n) => c + n, 0),
         totalStrength: activeRow.map((c) => c.strength).reduce((c, n) => c + n, 0),
         totalWillpower: activeRow.map((c) => c.willpower).reduce((c, n) => c + n, 0)
@@ -100,7 +241,7 @@ export const defineFieldState = (activeRow: Card[]): FieldState => {
 export const defineHandState = (player: Player, opposingPlayerActiveRow: Card[]) => {
     // let possibleActions = defineOptimalAction(player, opposingPlayerActiveRow);
     const handState: HandState = {
-        amount: player.hand.length,
+        handSizeRange: defineCardAmountRange(player.hand.length),
         // amountInkable: possibleActions.INK_CARD.length,
         // amountThatCanBePlayed: possibleActions.PLAY_CARD.length,
         // totalCardCost: player.hand.map((c) => c.inkCost).reduce((current, next) => current + next, 0),
@@ -114,62 +255,48 @@ export const serializeState = (state: { player: PlayerGameState, hostilePlayer: 
 }
 
 export const serializeOptimalAction = (optimalAction: {
+    cardIdx?: number,
+    card?: Card,
     action: Actions,
     stats?: { power: number } | undefined
 }) => {
-    if (optimalAction.stats) {
+    if (optimalAction.stats && optimalAction.card?.id) {
+        return `${optimalAction.action}-${optimalAction.card.id}-${optimalAction.cardIdx}-${optimalAction.stats.power}`
+    } else if (optimalAction.stats) {
         return `${optimalAction.action}-${optimalAction.stats.power}`
+    } else if (optimalAction.card?.id) {
+        return `${optimalAction.action}-${optimalAction.card.id}-${optimalAction.cardIdx}`
     } else {
         return `${optimalAction.action}`
     }
 }
 
-export const deserializeOptimalAction = (serializedOptimalAction: string): {
-    action: Actions,
-    stats?: { power: number } | undefined
-} => {
-    const parts = serializedOptimalAction.split('-');
-
-    // Handle cases without stats (no stats means the string ends with '}')
-    if (parts.length === 1) {
-        return {
-            action: parts[0] as Actions
-        };
+function defineNextStatesByInkingCard(player: Player, opposingActiveRow: Card[]): PlayerGameState {
+    const playerGameState = defineState(player, opposingActiveRow);
+    return {
+        ...playerGameState,
+        inkTotal: playerGameState.inkTotal + 1,
+        hand: {...playerGameState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)}
     }
 
-    // Extract parts
-    const [action, power] = parts;
 
-    // Parse optional stats (removing the trailing '-' if present)
-    const powerDes = power && power !== '' ? parseInt(power.replace('-', ''), 10) : undefined;
-    return {
-        action: action as Actions,
-        stats: powerDes ? {
-            power: powerDes
-        } : undefined
-    };
 }
 
-function defineNextStatesByInkingCard(currentState: PlayerGameState): PlayerGameState {
-    return {
-        ...currentState,
-        inkTotal: currentState.inkTotal + 1,
-        hand: {...currentState.hand, amount: currentState.hand.amount - 1}
-    }
-}
-
-function defineNextStatesByChallengingCards(action: {
-    card?: Card,
-    action: Actions
-}, clonedPlayerState: PlayerGameState, clonedHostileState: PlayerGameState, opposingRow: Card[]) {
-    return eligibleTargets(opposingRow).map((target, idx) => {
+function defineNextStatesByChallengingCards(
+    player: Player,
+    action: {
+        card?: Card,
+        action: Actions
+    }, clonedPlayerState: PlayerGameState, clonedHostileState: PlayerGameState, opposingRow: Card[]) {
+    if (eligibleTargets(opposingRow)) {
+        const target = optimalChallengeTarget(opposingRow, action.card!)!;
         const card = {...action.card!}
         const newPlayerState = {...clonedPlayerState}
         const newHostilePlayerState = {...clonedHostileState}
         if (card.strength >= target.willpower - target.damage) {
             newHostilePlayerState.fieldState = {
                 totalLore: newHostilePlayerState.fieldState.totalLore - target.lore,
-                totalReadiedCards: target.readied ? newHostilePlayerState.fieldState.totalReadiedCards - 1 : newHostilePlayerState.fieldState.totalReadiedCards,
+                totalReadiedCards: target.readied ? defineCardAmountRange(player.activeRow.filter((c) => c.readied).length - 1) : defineCardAmountRange(player.activeRow.filter((c) => c.readied).length),
                 totalStrength: newHostilePlayerState.fieldState.totalStrength - target.strength,
                 totalWillpower: newHostilePlayerState.fieldState.totalWillpower - target.willpower
             }
@@ -194,92 +321,12 @@ function defineNextStatesByChallengingCards(action: {
             }
         }
         return {
-            nextSerializedState: serializeState({
-                player: newPlayerState,
-                hostilePlayer: newHostilePlayerState
-            }),
-            action,
-            targetIndex: idx
+            player: newPlayerState,
+            hostilePlayer: newHostilePlayerState
         }
-    })
-}
-
-
-// PARTLY DEPRECATED
-export const chooseOptimalAction = (currentStates: {
-    player: PlayerGameState,
-    hostilePlayer: PlayerGameState
-}, allPossibleActions: {
-    card?: Card,
-    action: Actions
-}[], qState: Record<string, number>, opposingRow: Card[]) => {
-    const clonedPlayerState = {...currentStates.player}
-    const clonedHostileState = {...currentStates.hostilePlayer}
-    const actionsAndTheirNextState: {
-        nextSerializedState: string;
-        action: { card?: Card; action: "INK_CARD" | "CHALLENGE" | "QUEST" | "PLAY_CARD" | "END_TURN" };
-        targetIndex?: number;
-    }[] = allPossibleActions.flatMap((action) => {
-        const clonedAction = {...action};
-        switch (clonedAction.action) {
-            case "INK_CARD": {
-                const nextPlayerStateByInking = defineNextStatesByInkingCard(clonedPlayerState);
-                return [{
-                    nextSerializedState: serializeState({
-                        player: nextPlayerStateByInking,
-                        hostilePlayer: clonedHostileState
-                    }),
-                    action: clonedAction
-                }];
-            }
-            case "CHALLENGE": {
-                return defineNextStatesByChallengingCards(
-                    clonedAction,
-                    clonedPlayerState,
-                    clonedHostileState,
-                    [...opposingRow]
-                ).map(state => ({...state, targetIndex: state.targetIndex ?? undefined}));
-            }
-            case "QUEST": {
-                const nextPlayerStateByQuesting = defineNextStateByQuesting(clonedPlayerState, action.card!);
-                return [{
-                    nextSerializedState: serializeState({
-                        player: nextPlayerStateByQuesting,
-                        hostilePlayer: clonedHostileState
-                    }),
-                    action: clonedAction
-                }];
-            }
-            case "PLAY_CARD": {
-                const nextPlayerStateByPlayingCard = defineNextStateByPlayingCard(clonedPlayerState, action.card!);
-                return [{
-                    nextSerializedState: serializeState({
-                        player: nextPlayerStateByPlayingCard,
-                        hostilePlayer: clonedHostileState
-                    }),
-                    action: clonedAction
-                }];
-            }
-            case "END_TURN": {
-                return [{
-                    nextSerializedState: serializeState({
-                        player: clonedPlayerState,
-                        hostilePlayer: clonedHostileState
-                    }),
-                    action: clonedAction
-                }];
-            }
-        }
-    });
-
-    const actionStateAndQValue = actionsAndTheirNextState.map((actionAndState) => ({
-        ...actionAndState,
-        qValue: qState[actionAndState.nextSerializedState] === undefined ? 0 : qState[actionAndState.nextSerializedState]
-    }));
-
-    return actionStateAndQValue.reduce((highest, current) =>
-        current.qValue > highest.qValue ? current : highest
-    );
+    } else {
+        return {player: clonedPlayerState, hostilePlayer: clonedHostileState}
+    }
 }
 
 export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard: Card) => {
@@ -333,45 +380,29 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
     }
 }
 
-export function writeQstateToFile(agentName: string, qStateObject: Record<string, number>) {
-    // Write the trends to a JSON file
-    const outputPath = path.join(__dirname, '..', 'data', `${agentName}_qstate.json`);
-    // save data to json files
-    try {
-        fs.mkdirSync(path.dirname(outputPath), {recursive: true}); // Ensure the directory exists
-        fs.writeFileSync(outputPath, JSON.stringify(qStateObject, null, 2), 'utf-8');
-        console.log(`Q-state successfully written to ${outputPath}`);
-    } catch (error: any) {
-        console.error(`Failed to write trends to file: ${error.message}`);
-    }
-}
-
-function defineNextStateByQuesting(clonedPlayerState: {
-    hand: HandState;
-    inkTotal: number;
-    fieldState: FieldState;
-    loreCount: number;
-}, card: Card) {
+function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGameState, card: Card) {
     return {
         ...clonedPlayerState,
         loreCount: clonedPlayerState.loreCount + card.lore,
         fieldState: {
             ...clonedPlayerState.fieldState,
-            totalReadiedCards: clonedPlayerState.fieldState.totalReadiedCards - 1
+            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length - 1)
         }
     }
 }
 
-function defineNextStateByPlayingCard(clonedPlayerState: PlayerGameState, card: Card) {
+function defineNextStateByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
+    const clonedPlayerState = defineState(player, opposingActiveRow)
     return {
         ...clonedPlayerState,
-        hand: {amount: clonedPlayerState.hand.amount - 1},
+        deckCount: defineDeckAmountRange(player.deck.length - 1),
+        hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
         fieldState: {
             ...clonedPlayerState.fieldState,
             totalLore: clonedPlayerState.fieldState.totalLore + card.lore,
             totalWillpower: clonedPlayerState.fieldState.totalWillpower + card.willpower,
             totalStrength: clonedPlayerState.fieldState.totalStrength + card.strength,
-            totalReadiedCards: clonedPlayerState.fieldState.totalReadiedCards + 1,
+            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + 1),
         }
     }
 }
