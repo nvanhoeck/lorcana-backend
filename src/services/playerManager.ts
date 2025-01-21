@@ -28,8 +28,8 @@ export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {
 
 export const inkCard = (hand: Card[], cardToBeInkedCard: Card, inkwell: number, cardInInkRow: number) => {
     if(cardToBeInkedCard.inkable) {
-        const indexOfInkedCard = hand.indexOf((cardToBeInkedCard))
-        hand.splice(indexOfInkedCard, 1)[0];
+        const indexOfCard = hand.findIndex((c) => c.id === cardToBeInkedCard.id)
+        hand.splice(indexOfCard, 1)[0];
         return {inkwell: inkwell +1, cardInInkRow: cardInInkRow +1}
     } else {
         throw new Error(`Cannot ink ${cardToBeInkedCard.name} ${cardToBeInkedCard.subName}`)
@@ -38,7 +38,7 @@ export const inkCard = (hand: Card[], cardToBeInkedCard: Card, inkwell: number, 
 
 export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlayed: Card, inkwell: number) => {
     if(cardToBePlayed.inkCost <= inkwell) {
-        const indexOfCard = hand.indexOf(cardToBePlayed)
+        const indexOfCard = hand.findIndex((c) => c.id === cardToBePlayed.id)
         transferElement(hand, waitingRow, indexOfCard)
         return inkwell - cardToBePlayed.inkCost
     } else {
@@ -49,7 +49,7 @@ export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlay
 
 export const playNonCharacterCard = (hand: Card[], banishedPile: Card[], cardToBePlayed: Card, inkwell: number) => {
     if(cardToBePlayed.inkCost <= inkwell) {
-        const indexOfCard = hand.indexOf(cardToBePlayed)
+        const indexOfCard = hand.findIndex((c) => c.id === cardToBePlayed.id)
         transferElement(hand, banishedPile, indexOfCard)
         return inkwell - cardToBePlayed.inkCost
     } else {
@@ -88,7 +88,7 @@ export const isSuccumbed = (card: Card) => {
 
 export const banishIfSuccumbed = (card: Card, originalRow: Card[], banishedPile: Card[]) => {
     if(card.damage >= card.willpower) {
-        const indexOfCard = originalRow.indexOf(card)
+        const indexOfCard = originalRow.findIndex((c) => c.id === card.id)
         transferElement(originalRow, banishedPile, indexOfCard)
     }
 }
