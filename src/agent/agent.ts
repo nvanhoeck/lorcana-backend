@@ -89,7 +89,7 @@ export class Agent {
         }
         if (newTurn) {
             if(!firstPlayerFirstTurn) {
-                console.log('Drawing card')
+                console.log('DRAWING CARD')
                 drawCard(this.player.deck, this.player.hand)
             }
         }
@@ -99,9 +99,9 @@ export class Agent {
         };
 
 
-        const mctsNode = await determineNextActionBasedByCurrentGameState(this.player, this.getHostilePlayer());
+        const mctsNode = await determineNextActionBasedByCurrentGameState({...this.player}, {...this.getHostilePlayer()});
         this.turnRootNodes[this.turnRootNodes.length - 1].push(mctsNode)
-        // TODO and later backpropagate
+        console.log('chosen action', mctsNode.action!.action.action)
         if (mctsNode.action) {
             executeAction(mctsNode.action?.action.action, this.player, this.getHostilePlayer(), mctsNode.action?.action.card)
             if (mctsNode.action.action.action !== 'END_TURN') {

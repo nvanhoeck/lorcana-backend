@@ -154,36 +154,37 @@ export function resetInkTotal(player: Player) {
 
 
 export const executeAction = (action: Actions, player: Player, hostilePlayer: Player, card?: Card | undefined) => {
+    const cardToBeUsed = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand.find((c) => c.id === card?.id && c.readied) : player.activeRow.find((c) => c.id === card?.id && c.readied)
     // console.log(action, card?.name, card?.subName)
     switch (action) {
         case "INK_CARD":
-            const result = inkCard(player.hand, card!, player.inkTotal, player.cardInInkRow);
+            const result = inkCard(player.hand, cardToBeUsed!, player.inkTotal, player.cardInInkRow);
             player.inkTotal = result.inkwell
             player.cardInInkRow = result.cardInInkRow
             player.alreadyInkedThisTurn = true
             break;
         case "CHALLENGE":
             // TODO do not make predefined choices (agent as well?)
-            const challengeTarget = optimalChallengeTarget(hostilePlayer.activeRow, card!);
+            const challengeTarget = optimalChallengeTarget(hostilePlayer.activeRow, cardToBeUsed!);
             if (!challengeTarget) {
                 throw new Error('Defending character is undefined for challenge')
             }
-            challengeCharacter(card!, challengeTarget)
+            challengeCharacter(cardToBeUsed!, challengeTarget)
             // TODO not the right place to do this
-            banishIfSuccumbed(card!, player.activeRow, player.banishedPile)
+            banishIfSuccumbed(cardToBeUsed!, player.activeRow, player.banishedPile)
             banishIfSuccumbed(challengeTarget, hostilePlayer.activeRow, hostilePlayer.banishedPile)
             break;
         case "QUEST":
-            quest(card!, player)
+            quest(cardToBeUsed!, player)
             break;
         case "PLAY_CARD":
-            if (card!.type === 'Character') {
-                player.inkTotal = playCharacterCard(player.hand, player.waitRow, card!, player.inkTotal)
-            } else if (card!.type === 'Action' || card!.type === 'Song') {
+            if (cardToBeUsed!.type === 'Character') {
+                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardToBeUsed!, player.inkTotal)
+            } else if (cardToBeUsed!.type === 'Action' || cardToBeUsed!.type === 'Song') {
                 //TODO improve playing a song
-                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, card!, player.inkTotal)
+                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardToBeUsed!, player.inkTotal)
             } else {
-                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, card!, player.inkTotal)
+                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardToBeUsed!, player.inkTotal)
             }
             break;
         case "END_TURN":

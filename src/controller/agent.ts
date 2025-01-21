@@ -17,7 +17,7 @@ router.post('/determine-action', async (req: express.Request<{}, {}, DetermineAg
         const game = body.game
         const currentActivePlayer = game.playerOne.name === game.playerTurn ? game.playerOne : game.playerTwo
         const currentHostilePlayer = game.playerOne.name === game.playerTurn ? game.playerTwo : game.playerOne
-        const chosenNode = await determineNextActionBasedByCurrentGameState(currentActivePlayer, currentHostilePlayer);
+        const chosenNode = await determineNextActionBasedByCurrentGameState({...currentActivePlayer}, {...currentHostilePlayer});
         if (chosenNode.action!.action.action === 'CHALLENGE') {
             const activeRow = game.playerTurn === game.playerOne.name ? game.playerTwo.activeRow : game.playerOne.activeRow;
             optimalChallengeTarget(activeRow, chosenNode.action!.action.card!)

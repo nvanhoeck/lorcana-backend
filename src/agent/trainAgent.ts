@@ -82,6 +82,8 @@ export const trainAgent = async () => {
             game.playerTurn = playerTwo
             await doTurn(agentTwo, agentOne)
             turnCount++
+            printGameDetails([game.playerOne, game.playerTwo])
+            console.log(turnCount)
             if (hasEnded(game)) {
                 break
             }

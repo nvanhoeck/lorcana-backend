@@ -14,6 +14,8 @@ import {definePossibleActionsWithoutEndTurn} from "../functions";
 import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
 import {sumByProperty} from "../functions/sumByProperty";
+import {deepClone} from "../functions/deepClone";
+
 
 const defineDeckPenalty = (deckCount: DeckAmountRange) => {
     switch (deckCount) {
@@ -42,29 +44,24 @@ const defineReward = (player: Player, hostilePlayer: Player) => {
     const deckPenalty = defineDeckPenalty(playerGameState.deckCount)
     const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, hostilePlayer.hand.length)
     const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
-    const inkDifference = player.inkTotal - hostilePlayer.inkTotal
+    const inkDifference = player.cardInInkRow - hostilePlayer.cardInInkRow
     const playerStatTotal = sumByProperty(player.activeRow, 'lore') + sumByProperty(player.activeRow, 'willpower') + sumByProperty(player.activeRow, 'strength') + sumByProperty(player.waitRow, 'lore') + sumByProperty(player.waitRow, 'willpower') + sumByProperty(player.waitRow, 'strength')
     const hostilePlayerStatTotal = sumByProperty(hostilePlayer.activeRow, 'lore') + sumByProperty(hostilePlayer.activeRow, 'willpower') + sumByProperty(hostilePlayer.activeRow, 'strength') + sumByProperty(hostilePlayer.waitRow, 'lore') + sumByProperty(hostilePlayer.waitRow, 'willpower') + sumByProperty(hostilePlayer.waitRow, 'strength')
     // return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
-    return  5 * loreCount - 2 * deckPenalty + 3 * inkDifference;
+    return loreCount + deckPenalty + inkDifference + hostilePlayerStatTotal;
 };
 
 const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
-    let currentNode = node
-    let clonedPlayer = {...player}
-    let clonedHostilePlayer = {...hostilePlayer}
-    if (currentNode.action) {
-        while (!currentNode.action) {
-            const validActions = flatMapPossibleActions(clonedPlayer, clonedHostilePlayer.activeRow)
-            const randomAction = validActions[Math.floor(Math.random() * validActions.length)];
-            executeAction(randomAction.action, clonedPlayer, clonedHostilePlayer)
-        }
-        return defineReward(player, hostilePlayer)
+    // console.log('Simulating...')
+    if (node.action) {
+        executeAction(node.action!.action.action, player, hostilePlayer, node.action?.action.card)
     } else throw new Error('No action for node found')
 };
 
 const backPropagate = (node: MCTSNode, reward: number) => {
     let current: MCTSNode | null = node;
+
+    console.log(node.action?.action.action, reward)
 
     while (current) {
         current.visits += 1;
@@ -74,71 +71,70 @@ const backPropagate = (node: MCTSNode, reward: number) => {
 };
 
 export const determineNextActionBasedByCurrentGameState = async (player: Player, hostilePlayer: Player) => {
+    // console.log('Root')
     const root = new MCTSNode({
         player: defineState(player, hostilePlayer.activeRow),
         hostilePlayer: defineState(hostilePlayer, player.activeRow)
     })
-    // console.log('Root state')
-    for (let i = 0; i < 1000; i++) {
-        // console.log('Selecting...')
-        const leaf = select(root, player, hostilePlayer)
-        // console.log('Selected leaf:', leaf.action?.action.action);
-        // console.log('Simulation')
-        const reward = simulate(player, hostilePlayer, leaf)
-        // console.log('Back propagate')
-        backPropagate(leaf, reward)
-    }
-
-    return root.bestChild()
+    // We select the best option
+    select(root, player, hostilePlayer)
+    const bestChild = root.bestChild();
+    return bestChild
 }
 
 const select = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+    // console.log('Selecting...')
     let current = node
-    if (!current.isFullyExpanded({...player}, [...hostilePlayer.activeRow])) {
-        // console.log('Not fully expanded')
-        const mctsNode = expand(current, {...player}, {...hostilePlayer});
-        // console.log('Selected expanded node:', mctsNode.action?.action.action)
-        return mctsNode
-    } else {
-        // console.log('Fully expanded')
-        const bestChild = current.bestChild();
-        // console.log('Best child', bestChild.action?.action.action)
-        return bestChild;
-    }
+    // We iterate over all the options available and simulate them
+    // By expanding, we add all options as children to the current node
+    expand(current, player, hostilePlayer)
+    // Once this is done, we return the best child
+    return current.bestChild()
 };
 
 const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+    // console.log('Expanding...')
+    // We get all the actions
     const allActions = flatMapPossibleActions(player, hostilePlayer.activeRow);
     if (!allActions.find((a) => a.action === 'END_TURN')) {
         throw new Error('No end turn action found')
     }
-    const untriedActions = allActions
-        .map((action) => {
-            if (!action.action) {
-                throw new Error("Found action with undefined action type");
-            }
-            return {
+    // For each of the actions, except for end_turn, we simulate and we select again. We picked end_turn, the reward is defined and backpropagated
+    allActions
+        .filter((a) => a.action !== 'END_TURN')
+        .forEach((action) => {
+            const actionWithId = {
                 id: serializeOptimalAction(action),
                 action
-            };
+            }
+            // We apply the action to simulate the result
+            let newState = defineNextState(action, player, hostilePlayer)
+            const childNode = new MCTSNode(newState, node, actionWithId);
+            node.children.set(actionWithId.id, childNode);
+            const clonedPlayer = deepClone(player)
+            const clonedHostilePlayer = deepClone(hostilePlayer)
+            simulate(clonedPlayer, clonedHostilePlayer, childNode)
+            // Now we select and expand all the children of the next node
+            select(childNode, clonedPlayer, clonedHostilePlayer)
         })
-        .filter((action) => !node.children.has(action.id));
 
-
-    const action = untriedActions[Math.floor(Math.random() * untriedActions.length)];
-    if (!action) {
-        const amountOfDuplicateCardsInHand = player.hand.reduce((count, card, index, array) => {
-            const duplicates = array.filter((item) => item.id === card.id).length;
-            return duplicates > 1 ? count + 1 / duplicates : count;
-        }, 0);
+    // console.log('All actions performed, doing an end_turn')
+    const endTurnAction = allActions.find((a) => a.action === 'END_TURN')!;
+    const actionWithId = {
+        id: serializeOptimalAction(endTurnAction),
+        action: endTurnAction
+    }
+    // We do an end turn, which triggers a reward and backpropagation
+    let newState = defineNextState(endTurnAction, player, hostilePlayer)
+    const childNode = new MCTSNode(newState, node, actionWithId);
+    node.children.set(actionWithId.id, childNode);
+    const clonedPlayer = deepClone(player)
+    const clonedHostilePlayer = deepClone(hostilePlayer)
+    simulate(clonedPlayer, clonedHostilePlayer, childNode)
+    backPropagate(childNode, defineReward(clonedPlayer, clonedHostilePlayer))
+    if(node.parent === null) {
         debugger
     }
-    // console.log('untriedActions', untriedActions.map((ut) => ut.action.action))
-    // console.log('chosen action', action.action.action)
-    let newState = defineNextState(action.action, player, hostilePlayer)
-    const childNode = new MCTSNode(newState, node, action);
-    node.children.set(action.id, childNode);
-    return childNode;
 };
 
 const defineNextState = (action: {
@@ -149,25 +145,25 @@ const defineNextState = (action: {
     switch (action.action) {
         case "INK_CARD":
             return {
-                player: defineNextStatesByInkingCard({...player}, [...hostilePlayer.activeRow]),
-                hostilePlayer: defineState({...player}, [...hostilePlayer.activeRow])
+                player: defineNextStatesByInkingCard(deepClone(player), deepClone(hostilePlayer.activeRow)),
+                hostilePlayer: defineState(deepClone(player), deepClone(hostilePlayer.activeRow))
             }
         case "CHALLENGE":
             return defineNextStatesByChallengingCards(
-                {...player},
+                deepClone(player),
                 action,
-                defineState({...player}, [...hostilePlayer.activeRow]),
-                defineState({...hostilePlayer}, [...player.activeRow]),
+                defineState(deepClone(player), deepClone(hostilePlayer.activeRow)),
+                defineState(deepClone(hostilePlayer), deepClone(player.activeRow)),
                 hostilePlayer.activeRow)
         case "QUEST":
             return {
-                player: defineNextStateByQuesting({...player}, defineState({...player}, [...hostilePlayer.activeRow]), action.card!),
-                hostilePlayer: defineState({...hostilePlayer}, [...player.activeRow])
+                player: defineNextStateByQuesting(deepClone(player), defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), action.card!),
+                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
             }
         case "PLAY_CARD":
             return {
-                player: defineNextStateByPlayingCard({...player}, action.card!, [...hostilePlayer.activeRow]),
-                hostilePlayer: defineState({...hostilePlayer}, [...player.activeRow])
+                player: defineNextStateByPlayingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)),
+                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
             }
         case "END_TURN":
             return {
@@ -294,9 +290,9 @@ function defineNextStatesByChallengingCards(
     }, clonedPlayerState: PlayerGameState, clonedHostileState: PlayerGameState, opposingRow: Card[]) {
     if (eligibleTargets(opposingRow)) {
         const target = optimalChallengeTarget(opposingRow, action.card!)!;
-        const card = {...action.card!}
-        const newPlayerState = {...clonedPlayerState}
-        const newHostilePlayerState = {...clonedHostileState}
+        const card = deepClone(action.card!)
+        const newPlayerState = deepClone(clonedPlayerState)
+        const newHostilePlayerState = deepClone(clonedHostileState)
         if (card.strength >= target.willpower - target.damage) {
             newHostilePlayerState.fieldState = {
                 totalLore: newHostilePlayerState.fieldState.totalLore - target.lore,
