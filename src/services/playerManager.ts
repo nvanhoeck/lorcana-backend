@@ -26,7 +26,8 @@ export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {
 
 }
 
-export const inkCard = (hand: Card[], cardToBeInkedCard: Card, inkwell: number, cardInInkRow: number) => {
+export const inkCard = (hand: Card[], cardToBeInkedCardIdx: number, inkwell: number, cardInInkRow: number) => {
+    const cardToBeInkedCard = hand[cardToBeInkedCardIdx]
     if(cardToBeInkedCard.inkable) {
         const indexOfCard = hand.findIndex((c) => c.id === cardToBeInkedCard.id)
         hand.splice(indexOfCard, 1)[0];
@@ -36,7 +37,8 @@ export const inkCard = (hand: Card[], cardToBeInkedCard: Card, inkwell: number, 
     }
 }
 
-export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlayed: Card, inkwell: number) => {
+export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlayedIdx: number, inkwell: number) => {
+    const cardToBePlayed = hand[cardToBePlayedIdx]
     if(cardToBePlayed.inkCost <= inkwell) {
         const indexOfCard = hand.findIndex((c) => c.id === cardToBePlayed.id)
         transferElement(hand, waitingRow, indexOfCard)
@@ -47,7 +49,8 @@ export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlay
     }
 }
 
-export const playNonCharacterCard = (hand: Card[], banishedPile: Card[], cardToBePlayed: Card, inkwell: number) => {
+export const playNonCharacterCard = (hand: Card[], banishedPile: Card[], cardToBePlayedIdx: number, inkwell: number) => {
+    const cardToBePlayed = hand[cardToBePlayedIdx]
     if(cardToBePlayed.inkCost <= inkwell) {
         const indexOfCard = hand.findIndex((c) => c.id === cardToBePlayed.id)
         transferElement(hand, banishedPile, indexOfCard)
@@ -62,20 +65,30 @@ export const moveFromWaitingToActiveZone = (waitingZone: Card[], activeZone: Car
     transferLastElements(waitingZone, activeZone, waitingZone.length)
 }
 
-export const quest = (card: Card, player: Player) => {
-    if(card.type === "Character" && card.readied) {
-        player.loreCount += card.lore
-        card.readied = false
+export const quest = (activeRow: Card[], cardToBeQuestIdx: number, player: Player) => {
+    const cardToBeQuest = activeRow[cardToBeQuestIdx]
+    if(cardToBeQuest.type === "Character" && cardToBeQuest.readied) {
+        player.loreCount += cardToBeQuest.lore
+        cardToBeQuest.readied = false
     } else {
-        throw new Error(`Character ${card.name} ${card.subName} can not quest`)
+        throw new Error(`Character ${cardToBeQuest.name} ${cardToBeQuest.subName} can not quest`)
     }
 }
 
-export const challengeCharacter = (attackingCard: Card, defendingCard: Card) => {
-       if(attackingCard.type === 'Character' && defendingCard.type === 'Character') {
+export const challengeCharacter = (attackingActiveRow: Card[], attackingCardIdx: number, defendingActiveRow: Card[], defendingCardIdx: number) => {
+    const attackingCard = attackingActiveRow[attackingCardIdx]
+    const defendingCard = defendingActiveRow[defendingCardIdx]
+    // console.log(attackingCardIdx)
+    // console.log(attackingActiveRow.map((c) => c.name))
+    // console.log(attackingCard.name, attackingCard.subName)
+    // console.log(defendingCardIdx)
+    // console.log(defendingActiveRow.map((c) => c.name))
+    // console.log(defendingCard.name, defendingCard.subName)
+    if(attackingCard.type === 'Character' && defendingCard.type === 'Character') {
         if(attackingCard.readied && !defendingCard.readied) {
             defendingCard.damage += attackingCard.strength
             attackingCard.damage += defendingCard.strength
+            attackingCard.readied = false
         }
     } else {
         throw new Error(`${attackingCard.name} ${attackingCard.subName} cannot attack ${defendingCard.name} ${defendingCard.subName}`)
@@ -86,7 +99,8 @@ export const isSuccumbed = (card: Card) => {
     return card.damage >= card.willpower
 }
 
-export const banishIfSuccumbed = (card: Card, originalRow: Card[], banishedPile: Card[]) => {
+export const banishIfSuccumbed = (cardIdx: number, originalRow: Card[], banishedPile: Card[]) => {
+    const card: Card = originalRow[cardIdx]
     if(card.damage >= card.willpower) {
         const indexOfCard = originalRow.findIndex((c) => c.id === card.id)
         transferElement(originalRow, banishedPile, indexOfCard)

@@ -38,7 +38,7 @@ export const testMCTS = async () => {
     do {
          nextNode = await determineNextActionBasedByCurrentGameState(player, hostilePlayer);
         if (nextNode.action) {
-            executeAction(nextNode.action?.action.action, player, hostilePlayer, nextNode.action?.action.card)
+            executeAction(nextNode.action?.action.action, player, hostilePlayer, nextNode.action?.action.cardIdx, nextNode.action.targetIdx)
         } else {
             throw new Error('Action not found for ' + nextNode.serializedState)
         }

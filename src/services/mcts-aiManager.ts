@@ -56,7 +56,7 @@ const defineReward = (player: Player, hostilePlayer: Player) => {
 const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
     // console.log('Simulating...')
     if (node.action) {
-        executeAction(node.action!.action.action, player, hostilePlayer, node.action?.action.card)
+        executeAction(node.action!.action.action, player, hostilePlayer, node.action?.action.cardIdx, node.action.action.targetIdx)
     } else throw new Error('No action for node found')
 };
 
@@ -97,6 +97,7 @@ const select = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
 const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     // console.log('Expanding...')
     // We get all the actions
+    // TODO define duplicate cards that do the same action (index based)
     const allActions = flatMapPossibleActions(player, hostilePlayer.activeRow);
     if (!allActions.find((a) => a.action === 'END_TURN')) {
         throw new Error('No end turn action found')
@@ -107,7 +108,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
         .forEach((action) => {
             const actionWithId = {
                 id: serializeOptimalAction(action),
-                action
+                action,
             }
             // We apply the action to simulate the result
             let newState = defineNextState(action, player, hostilePlayer)
@@ -135,7 +136,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     simulate(clonedPlayer, clonedHostilePlayer, childNode)
     backPropagate(childNode, defineReward(clonedPlayer, clonedHostilePlayer))
     if (node.parent === null) {
-        debugger
+        // debugger
     }
 };
 
@@ -182,6 +183,7 @@ export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]
     const possibleActions = definePossibleActionsWithoutEndTurn(player, opposingActiveRow);
 
     const allActions: {
+        targetIdx?: number
         card?: Card,
         cardIdx?: number,
         action: Actions,
@@ -201,6 +203,7 @@ export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]
             cardIdx: player.activeRow.indexOf(cardForAction),
             card: cardForAction,
             action: "CHALLENGE" as Actions,
+            targetIdx: opposingActiveRow.indexOf(optimalChallengeTarget(opposingActiveRow, cardForAction)!)
         })),
         ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
             cardIdx: player.hand.indexOf(cardForAction),
@@ -256,6 +259,7 @@ export const serializeState = (state: { player: PlayerGameState, hostilePlayer: 
     return JSON.stringify(state);
 }
 
+//TODO in the future add different targets as additional actions of challenge
 export const serializeOptimalAction = (optimalAction: {
     cardIdx?: number,
     card?: Card,
@@ -331,6 +335,7 @@ function defineNextStatesByChallengingCards(
     }
 }
 
+// TODO index based
 export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard: Card) => {
     //TODO take into consideration ward, evasive, bodyguard,... (gameMamanger, eligbleTargets)
     const eligibleTarget = eligibleTargets(opposingActiveRow)

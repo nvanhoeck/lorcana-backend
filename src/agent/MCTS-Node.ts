@@ -1,6 +1,5 @@
-import {Card, Player, PlayerGameState} from "../model";
+import {Card, PlayerGameState} from "../model";
 import {Actions} from "../data/actions";
-import {definePossibleActionsWithoutEndTurn} from "../functions";
 import {serializeState} from "../services/mcts-aiManager";
 
 export class MCTSNode {
@@ -13,7 +12,7 @@ export class MCTSNode {
     children: Map<string, MCTSNode>;
     visits: number;
     totalReward: number;
-    action: { id: string; action: { card?: Card; action: Actions; stats?: { power: number } | undefined } } | null
+    action: { id: string; action: { cardIdx?: number; card?: Card; action: Actions; stats?: { power: number } | undefined; targetIdx?:number }; } | null
 
     constructor(playerState: {
         player: PlayerGameState,
@@ -29,26 +28,6 @@ export class MCTSNode {
         this.visits = 0;
         this.totalReward = 0;
         this.action = action;
-    }
-
-    isFullyExpanded(player: Player, hostilePlayerActiveRow: Card[]): boolean {
-        const allPossibleActions = definePossibleActionsWithoutEndTurn(player, hostilePlayerActiveRow);
-        let amountOfPossibleActions = 0
-        Object.keys(allPossibleActions).forEach((key) => {
-            amountOfPossibleActions += allPossibleActions[key as keyof typeof allPossibleActions].length
-        })
-        if (amountOfPossibleActions === 0) {
-            // console.log('Ran out of possible actions')
-            // console.log(allPossibleActions)
-        }
-        const addTurnIncrementMissing = 1;
-        if (amountOfPossibleActions + addTurnIncrementMissing === this.children.size) {
-            // console.log('Amount of children matches amount of possible actions')
-            // console.log(allPossibleActions)
-            // console.log(amountOfPossibleActions)
-        }
-        // console.log(this.children.size, amountOfPossibleActions + addTurnIncrementMissing)
-        return this.children.size === amountOfPossibleActions + addTurnIncrementMissing;
     }
 
     bestChild(explorationParam = Math.sqrt(2)): MCTSNode {

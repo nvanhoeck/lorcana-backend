@@ -153,39 +153,45 @@ export function resetInkTotal(player: Player) {
 }
 
 
-export const executeAction = (action: Actions, player: Player, hostilePlayer: Player, card?: Card | undefined) => {
-    const cardToBeUsed = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand.find((c) => c.id === card?.id && c.readied) : player.activeRow.find((c) => c.id === card?.id && c.readied)
+export const executeAction = (action: Actions, player: Player, opposingPlayer: Player, cardIdx?: number, targetIndex?: number) => {
+    const card = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
     // console.log(action, card?.name, card?.subName)
     switch (action) {
         case "INK_CARD":
-            const result = inkCard(player.hand, cardToBeUsed!, player.inkTotal, player.cardInInkRow);
+            const result = inkCard(player.hand, cardIdx!, player.inkTotal, player.cardInInkRow);
             player.inkTotal = result.inkwell
             player.cardInInkRow = result.cardInInkRow
             player.alreadyInkedThisTurn = true
             break;
         case "CHALLENGE":
             // TODO do not make predefined choices (agent as well?)
-            const challengeTarget = optimalChallengeTarget(hostilePlayer.activeRow, cardToBeUsed!);
+            const challengeTarget = optimalChallengeTarget(opposingPlayer.activeRow, card!);
             if (!challengeTarget) {
                 throw new Error('Defending character is undefined for challenge')
             }
-            challengeCharacter(cardToBeUsed!, challengeTarget)
-            // TODO not the right place to do this
-            banishIfSuccumbed(cardToBeUsed!, player.activeRow, player.banishedPile)
-            banishIfSuccumbed(challengeTarget, hostilePlayer.activeRow, hostilePlayer.banishedPile)
+            challengeCharacter(player.activeRow, cardIdx!, opposingPlayer.activeRow, targetIndex!)
+            if (card!.readied) {
+                throw new Error('Not properly updated')
+            }
+            banishIfSuccumbed(cardIdx!, player.activeRow, player.banishedPile)
+            banishIfSuccumbed(targetIndex!, opposingPlayer.activeRow, opposingPlayer.banishedPile)
             break;
         case "QUEST":
-            quest(cardToBeUsed!, player)
+            quest(player.activeRow, cardIdx!, player)
+            if (card!.readied) {
+                throw new Error('Not properly updated')
+            }
             break;
         case "PLAY_CARD":
-            if (cardToBeUsed!.type === 'Character') {
-                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardToBeUsed!, player.inkTotal)
-            } else if (cardToBeUsed!.type === 'Action' || cardToBeUsed!.type === 'Song') {
+            if (card!.type === 'Character') {
+                player.inkTotal = playCharacterCard(player.hand, player.waitRow,cardIdx!, player.inkTotal)
+            } else if (card!.type === 'Action' || card!.type === 'Song') {
                 //TODO improve playing a song
-                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardToBeUsed!, player.inkTotal)
+                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
             } else {
-                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardToBeUsed!, player.inkTotal)
+                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
             }
+            return {activePlayer: player, opposingPlayer: opposingPlayer}
             break;
         case "END_TURN":
             // Do nothing
