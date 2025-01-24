@@ -8,7 +8,7 @@ export const parallelTrainAgent = async () => {
         return trainAgent().then();
     });
     await Promise.all(tasks);
-    console.log('All iterations complete')
+    // console.log('All iterations complete')
 }
 
 parallelTrainAgent().then()

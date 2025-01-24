@@ -2,6 +2,32 @@ import {Card, PlayerGameState} from "../model";
 import {Actions} from "../data/actions";
 import {serializeState} from "../services/mcts-aiManager";
 
+
+type SerializedMCTSNode = {
+    state: {
+        player: PlayerGameState;
+        hostilePlayer: PlayerGameState;
+    };
+    serializedState: string;
+    // parent: string | null; // References the serializedState of the parent node
+    children: {
+        key: string;
+        child: SerializedMCTSNode;
+    }[];
+    visits: number;
+    totalReward: number;
+    action: {
+        id: string;
+        action: {
+            cardIdx?: number;
+            card?: Card;
+            action: Actions;
+            stats?: { power: number } | undefined;
+            targetIdx?: number;
+        };
+    } | null;
+};
+
 export class MCTSNode {
     state: {
         player: PlayerGameState,
@@ -12,7 +38,16 @@ export class MCTSNode {
     children: Map<string, MCTSNode>;
     visits: number;
     totalReward: number;
-    action: { id: string; action: { cardIdx?: number; card?: Card; action: Actions; stats?: { power: number } | undefined; targetIdx?:number }; } | null
+    action: {
+        id: string;
+        action: {
+            cardIdx?: number;
+            card?: Card;
+            action: Actions;
+            stats?: { power: number } | undefined;
+            targetIdx?: number
+        };
+    } | null
 
     constructor(playerState: {
         player: PlayerGameState,
@@ -39,5 +74,20 @@ export class MCTSNode {
                 ? {node: child, uct: uctValue}
                 : best;
         }, {node: null, uct: -Infinity} as { node: MCTSNode | null; uct: number }).node!;
+    }
+
+    toJSON(): SerializedMCTSNode {
+        return {
+            state: this.state,
+            serializedState: this.serializedState,
+            // parent: this.parent ? this.parent.serializedState : null, // Prevent circular reference
+            children: Array.from(this.children.entries()).map(([key, child]) => ({
+                key,
+                child: child.toJSON() // Recursively serialize children
+            })),
+            visits: this.visits,
+            totalReward: this.totalReward,
+            action: this.action
+        }
     }
 }

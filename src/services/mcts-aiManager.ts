@@ -16,6 +16,26 @@ import {executeAction} from "./gameManager";
 import {sumByProperty} from "../functions/sumByProperty";
 import {deepClone} from "../functions/deepClone";
 
+const defineLoreCountRangeReward = (loreCount: number) => {
+    if (loreCount > 0 && loreCount < 5) {
+        return loreCount
+    }
+    if (loreCount >= 5 && loreCount < 10) {
+        return loreCount * 2
+    }
+    if (loreCount >= 10 && loreCount < 15) {
+        return loreCount * 3
+    }
+    if (loreCount >= 15 && loreCount < 20) {
+        return loreCount * 4
+    }
+    if (loreCount >= 20) {
+        return loreCount * 10
+    } else {
+        return loreCount
+    }
+};
+
 
 const defineDeckPenalty = (deckCount: DeckAmountRange) => {
     switch (deckCount) {
@@ -40,7 +60,7 @@ const defineRewardByHandSizeDifference = (playerLength: number, hostilePlayerLen
 
 const defineReward = (player: Player, hostilePlayer: Player) => {
     const playerGameState = defineState(player, hostilePlayer.activeRow)
-    const loreCount = playerGameState.loreCount
+    const loreCount = defineLoreCountRangeReward(playerGameState.loreCount)
     const deckPenalty = defineDeckPenalty(playerGameState.deckCount)
     const inkDifference = player.cardInInkRow - hostilePlayer.cardInInkRow
     const playerStatTotal = sumByProperty(player.activeRow, 'lore') + sumByProperty(player.activeRow, 'willpower') + sumByProperty(player.activeRow, 'strength') + sumByProperty(player.waitRow, 'lore') + sumByProperty(player.waitRow, 'willpower') + sumByProperty(player.waitRow, 'strength')
@@ -97,7 +117,6 @@ const select = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
 const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     // console.log('Expanding...')
     // We get all the actions
-    // TODO define duplicate cards that do the same action (index based)
     const allActions = flatMapPossibleActions(player, hostilePlayer.activeRow);
     if (!allActions.find((a) => a.action === 'END_TURN')) {
         throw new Error('No end turn action found')
@@ -136,6 +155,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     simulate(clonedPlayer, clonedHostilePlayer, childNode)
     backPropagate(childNode, defineReward(clonedPlayer, clonedHostilePlayer))
     if (node.parent === null) {
+        // console.log('Finished on root')
         // debugger
     }
 };
