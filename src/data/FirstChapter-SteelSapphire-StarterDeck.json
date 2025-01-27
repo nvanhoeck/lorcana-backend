@@ -3,13 +3,13 @@
     "player": {
       "deckCount": "30+",
       "fieldState": {
-        "totalReadiedCards": "1-2",
-        "totalLore": 1,
-        "totalStrength": 1,
-        "totalWillpower": 2
+        "totalReadiedCards": "0",
+        "totalLore": 0,
+        "totalStrength": 0,
+        "totalWillpower": 0
       },
       "hand": {
-        "handSizeRange": "3-4"
+        "handSizeRange": "5-7"
       },
       "inkTotal": 1,
       "loreCount": 0
@@ -29,24 +29,24 @@
       "loreCount": 0
     }
   },
-  "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"1-2\",\"totalLore\":1,\"totalStrength\":1,\"totalWillpower\":2},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":1,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+  "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":1,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
   "children": [
     {
-      "key": "END_TURN",
+      "key": "PLAY_CARD-001-145-0",
       "child": {
         "state": {
           "player": {
             "deckCount": "30+",
             "fieldState": {
-              "totalReadiedCards": "0",
-              "totalLore": 0,
-              "totalStrength": 0,
-              "totalWillpower": 0
+              "totalReadiedCards": "1-2",
+              "totalLore": 1,
+              "totalStrength": 2,
+              "totalWillpower": 2
             },
             "hand": {
               "handSizeRange": "3-4"
             },
-            "inkTotal": 0,
+            "inkTotal": 1,
             "loreCount": 0
           },
           "hostilePlayer": {
@@ -64,10 +64,125 @@
             "loreCount": 0
           }
         },
-        "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":0,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+        "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"1-2\",\"totalLore\":1,\"totalStrength\":2,\"totalWillpower\":2},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":1,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+        "children": [
+          {
+            "key": "END_TURN",
+            "child": {
+              "state": {
+                "player": {
+                  "deckCount": "30+",
+                  "fieldState": {
+                    "totalReadiedCards": "0",
+                    "totalLore": 0,
+                    "totalStrength": 0,
+                    "totalWillpower": 0
+                  },
+                  "hand": {
+                    "handSizeRange": "3-4"
+                  },
+                  "inkTotal": 0,
+                  "loreCount": 0
+                },
+                "hostilePlayer": {
+                  "deckCount": "30+",
+                  "fieldState": {
+                    "totalReadiedCards": "0",
+                    "totalLore": 0,
+                    "totalStrength": 0,
+                    "totalWillpower": 0
+                  },
+                  "hand": {
+                    "handSizeRange": "5-7"
+                  },
+                  "inkTotal": 0,
+                  "loreCount": 0
+                }
+              },
+              "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":0,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+              "children": [],
+              "visits": 1,
+              "totalReward": 6,
+              "action": {
+                "id": "END_TURN",
+                "action": {
+                  "action": "END_TURN"
+                }
+              }
+            }
+          }
+        ],
+        "visits": 1,
+        "totalReward": 6,
+        "action": {
+          "id": "PLAY_CARD-001-145-0",
+          "action": {
+            "cardIdx": 0,
+            "card": {
+              "id": "001-145",
+              "setId": 1,
+              "inkable": true,
+              "type": "Character",
+              "inkCost": 1,
+              "name": "Flounder",
+              "subName": "Voice of Reason",
+              "sphere": "Sapphire",
+              "strength": 2,
+              "willpower": 2,
+              "classification": [
+                "Storyborn",
+                "Ally"
+              ],
+              "lore": 1,
+              "movement": 0,
+              "keywords": [],
+              "damage": 0,
+              "readied": true,
+              "canBeReadiedDuringReadyPhase": false,
+              "abilities": []
+            },
+            "action": "PLAY_CARD"
+          }
+        }
+      }
+    },
+    {
+      "key": "END_TURN",
+      "child": {
+        "state": {
+          "player": {
+            "deckCount": "30+",
+            "fieldState": {
+              "totalReadiedCards": "0",
+              "totalLore": 0,
+              "totalStrength": 0,
+              "totalWillpower": 0
+            },
+            "hand": {
+              "handSizeRange": "5-7"
+            },
+            "inkTotal": 1,
+            "loreCount": 0
+          },
+          "hostilePlayer": {
+            "deckCount": "30+",
+            "fieldState": {
+              "totalReadiedCards": "0",
+              "totalLore": 0,
+              "totalStrength": 0,
+              "totalWillpower": 0
+            },
+            "hand": {
+              "handSizeRange": "5-7"
+            },
+            "inkTotal": 0,
+            "loreCount": 0
+          }
+        },
+        "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":1,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
         "children": [],
         "visits": 1,
-        "totalReward": 5,
+        "totalReward": 1,
         "action": {
           "id": "END_TURN",
           "action": {
@@ -77,39 +192,44 @@
       }
     }
   ],
-  "visits": 1,
-  "totalReward": 5,
+  "visits": 2,
+  "totalReward": 7,
   "action": {
-    "id": "PLAY_CARD-001-174-1",
+    "id": "INK_CARD-001-181-1",
     "action": {
       "cardIdx": 1,
       "card": {
-        "id": "001-174",
+        "id": "001-181",
         "setId": 1,
         "inkable": true,
         "type": "Character",
-        "inkCost": 1,
-        "name": "Captain Hook",
-        "subName": "Forceful Duelist",
+        "inkCost": 3,
+        "name": "Hercules",
+        "subName": "True Hero",
         "sphere": "Steel",
-        "strength": 1,
-        "willpower": 2,
+        "strength": 3,
+        "willpower": 3,
         "classification": [
           "Dreamborn",
-          "Villain",
-          "Pirate",
-          "Captain"
+          "Hero",
+          "Prince"
         ],
         "lore": 1,
         "movement": 0,
         "keywords": [
-          "Challenger"
+          "Bodyguard"
         ],
         "damage": 0,
         "readied": true,
-        "canBeReadiedDuringReadyPhase": false
+        "canBeReadiedDuringReadyPhase": false,
+        "abilities": [
+          {
+            "keyword": "Bodyguard",
+            "type": "keyword"
+          }
+        ]
       },
-      "action": "PLAY_CARD"
+      "action": "INK_CARD"
     }
   }
 }

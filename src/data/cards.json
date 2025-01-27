@@ -20,7 +20,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "VOICELESS",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-002",
@@ -45,7 +51,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Singer",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "MUSICAL DEBUT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-003",
@@ -70,7 +87,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Singer",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "A WONDERFUL DREAM",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-004",
@@ -95,7 +123,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "AND TWO FOR TEA!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-005",
@@ -121,7 +159,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "name": "SINISTER PLOT",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-006",
@@ -144,7 +193,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "WELL OF SOULS",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-007",
@@ -168,7 +223,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-008",
@@ -190,7 +251,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "LOYAL",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-009",
@@ -212,7 +279,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-010",
@@ -237,7 +305,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-011",
@@ -259,7 +337,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "HORSE KICK",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-012",
@@ -281,7 +365,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-013",
@@ -303,7 +388,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-014",
@@ -326,7 +412,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "WE CAN FIX IT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-015",
@@ -349,7 +441,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-016",
@@ -372,7 +465,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "HEROISM",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-017",
@@ -394,7 +493,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-018",
@@ -417,7 +517,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GLEAM AND GLOW",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-019",
@@ -441,7 +547,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Singer",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-020",
@@ -466,7 +579,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-021",
@@ -489,7 +608,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "OHANA",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-022",
@@ -512,7 +637,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-023",
@@ -537,7 +663,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "ADORING FANS",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-024",
@@ -559,7 +696,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "TASTES LIKE CHICKEN",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-025",
@@ -579,7 +722,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-026",
@@ -597,7 +745,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-027",
@@ -617,7 +766,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-028",
@@ -635,7 +789,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-029",
@@ -653,7 +808,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-030",
@@ -673,7 +829,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-031",
@@ -691,7 +852,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-032",
@@ -709,7 +871,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "STRAIGHTEN HAIR",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-033",
@@ -727,7 +895,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "BIRTHDAY LIGHTS",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-034",
@@ -745,7 +919,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "NOW, SING!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-035",
@@ -768,7 +948,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "LOVING HEART",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-036",
@@ -790,7 +976,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-037",
@@ -815,7 +1002,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "INTO THE SHADOWS",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-038",
@@ -840,7 +1038,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 2,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-039",
@@ -863,7 +1068,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DREAMS MADE REAL",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-040",
@@ -887,7 +1098,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-041",
@@ -911,7 +1123,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FREEZE",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-042",
@@ -937,7 +1155,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "name": "DEEP FREEZE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-043",
@@ -961,7 +1190,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "name": "DEXTEROUS LUNGE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-044",
@@ -984,7 +1223,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "HIDDEN WONDERS",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-045",
@@ -1009,7 +1254,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-046",
@@ -1033,7 +1285,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "SINISTER SLITHER",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-047",
@@ -1055,7 +1317,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SWEEP",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-048",
@@ -1078,7 +1346,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-049",
@@ -1101,7 +1370,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "CAST MY SPELL!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-050",
@@ -1123,7 +1398,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DURABLE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-051",
@@ -1145,7 +1426,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "ANIMATE BROOM",
+        "type": "static"
+      },
+      {
+        "name": "CEASELESS WORKER",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-052",
@@ -1167,7 +1458,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-053",
@@ -1189,7 +1481,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "CAMOUFLAGE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-054",
@@ -1214,7 +1512,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-055",
@@ -1236,7 +1540,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-056",
@@ -1259,7 +1564,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "I SUMMON THEE",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-057",
@@ -1281,7 +1592,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-058",
@@ -1306,7 +1618,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "LOYAL AND DEVOTED",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-059",
@@ -1329,7 +1651,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "IT'S TOO EASY!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-060",
@@ -1352,7 +1680,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "YOU'RE EXCUSED",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-061",
@@ -1377,7 +1711,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-062",
@@ -1395,7 +1740,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-063",
@@ -1413,7 +1759,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-064",
@@ -1433,7 +1780,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-065",
@@ -1453,7 +1805,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-066",
@@ -1471,7 +1828,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SPEAK!",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-067",
@@ -1489,7 +1852,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "PEER INTO THE DEPTHS",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-068",
@@ -1507,7 +1876,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "I'M LATE!",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-069",
@@ -1532,7 +1907,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Ward",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-070",
@@ -1557,7 +1938,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "name": "ROAR",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-071",
@@ -1578,7 +1969,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "LOSE SOMETHING?",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-072",
@@ -1600,7 +1997,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "YOU'LL BE SORRY!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-073",
@@ -1622,7 +2025,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-074",
@@ -1645,7 +2049,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "HERE COMES THE SMOLDER",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-075",
@@ -1669,7 +2079,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "DISAPPEAR",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-076",
@@ -1694,7 +2114,22 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "PHENOMENAL COSMIC POWER!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-077",
@@ -1716,7 +2151,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-078",
@@ -1739,7 +2175,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-079",
@@ -1761,7 +2198,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-080",
@@ -1783,7 +2221,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "YOU GOT A PROBLEM?",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-081",
@@ -1805,7 +2249,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "PUPPYNAPPING",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-082",
@@ -1830,7 +2280,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "PICK YOUR FIGHTS",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-083",
@@ -1853,7 +2309,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-084",
@@ -1877,7 +2334,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Ward",
+        "type": "keyword"
+      },
+      {
+        "name": "NO TOUCHY!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-085",
@@ -1899,7 +2366,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DO IT AGAIN!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-086",
@@ -1920,7 +2393,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "TEA PARTY",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-087",
@@ -1942,7 +2421,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "WONDER BOY",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-088",
@@ -1966,7 +2451,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "MISDIRECTION",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-089",
@@ -1989,7 +2485,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-090",
@@ -2011,7 +2508,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SKIP THE DRAMA, STAY WITH MAMA",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-091",
@@ -2035,7 +2538,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-092",
@@ -2056,7 +2565,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-093",
@@ -2081,7 +2591,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "PIXIE DUST",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-094",
@@ -2099,7 +2619,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-095",
@@ -2119,7 +2640,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-096",
@@ -2137,7 +2663,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-097",
@@ -2155,7 +2682,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-098",
@@ -2175,7 +2703,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-099",
@@ -2193,7 +2726,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-100",
@@ -2211,7 +2745,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-101",
@@ -2229,7 +2764,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "THE CARDS WILL TELL",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-102",
@@ -2247,7 +2788,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SLASH",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-103",
@@ -2269,7 +2816,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-104",
@@ -2293,7 +2841,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "DARING EXPLOIT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-105",
@@ -2315,7 +2874,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "IMPROVISE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-106",
@@ -2338,7 +2903,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-107",
@@ -2364,7 +2930,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "name": "YOU COWARD!",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-108",
@@ -2385,7 +2961,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-109",
@@ -2409,7 +2986,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "THAT'S NO BLIZZARD",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-110",
@@ -2433,7 +3016,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Reckless",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-111",
@@ -2457,7 +3046,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-112",
@@ -2479,7 +3074,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FAN THE FLAMES",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-113",
@@ -2502,7 +3103,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DRAGON FIRE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-114",
@@ -2528,7 +3135,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "keyword": "Reckless",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-115",
@@ -2552,7 +3169,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-116",
@@ -2574,7 +3197,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-117",
@@ -2597,7 +3221,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "THIS IS NOT WHO YOU ARE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-118",
@@ -2620,7 +3250,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "LEAD BY EXAMPLE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-119",
@@ -2644,7 +3280,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-120",
@@ -2668,7 +3310,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-121",
@@ -2691,7 +3339,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "TANGLE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-122",
@@ -2713,7 +3367,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-123",
@@ -2738,7 +3393,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "name": "ROUSING SPEECH",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-124",
@@ -2760,7 +3426,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-125",
@@ -2783,7 +3450,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-126",
@@ -2808,7 +3476,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Reckless",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-127",
@@ -2832,7 +3506,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-128",
@@ -2852,7 +3532,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-129",
@@ -2870,7 +3555,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-130",
@@ -2888,7 +3574,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-131",
@@ -2906,7 +3593,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-132",
@@ -2924,7 +3612,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-133",
@@ -2942,7 +3631,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-134",
@@ -2960,7 +3650,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "TAKE A BITE...",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-135",
@@ -2978,7 +3674,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FIREPROOF",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-136",
@@ -2996,7 +3698,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FINAL ENCHANTMENT",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-137",
@@ -3019,7 +3727,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "LOOK AT THIS STUFF",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-138",
@@ -3042,7 +3756,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DISARMING BEAUTY",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-139",
@@ -3067,7 +3787,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      },
+      {
+        "name": "PROTECTIVE EMBRACE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-140",
@@ -3090,7 +3821,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-141",
@@ -3114,7 +3846,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "TINKER",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-142",
@@ -3137,7 +3875,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "READ A BOOK",
+        "type": "static"
+      },
+      {
+        "name": "MY FAVORITE PART!",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-143",
@@ -3162,7 +3910,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-144",
@@ -3187,7 +3941,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Ward",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-145",
@@ -3209,7 +3969,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-146",
@@ -3231,7 +3992,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "I WILL BE WITH YOU",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-147",
@@ -3254,7 +4021,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "IS THERE A DOWNSIDE TO THIS?",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-148",
@@ -3276,7 +4049,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-149",
@@ -3302,7 +4076,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      },
+      {
+        "name": "CARETAKER",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-150",
@@ -3325,7 +4110,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-151",
@@ -3348,7 +4134,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-152",
@@ -3371,7 +4158,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GIVE IT A TRY",
+        "type": "triggered"
+      },
+      {
+        "name": "IT WORKS!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-153",
@@ -3396,7 +4193,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-154",
@@ -3419,7 +4222,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GET A CLUE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-155",
@@ -3442,7 +4251,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-156",
@@ -3466,7 +4276,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-157",
@@ -3488,7 +4304,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FEED THE POOR",
+        "type": "triggered"
+      },
+      {
+        "name": "GOOD SHOT",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-158",
@@ -3510,7 +4336,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "INSIDIOUS PLOT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-159",
@@ -3532,7 +4364,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "WHAT HAVE WE HERE?",
+        "type": "triggered"
+      },
+      {
+        "name": "GLAM",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-160",
@@ -3554,7 +4396,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-161",
@@ -3572,7 +4415,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-162",
@@ -3590,7 +4434,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-163",
@@ -3610,7 +4455,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-164",
@@ -3630,7 +4480,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-165",
@@ -3648,7 +4503,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-166",
@@ -3666,7 +4522,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "CONSIDER THE COCONUT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-167",
@@ -3684,7 +4546,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SEE THE FUTURE",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-168",
@@ -3702,7 +4570,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GO AHEAD AND SIGN",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-169",
@@ -3720,7 +4594,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "HEALING POLLEN",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-170",
@@ -3738,7 +4618,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "COMMAND",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-171",
@@ -3760,7 +4646,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-172",
@@ -3783,7 +4670,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "BREAK",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-173",
@@ -3807,7 +4700,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DOUBLE THE POWDER!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-174",
@@ -3833,7 +4732,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 2,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-175",
@@ -3860,7 +4766,23 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      },
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      },
+      {
+        "name": "STOLEN DUST",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-176",
@@ -3881,7 +4803,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-177",
@@ -3906,7 +4829,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "STAY ALERT!",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-178",
@@ -3929,7 +4862,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "UNDER ARREST",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-179",
@@ -3951,7 +4890,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-180",
@@ -3974,7 +4914,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "STAGE A LITTLE ACCIDENT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-181",
@@ -3999,7 +4945,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-182",
@@ -4021,7 +4973,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-183",
@@ -4043,7 +4996,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-184",
@@ -4065,7 +5019,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-185",
@@ -4088,7 +5043,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-186",
@@ -4113,7 +5069,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "ALL FOR ONE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-187",
@@ -4138,7 +5104,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 2,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-188",
@@ -4161,7 +5134,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GUESS WHAT?",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-189",
@@ -4186,7 +5165,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "POUNCE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-190",
@@ -4209,7 +5199,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "I KNOW WHAT I HAVE TO DO",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-191",
@@ -4232,7 +5228,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "AYE AYE, CAPTAIN",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-192",
@@ -4255,7 +5257,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SEEK THE HEART",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-193",
@@ -4280,7 +5288,22 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "ROCK THE BOAT",
+        "type": "triggered"
+      },
+      {
+        "name": "PUNY PIRATE!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-194",
@@ -4303,7 +5326,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "BATTLE PLANS",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-195",
@@ -4323,7 +5352,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-196",
@@ -4341,7 +5375,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-197",
@@ -4359,7 +5394,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-198",
@@ -4379,7 +5415,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-199",
@@ -4397,7 +5438,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-200",
@@ -4415,7 +5457,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-201",
@@ -4433,7 +5476,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "SHOW ME",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-202",
@@ -4451,7 +5500,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "CLANG!",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-203",
@@ -4469,7 +5524,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "ALL FOR ONE AND ONE FOR ALL",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-204",
@@ -4487,7 +5548,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "QUICK SHOT",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-205",
@@ -4513,7 +5580,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "name": "SINISTER PLOT",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-206",
@@ -4536,7 +5614,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "OHANA",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-207",
@@ -4562,7 +5646,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "name": "DEEP FREEZE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-208",
@@ -4584,7 +5679,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "ANIMATE BROOM",
+        "type": "static"
+      },
+      {
+        "name": "CEASELESS WORKER",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-209",
@@ -4608,7 +5713,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "DISAPPEAR",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-210",
@@ -4632,7 +5747,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "MISDIRECTION",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-211",
@@ -4656,7 +5782,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 5,
+        "type": "keyword"
+      },
+      {
+        "name": "DARING EXPLOIT",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-212",
@@ -4682,7 +5819,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Rush",
+        "type": "keyword"
+      },
+      {
+        "keyword": "Reckless",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-213",
@@ -4707,7 +5854,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 3,
+        "type": "keyword"
+      },
+      {
+        "name": "PROTECTIVE EMBRACE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-214",
@@ -4730,7 +5888,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "READ A BOOK",
+        "type": "static"
+      },
+      {
+        "name": "MY FAVORITE PART!",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-215",
@@ -4755,7 +5923,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "POUNCE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-216",
@@ -4780,7 +5959,22 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "ROCK THE BOAT",
+        "type": "triggered"
+      },
+      {
+        "name": "PUNY PIRATE!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-659",
@@ -4804,7 +5998,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-660",
@@ -4829,7 +6029,18 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 4,
+        "type": "keyword"
+      },
+      {
+        "name": "ADORING FANS",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-661",
@@ -4853,7 +6064,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FREEZE",
+        "type": "activated"
+      }
+    ]
   },
   {
     "id": "001-662",
@@ -4875,7 +6092,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "YOU'LL BE SORRY!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-663",
@@ -4898,7 +6121,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "DRAGON FIRE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-664",
@@ -4920,7 +6149,17 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "FEED THE POOR",
+        "type": "triggered"
+      },
+      {
+        "name": "GOOD SHOT",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-665",
@@ -4946,7 +6185,14 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Challenger",
+        "keywordValueNumber": 2,
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-666",
@@ -4969,7 +6215,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GET A CLUE",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-667",
@@ -4993,7 +6245,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Support",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-668",
@@ -5016,7 +6274,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "YOU'RE EXCUSED",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-669",
@@ -5041,7 +6305,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "ALL FOR ONE",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-670",
@@ -5066,7 +6340,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "AND TWO FOR TEA!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-671",
@@ -5091,7 +6375,17 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Bodyguard",
+        "type": "keyword"
+      },
+      {
+        "name": "STAY ALERT!",
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-678",
@@ -5116,7 +6410,22 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Shift",
+        "keywordValueNumber": 6,
+        "type": "keyword"
+      },
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      },
+      {
+        "name": "PHENOMENAL COSMIC POWER!",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-679",
@@ -5139,7 +6448,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-680",
@@ -5162,7 +6472,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-681",
@@ -5185,7 +6496,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-682",
@@ -5209,7 +6521,13 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Reckless",
+        "type": "keyword"
+      }
+    ]
   },
   {
     "id": "001-1187",
@@ -5227,7 +6545,8 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": []
   },
   {
     "id": "001-1188",
@@ -5247,7 +6566,12 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "type": "static"
+      }
+    ]
   },
   {
     "id": "001-1190",
@@ -5270,7 +6594,13 @@
     "keywords": [],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "name": "GLEAM AND GLOW",
+        "type": "triggered"
+      }
+    ]
   },
   {
     "id": "001-1191",
@@ -5294,6 +6624,12 @@
     ],
     "damage": 0,
     "readied": true,
-    "canBeReadiedDuringReadyPhase": false
+    "canBeReadiedDuringReadyPhase": false,
+    "abilities": [
+      {
+        "keyword": "Evasive",
+        "type": "keyword"
+      }
+    ]
   }
 ]

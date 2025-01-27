@@ -5,8 +5,6 @@ import {Card} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
-import {shuffleArray} from "lorcana-shared/utils/shuffleArray";
-import {transferLastElements} from 'lorcana-shared/utils/transferElements'
 import {Actions} from "../data/actions";
 import {
     banishIfSuccumbed,
@@ -76,12 +74,6 @@ export const initializeGame = async (playersAndDecks: { name: string, deck: Simp
     return game
 }
 
-export const setupHandAndShuffleDeck = (deck: Card[], hand: Card[]) => {
-    let cards = shuffleArray(deck);
-    transferLastElements(cards, hand, 6)
-    return {deck: cards, hand: hand}
-}
-
 export const hasEnded = (game: Game) => {
     return game.playerOne.loreCount >= 20 || game.playerTwo.loreCount >= 20 || game.playerOne.deck.length === 0 || game.playerTwo.deck.length === 0
 }
@@ -145,11 +137,6 @@ export function printGameDetails(players: Player[]) {
     console.groupCollapsed(`%c=== Game State ===`, 'color: #8E44AD; font-size: 16px; font-weight: bold;');
     players.forEach(player => printPlayerDetails(player));
     console.groupEnd();
-}
-
-export function resetInkTotal(player: Player) {
-    player.inkTotal = player.cardInInkRow
-    player.alreadyInkedThisTurn = false
 }
 
 

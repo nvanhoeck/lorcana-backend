@@ -8,8 +8,9 @@ import {
 } from "../services/mcts-aiManager";
 import {Card} from "lorcana-shared/model/Card";
 import {drawCard, readyAllCards} from "../services/playerManager";
-import {executeAction, resetInkTotal} from "../services/gameManager";
+import {executeAction} from "../services/gameManager";
 import {MCTSNode} from "./MCTS-Node";
+import {resetInkTotal} from 'lorcana-shared/utils/resetInktotal'
 
 export class Agent {
     player: Player
@@ -88,7 +89,7 @@ export class Agent {
             readyAllCards(this.player.activeRow, this.player.waitRow)
         }
         if (newTurn) {
-            if(!firstPlayerFirstTurn) {
+            if (!firstPlayerFirstTurn) {
                 // console.log('DRAWING CARD')
                 drawCard(this.player.deck, this.player.hand)
             }

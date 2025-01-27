@@ -1,7 +1,7 @@
 // import {Actions} from "../data/actions";
-// import {Card} from "../model/domain/Card";
-// import {Player} from "../model/domain/Player";
-// import {defineCardAmountRange, FieldState, HandState, PlayerGameState} from "../model/ai/State";
+// import {Card} from "lorcana-shared/model//domain/Card";
+// import {Player} from "lorcana-shared/model//domain/Player";
+// import {defineCardAmountRange, FieldState, HandState, PlayerGameState} from "lorcana-shared/model//ai/State";
 // import path from "path";
 // import fs from "fs";
 // import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
