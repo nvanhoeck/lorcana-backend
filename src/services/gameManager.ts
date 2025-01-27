@@ -1,12 +1,12 @@
-import {Game} from "../model/domain/Game";
+import {Game} from "lorcana-shared/model/Game";
 import {writeFile} from "./fileWriter";
 import {readFile} from "./fileReader";
-import {Card} from "../model/domain/Card";
+import {Card} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
-import {SimpleDeck} from "../model/domain/PlayableDeck";
-import {Player} from "../model/domain/Player";
-import {shuffleArray} from "../utils/shuffleArray";
-import {transferLastElements} from '../utils/transferElements'
+import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
+import {Player} from "lorcana-shared/model/Player";
+import {shuffleArray} from "lorcana-shared/utils/shuffleArray";
+import {transferLastElements} from 'lorcana-shared/utils/transferElements'
 import {Actions} from "../data/actions";
 import {
     banishIfSuccumbed,

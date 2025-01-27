@@ -4,7 +4,7 @@
 // import {defineCardAmountRange, FieldState, HandState, PlayerGameState} from "../model/ai/State";
 // import path from "path";
 // import fs from "fs";
-// import {eligibleTargets} from "../utils/eligibleTargets";
+// import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
 // import {readFile} from "./fileReader";
 // import {definePossibleActions} from "../functions";
 //

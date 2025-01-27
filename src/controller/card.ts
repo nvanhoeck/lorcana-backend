@@ -1,11 +1,8 @@
 import express from 'express';
-import {StartGameRequestBody} from "./dto/StartGameRequestBody";
-import {StartGameResponseBody} from "./dto/StartGameResponeBody";
-import {createCardCollection, getAllCards, readFile} from "../services";
-import {SimpleDeck} from "../model";
-import {setCorsHeaders} from "../utils/setCorsHeaders";
+import {createCardCollection, getAllCards} from "../services";
 import {GetCardsRequestBody} from "./dto/GetCardsRequestBody";
 import {GetCardsResponseBody} from "./dto/GetCardsResponseBody";
+import {setCorsHeaders} from "../utils/setCorsHeaders";
 
 const router = express.Router();
 

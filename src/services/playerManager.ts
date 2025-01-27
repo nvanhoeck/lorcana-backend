@@ -1,6 +1,6 @@
-import {Card} from "../model/domain/Card";
-import {transferElement, transferLastElements} from "../utils/transferElements";
-import {Player} from "../model/domain/Player";
+import {Card} from "lorcana-shared/model/Card";
+import {transferElement, transferLastElements} from "lorcana-shared/utils/transferElements";
+import {Player} from "lorcana-shared/model/Player";
 
 export const drawCard = (deck: Card[], hand: Card[]) => {
     transferLastElements(deck, hand, 1)

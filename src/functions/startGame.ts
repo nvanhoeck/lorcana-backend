@@ -1,6 +1,6 @@
-import {SimpleDeck} from "../model/domain/PlayableDeck";
+import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {initializeGame, setupHandAndShuffleDeck} from "../services/gameManager";
-import {Player} from "../model/domain/Player";
+import {Player} from "lorcana-shared/model/Player";
 
 export const startGame = async (players: {name: string, deck: SimpleDeck}[]) => {
     let game = await initializeGame(players);

@@ -1,4 +1,5 @@
-import {Card, PlayerGameState} from "../model";
+import {Card} from "lorcana-shared/model/Card";
+import {PlayerGameState} from "lorcana-shared/model/ai/State";
 import {Actions} from "../data/actions";
 import {serializeState} from "../services/mcts-aiManager";
 

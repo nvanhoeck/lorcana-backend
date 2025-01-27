@@ -1,8 +1,8 @@
 import {hasEnded, initializeGame, printGameDetails, setupHandAndShuffleDeck} from "../services/gameManager";
 import {readFile} from "../services/fileReader";
-import {SimpleDeck} from "../model/domain/PlayableDeck";
+import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Agent} from "./agent";
-import {Player} from "../model/domain/Player";
+import {Player} from "lorcana-shared/model//Player";
 import {ExponentialDecayExploration, LinearDecayExploration} from "./exploration-rate";
 import {defineState} from "../services/mcts-aiManager";
 import {writeFile} from "../services";

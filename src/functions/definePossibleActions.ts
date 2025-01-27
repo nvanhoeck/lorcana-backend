@@ -1,7 +1,7 @@
-import {Player} from "../model/domain/Player";
-import {Card} from "../model/domain/Card";
+import {Player} from "lorcana-shared/model/Player";
+import {Card} from "lorcana-shared/model/Card";
 import {Actions} from "../data/actions";
-import {eligibleTargets} from "../utils/eligibleTargets";
+import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
 
 type PossibleActions = Record<Actions, any[]>; // Create a type where keys are from 'Actions' and values are arrays of any type.
 

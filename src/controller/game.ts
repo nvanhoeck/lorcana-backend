@@ -2,7 +2,7 @@ import express from 'express';
 import {StartGameRequestBody} from "./dto/StartGameRequestBody";
 import {StartGameResponseBody} from "./dto/StartGameResponeBody";
 import {readFile} from "../services";
-import {SimpleDeck} from "../model";
+import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {setCorsHeaders} from "../utils/setCorsHeaders";
 
 const router = express.Router();

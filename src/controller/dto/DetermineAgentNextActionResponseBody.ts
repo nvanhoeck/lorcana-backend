@@ -1,4 +1,4 @@
-import {Card} from "../../model";
+import {Card} from "lorcana-shared/model/Card";
 import {Actions} from "../../data/actions";
 
 export type DetermineAgentNextActionResponseBody = {

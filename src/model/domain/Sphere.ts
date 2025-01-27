@@ -1,1 +1,0 @@
-export type Sphere = 'Amber' | 'Amethyst' | 'Emerald' | 'Ruby' | 'Sapphire' | 'Steel'

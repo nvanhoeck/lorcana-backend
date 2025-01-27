@@ -1,12 +1,12 @@
-import {Player} from "../model/domain/Player";
-import {defineDeckAmountRange, PlayerGameState} from "../model/ai/State";
+import {Player} from "lorcana-shared/model/Player";
+import {defineDeckAmountRange, PlayerGameState} from "lorcana-shared/model/ai/State";
 import {
     defineFieldState,
     defineHandState,
     defineState,
     determineNextActionBasedByCurrentGameState,
 } from "../services/mcts-aiManager";
-import {Card} from "../model/domain/Card";
+import {Card} from "lorcana-shared/model/Card";
 import {drawCard, readyAllCards} from "../services/playerManager";
 import {executeAction, resetInkTotal} from "../services/gameManager";
 import {MCTSNode} from "./MCTS-Node";

@@ -1,5 +1,5 @@
-import {Card, CardType} from "../model/domain/Card";
-import {Sphere} from "../model/domain/Sphere";
+import {Card, CardType} from "lorcana-shared/model/Card";
+import {Sphere} from "lorcana-shared/model/Sphere";
 import {readFile} from "./fileReader";
 import {writeFile} from "./fileWriter";
 

@@ -1,4 +1,4 @@
-import {SimpleDeck} from "../../model";
+import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 
 export type StartGameResponseBody = {
     playerOne: {

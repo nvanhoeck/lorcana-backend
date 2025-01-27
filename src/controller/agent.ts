@@ -1,9 +1,9 @@
 import express from 'express';
-import {setCorsHeaders} from "../utils/setCorsHeaders";
 import {DetermineAgentNextActionRequestBody} from "./dto/DetermineAgentNextActionRequestBody";
 import {DetermineAgentNextActionResponseBody} from "./dto/DetermineAgentNextActionResponseBody";
 import {determineNextActionBasedByCurrentGameState, optimalChallengeTarget} from "../services/mcts-aiManager";
 import {writeFile} from "../services";
+import {setCorsHeaders} from "../utils/setCorsHeaders";
 
 const router = express.Router();
 
