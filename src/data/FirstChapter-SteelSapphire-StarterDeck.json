@@ -1,0 +1,115 @@
+{
+  "state": {
+    "player": {
+      "deckCount": "30+",
+      "fieldState": {
+        "totalReadiedCards": "1-2",
+        "totalLore": 1,
+        "totalStrength": 1,
+        "totalWillpower": 2
+      },
+      "hand": {
+        "handSizeRange": "3-4"
+      },
+      "inkTotal": 1,
+      "loreCount": 0
+    },
+    "hostilePlayer": {
+      "deckCount": "30+",
+      "fieldState": {
+        "totalReadiedCards": "0",
+        "totalLore": 0,
+        "totalStrength": 0,
+        "totalWillpower": 0
+      },
+      "hand": {
+        "handSizeRange": "5-7"
+      },
+      "inkTotal": 0,
+      "loreCount": 0
+    }
+  },
+  "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"1-2\",\"totalLore\":1,\"totalStrength\":1,\"totalWillpower\":2},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":1,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+  "children": [
+    {
+      "key": "END_TURN",
+      "child": {
+        "state": {
+          "player": {
+            "deckCount": "30+",
+            "fieldState": {
+              "totalReadiedCards": "0",
+              "totalLore": 0,
+              "totalStrength": 0,
+              "totalWillpower": 0
+            },
+            "hand": {
+              "handSizeRange": "3-4"
+            },
+            "inkTotal": 0,
+            "loreCount": 0
+          },
+          "hostilePlayer": {
+            "deckCount": "30+",
+            "fieldState": {
+              "totalReadiedCards": "0",
+              "totalLore": 0,
+              "totalStrength": 0,
+              "totalWillpower": 0
+            },
+            "hand": {
+              "handSizeRange": "5-7"
+            },
+            "inkTotal": 0,
+            "loreCount": 0
+          }
+        },
+        "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":0,\"loreCount\":0},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":0,\"loreCount\":0}}",
+        "children": [],
+        "visits": 1,
+        "totalReward": 5,
+        "action": {
+          "id": "END_TURN",
+          "action": {
+            "action": "END_TURN"
+          }
+        }
+      }
+    }
+  ],
+  "visits": 1,
+  "totalReward": 5,
+  "action": {
+    "id": "PLAY_CARD-001-174-1",
+    "action": {
+      "cardIdx": 1,
+      "card": {
+        "id": "001-174",
+        "setId": 1,
+        "inkable": true,
+        "type": "Character",
+        "inkCost": 1,
+        "name": "Captain Hook",
+        "subName": "Forceful Duelist",
+        "sphere": "Steel",
+        "strength": 1,
+        "willpower": 2,
+        "classification": [
+          "Dreamborn",
+          "Villain",
+          "Pirate",
+          "Captain"
+        ],
+        "lore": 1,
+        "movement": 0,
+        "keywords": [
+          "Challenger"
+        ],
+        "damage": 0,
+        "readied": true,
+        "canBeReadiedDuringReadyPhase": false
+      },
+      "action": "PLAY_CARD"
+    }
+  }
+}
