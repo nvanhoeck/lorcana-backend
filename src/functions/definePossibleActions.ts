@@ -1,6 +1,6 @@
 import {Player} from "lorcana-shared/model/Player";
 import {Card} from "lorcana-shared/model/Card";
-import {Actions} from "../data/actions";
+import {Actions} from "lorcana-shared/model/actions";
 import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
 
 type PossibleActions = Record<Actions, any[]>; // Create a type where keys are from 'Actions' and values are arrays of any type.
@@ -11,7 +11,8 @@ export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlay
         CHALLENGE: [],
         QUEST: [],
         INK_CARD: [],
-        END_TURN: []
+        END_TURN: [],
+        SING: []
     }
     if (!player.alreadyInkedThisTurn) {
         possibleActions.INK_CARD.push(...definePossibleInkableCards(player.hand))
@@ -21,6 +22,7 @@ export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlay
     }
     possibleActions.PLAY_CARD.push(...definePossiblePlayableCards(player.hand, player.inkTotal))
     possibleActions.QUEST.push(...definePossibleQuestingCards(player.activeRow))
+    possibleActions.SING.push(...definePossibleSingCards(player.hand))
 
     return possibleActions
 }
@@ -39,4 +41,8 @@ const definePossiblePlayableCards = (hand: Card[], inkTotal: number) => {
 
 const definePossibleQuestingCards = (activeRow: Card[]) => {
     return activeRow.filter((c) => c.readied && c.type === 'Character')
+}
+
+const definePossibleSingCards = (hand: Card[]) => {
+    return hand.filter((c) => c.type === 'Song')
 }

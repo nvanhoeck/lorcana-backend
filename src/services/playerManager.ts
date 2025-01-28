@@ -1,6 +1,7 @@
 import {Card} from "lorcana-shared/model/Card";
 import {transferElement, transferLastElements} from "lorcana-shared/utils/transferElements";
 import {Player} from "lorcana-shared/model/Player";
+import { findOptimalSinger } from "lorcana-shared/utils/optimalSinger";
 
 export const drawCard = (deck: Card[], hand: Card[]) => {
     transferLastElements(deck, hand, 1)

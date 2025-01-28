@@ -1,5 +1,5 @@
 import {defineState, determineNextActionBasedByCurrentGameState} from "../src/services/mcts-aiManager";
-import {Player} from "../src/model";
+import {Player} from "lorcana-shared/model/Player";
 import {createCardCollection, executeAction} from "../src/services";
 
 export const testMCTS = async () => {

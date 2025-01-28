@@ -76,10 +76,10 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
         willpower: card.willpower || 0,
         classification: card.subtypes || [],
         lore: card.lore || 0,
-        movement: 0, // Assuming "movement" is not provided in the input
+        movement: 0,
         keywords: (card.keywordAbilities || []) as Keywords[],
-        damage: 0, // Assuming "damage" starts at 0
-        readied: true, // Assuming "readied" defaults to false
+        damage: 0,
+        readied: true,
         canBeReadiedDuringReadyPhase: false,
         abilities: mapAbilities(card)
     }));

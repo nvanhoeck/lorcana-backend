@@ -1,4 +1,4 @@
-import {Actions} from "../data/actions";
+import {Actions} from "lorcana-shared/model/actions";
 import {Card} from "lorcana-shared/model/Card";
 import {Player} from "lorcana-shared/model/Player";
 import {
@@ -10,6 +10,7 @@ import {
     PlayerGameState
 } from "lorcana-shared/model/ai/State";
 import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
+import {findOptimalSinger} from "lorcana-shared/utils/optimalSinger";
 import {definePossibleActionsWithoutEndTurn} from "../functions";
 import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
@@ -192,6 +193,11 @@ const defineNextState = (action: {
             return {
                 player: defineState(player, hostilePlayer.activeRow),
                 hostilePlayer: defineState(hostilePlayer, player.activeRow)
+            }
+        case "SING":
+            return {
+                player: defineNextStateBySingingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)),
+                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
             }
         default:
             throw new Error(`Unhandled action type: ${action.action}`);
@@ -422,7 +428,6 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
     const clonedPlayerState = defineState(player, opposingActiveRow)
     return {
         ...clonedPlayerState,
-        deckCount: defineDeckAmountRange(player.deck.length - 1),
         hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
         fieldState: {
             ...clonedPlayerState.fieldState,
@@ -430,6 +435,19 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
             totalWillpower: clonedPlayerState.fieldState.totalWillpower + card.willpower,
             totalStrength: clonedPlayerState.fieldState.totalStrength + card.strength,
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + 1),
+        }
+    }
+}
+
+function defineNextStateBySingingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
+    const clonedPlayerState = defineState(player, opposingActiveRow)
+    const optimalSingerIdx = findOptimalSinger(player.activeRow, card.inkCost)
+    return {
+        ...clonedPlayerState,
+        hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
+        fieldState: {
+            ...clonedPlayerState.fieldState,
+            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length - (optimalSingerIdx >=0 ? 1 : 0))
         }
     }
 }

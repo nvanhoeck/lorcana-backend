@@ -20,7 +20,7 @@
     "express": "^4.21.2",
     "lodash": "^4.17.21",
     "uuid": "^11.0.3",
-    "lorcana-shared": "1.0.0"
+    "lorcana-shared": "*"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

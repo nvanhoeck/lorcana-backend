@@ -1,6 +1,6 @@
 import {Card} from "lorcana-shared/model/Card";
 import {PlayerGameState} from "lorcana-shared/model/ai/State";
-import {Actions} from "../data/actions";
+import {Actions} from "lorcana-shared/model/actions";
 import {serializeState} from "../services/mcts-aiManager";
 
 

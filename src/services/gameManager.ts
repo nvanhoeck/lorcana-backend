@@ -5,7 +5,7 @@ import {Card} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
-import {Actions} from "../data/actions";
+import {Actions} from "lorcana-shared/model/actions";
 import {
     banishIfSuccumbed,
     challengeCharacter,
@@ -14,6 +14,7 @@ import {
     playNonCharacterCard,
     quest
 } from "./playerManager";
+import {singASongCard} from 'lorcana-shared/utils/singASong'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
@@ -36,7 +37,7 @@ const createCard = async (cardId: string) => {
     return card
 }
 
-export const createCardCollection = async (cardsIds: {id:string, count: number}[]) => {
+export const createCardCollection = async (cardsIds: { id: string, count: number }[]) => {
     const cards: Card[] = []
     for (const c of cardsIds) {
         for (let i = 0; i < c.count; i++) {
@@ -140,6 +141,10 @@ export function printGameDetails(players: Player[]) {
 }
 
 
+function doCardEffect(card: Card, cardIdx: number | undefined, player: Player, opposingPlayer: Player) {
+    // TODO
+}
+
 export const executeAction = (action: Actions, player: Player, opposingPlayer: Player, cardIdx?: number, targetIndex?: number) => {
     const card = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
     // console.log(action, card?.name, card?.subName)
@@ -171,15 +176,21 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             break;
         case "PLAY_CARD":
             if (card!.type === 'Character') {
-                player.inkTotal = playCharacterCard(player.hand, player.waitRow,cardIdx!, player.inkTotal)
+                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal)
             } else if (card!.type === 'Action' || card!.type === 'Song') {
                 //TODO improve playing a song
                 player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
             } else {
                 player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
             }
-            return {activePlayer: player, opposingPlayer: opposingPlayer}
             break;
+        case "SING":
+            if(card!.type === 'Song') {
+                player.inkTotal = singASongCard(player.hand, player.activeRow, cardIdx!, player.inkTotal, player.banishedPile)
+                doCardEffect(card, cardIdx, player, opposingPlayer)
+            } else {
+                throw new Error('Cannot sing a non-song card')
+            }
         case "END_TURN":
             // Do nothing
             break;
