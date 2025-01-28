@@ -32,12 +32,11 @@ router.post('/', async (req: express.Request<{}, {}, StartGameRequestBody>, res:
             return;
         }
         const sharedDeck = await readFile(['..', '..', 'GameData', 'Decks', 'FirstChapter-SteelSapphire-StarterDeck.json']) as SimpleDeck;
-        let optimalQstate = await readFile(['..', 'data', 'MostOptimal_qstate.json']) as Record<string, number>
 
 
         res.status(200).json({
-            playerTwo: {deck: sharedDeck, name: body.playerTwo.name, qState: optimalQstate},
-            playerOne: {deck: sharedDeck, name: body.playerOne.name, qState: optimalQstate}
+            playerTwo: {deck: sharedDeck, name: body.playerTwo.name},
+            playerOne: {deck: sharedDeck, name: body.playerOne.name}
         })
     }
 )

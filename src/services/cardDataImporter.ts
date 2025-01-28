@@ -67,7 +67,7 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
         id: '00' + setId + '-' + card.id.toString().padStart(3, '0'),
         setId: setId,
         inkable: card.inkwell || false,
-        type: card.type as CardType,
+        type: card.subtypes && card.subtypes.find((s) => s === 'Song') ? 'Song' : card.type as CardType,
         inkCost: card.cost || 0,
         name: card.name,
         subName: card.version,
