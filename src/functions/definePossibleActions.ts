@@ -36,7 +36,7 @@ const definePossibleAttackingCards = (activeRow: Card[]) => {
 }
 
 const definePossiblePlayableCards = (hand: Card[], inkTotal: number) => {
-    return hand.filter((c) => c.inkCost <= inkTotal)
+    return hand.filter((c) => c.inkCost <= inkTotal && c.type === 'Character')
 }
 
 const definePossibleQuestingCards = (activeRow: Card[]) => {

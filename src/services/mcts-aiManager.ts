@@ -1,5 +1,5 @@
 import {Actions} from "lorcana-shared/model/actions";
-import {Card} from "lorcana-shared/model/Card";
+import {Card, isTriggeredAbility} from "lorcana-shared/model/Card";
 import {Player} from "lorcana-shared/model/Player";
 import {
     DeckAmountRange,
@@ -424,9 +424,23 @@ function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGame
     }
 }
 
+function cardEffectWrapperByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState) {
+    // TODO extend when expanded with a middleware redux style way
+    if (card.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
+        return {
+            ...newPlayerGameState,
+            deckCount: defineDeckAmountRange(player.deck.length - 1),
+            hand: {...newPlayerGameState.hand, handSizeRange: defineCardAmountRange(player.hand.length + 1)},
+        }
+    } else {
+        return newPlayerGameState
+    }
+}
+
+// TODO card effect
 function defineNextStateByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
     const clonedPlayerState = defineState(player, opposingActiveRow)
-    return {
+    const newPlayerState: PlayerGameState = {
         ...clonedPlayerState,
         hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
         fieldState: {
@@ -437,6 +451,7 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + 1),
         }
     }
+    return cardEffectWrapperByPlayingCard(player, card, opposingActiveRow, newPlayerState)
 }
 
 function defineNextStateBySingingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
@@ -447,7 +462,7 @@ function defineNextStateBySingingCard(player: Player, card: Card, opposingActive
         hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
         fieldState: {
             ...clonedPlayerState.fieldState,
-            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length - (optimalSingerIdx >=0 ? 1 : 0))
+            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length - (optimalSingerIdx >= 0 ? 1 : 0))
         }
     }
 }

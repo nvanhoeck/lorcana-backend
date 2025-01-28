@@ -1,7 +1,7 @@
 import {Game} from "lorcana-shared/model/Game";
 import {writeFile} from "./fileWriter";
 import {readFile} from "./fileReader";
-import {Card} from "lorcana-shared/model/Card";
+import {Card, isTriggeredAbility} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
@@ -15,6 +15,7 @@ import {
     quest
 } from "./playerManager";
 import {singASongCard} from 'lorcana-shared/utils/singASong'
+import {musicalDebut} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
@@ -177,11 +178,18 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
         case "PLAY_CARD":
             if (card!.type === 'Character') {
                 player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal)
-            } else if (card!.type === 'Action' || card!.type === 'Song') {
-                //TODO improve playing a song
+            } else if (card!.type === 'Action') {
                 player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
             } else {
                 player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
+            }
+            // TODO ship to different place when bigger, maybe in a redux middleware style way
+            if(card!.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
+                const stepsAndCondition = musicalDebut(player.deck);
+                const revealedCards = stepsAndCondition[0];
+                const chosenCard = revealedCards.find(stepsAndCondition.conditionToPick)
+                stepsAndCondition[1](revealedCards, player.hand, chosenCard ? revealedCards.indexOf(chosenCard): -1)
+                stepsAndCondition[2](revealedCards, player.deck)
             }
             break;
         case "SING":
