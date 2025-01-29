@@ -1,5 +1,5 @@
 import {Actions} from "lorcana-shared/model/actions";
-import {Card, isTriggeredAbility} from "lorcana-shared/model/Card";
+import {Card, isActivatedAbility, isTriggeredAbility} from "lorcana-shared/model/Card";
 import {Player} from "lorcana-shared/model/Player";
 import {
     DeckAmountRange,
@@ -16,6 +16,7 @@ import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
 import {sumByProperty} from "../functions/sumByProperty";
 import {deepClone} from "../functions/deepClone";
+import {aWonderfulDreamNextState, aWonderfulDreamOptimalTarget} from "lorcana-shared/model/abilities";
 
 const defineLoreCountRangeReward = (loreCount: number) => {
     if (loreCount > 0 && loreCount < 5) {
@@ -199,6 +200,28 @@ const defineNextState = (action: {
                 player: defineNextStateBySingingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)),
                 hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
             }
+        case "CARD_EFFECT_ACTIVATION":
+            if (action.card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
+                throw new Error("Has multiple effects, which is not yet developed")
+            } else if (action.card!.abilities.find((a) => isActivatedAbility(a))) {
+                const ability = action.card!.abilities.find((a) => isActivatedAbility(a))!;
+                // TODO when extended, improve code
+                if (ability.name === 'A WONDERFUL DREAM') {
+                    const optimalTarget = aWonderfulDreamOptimalTarget(player.activeRow);
+                    if (optimalTarget) {
+                        const clonedNextActiveRowState = deepClone(player.activeRow)
+                        clonedNextActiveRowState.find((c) => c.id === action.card?.id)!.readied = false
+                        return {
+                            player: aWonderfulDreamNextState(defineState(player, hostilePlayer.activeRow), deepClone(player)),
+                            hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(clonedNextActiveRowState))
+                        }
+                    } else {
+                        throw new Error("Performing A Wonderfull dream on non legitimate targets")
+                    }
+                }
+            } else {
+                throw new Error("Trying to trigger a card effect activation where there is none")
+            }
         default:
             throw new Error(`Unhandled action type: ${action.action}`);
     }
@@ -241,6 +264,11 @@ export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]
             card: cardForAction,
             action: "PLAY_CARD" as Actions,
         })),
+        ...possibleActions.CARD_EFFECT_ACTIVATION.map((cardForAction) => ({
+            cardIdx: player.activeRow.indexOf(cardForAction),
+            card: cardForAction,
+            action: "CARD_EFFECT_ACTIVATION" as Actions,
+        }))
     ];
 
     return allActions
@@ -292,6 +320,9 @@ export const serializeOptimalAction = (optimalAction: {
     action: Actions,
     stats?: { power: number } | undefined
 }) => {
+    if(optimalAction.action === 'CARD_EFFECT_ACTIVATION') {
+        return `${optimalAction.action}-${optimalAction.card!.id}-${optimalAction.cardIdx}`
+    }
     if (optimalAction.stats && optimalAction.card?.id) {
         return `${optimalAction.action}-${optimalAction.card.id}-${optimalAction.cardIdx}-${optimalAction.stats.power}`
     } else if (optimalAction.stats) {

@@ -1,4 +1,4 @@
-import {hasEnded, initializeGame, printGameDetails, setupHandAndShuffleDeck} from "../services/gameManager";
+import {hasEnded, initializeGame, printGameDetails} from "../services/gameManager";
 import {readFile} from "../services/fileReader";
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Agent} from "./agent";
@@ -6,6 +6,7 @@ import {Player} from "lorcana-shared/model//Player";
 import {ExponentialDecayExploration, LinearDecayExploration} from "./exploration-rate";
 import {defineState} from "../services/mcts-aiManager";
 import {writeFile} from "../services";
+import { setupHandAndShuffleDeck } from "lorcana-shared/utils";
 
 const doTurn = async (agent: Agent, opposingAgent: Agent, firstPlayerFirstTurn = false) => {
     const playerState = defineState(agent.player, opposingAgent.player.activeRow);

@@ -26,6 +26,11 @@
         "name": "VOICELESS",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -62,6 +67,11 @@
         "name": "MUSICAL DEBUT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -98,6 +108,11 @@
         "name": "A WONDERFUL DREAM",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -133,6 +148,11 @@
         "name": "AND TWO FOR TEA!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -170,6 +190,12 @@
         "name": "SINISTER PLOT",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Villain",
+      "King",
+      "Deity"
     ]
   },
   {
@@ -199,6 +225,11 @@
         "name": "WELL OF SOULS",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Deity"
     ]
   },
   {
@@ -229,6 +260,10 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -257,6 +292,10 @@
         "name": "LOYAL",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -280,7 +319,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
+    ]
   },
   {
     "id": "001-010",
@@ -315,6 +358,10 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -343,6 +390,10 @@
         "name": "HORSE KICK",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
     ]
   },
   {
@@ -366,7 +417,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
+    ]
   },
   {
     "id": "001-013",
@@ -389,7 +444,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Princess"
+    ]
   },
   {
     "id": "001-014",
@@ -418,6 +477,11 @@
         "name": "WE CAN FIX IT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -442,7 +506,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Ally",
+      "Pirate"
+    ]
   },
   {
     "id": "001-016",
@@ -471,6 +540,11 @@
         "name": "HEROISM",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -494,7 +568,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-018",
@@ -523,6 +601,11 @@
         "name": "GLEAM AND GLOW",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -554,6 +637,10 @@
         "keywordValueNumber": 4,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -585,6 +672,11 @@
         "keyword": "Bodyguard",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -614,6 +706,11 @@
         "name": "OHANA",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Alien"
     ]
   },
   {
@@ -638,7 +735,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Alien"
+    ]
   },
   {
     "id": "001-023",
@@ -674,6 +776,11 @@
         "name": "ADORING FANS",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Alien"
     ]
   },
   {
@@ -702,6 +809,10 @@
         "name": "TASTES LIKE CHICKEN",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -727,6 +838,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -771,6 +885,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -834,6 +951,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -954,6 +1074,11 @@
         "name": "LOVING HEART",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Queen"
     ]
   },
   {
@@ -977,7 +1102,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-037",
@@ -1013,6 +1142,11 @@
         "name": "INTO THE SHADOWS",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1045,6 +1179,11 @@
         "keywordValueNumber": 2,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1074,6 +1213,11 @@
         "name": "DREAMS MADE REAL",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1099,7 +1243,13 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
+    ]
   },
   {
     "id": "001-041",
@@ -1129,6 +1279,12 @@
         "name": "FREEZE",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
     ]
   },
   {
@@ -1166,6 +1322,12 @@
         "name": "DEEP FREEZE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
     ]
   },
   {
@@ -1200,6 +1362,10 @@
         "name": "DEXTEROUS LUNGE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -1229,6 +1395,11 @@
         "name": "HIDDEN WONDERS",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1261,6 +1432,11 @@
         "keywordValueNumber": 3,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1295,6 +1471,10 @@
         "name": "SINISTER SLITHER",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -1323,6 +1503,10 @@
         "name": "SWEEP",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Broom"
     ]
   },
   {
@@ -1347,7 +1531,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
+    ]
   },
   {
     "id": "001-049",
@@ -1376,6 +1565,11 @@
         "name": "CAST MY SPELL!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1404,6 +1598,10 @@
         "name": "DURABLE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -1436,6 +1634,10 @@
         "name": "CEASELESS WORKER",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Sorcerer"
     ]
   },
   {
@@ -1459,7 +1661,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-053",
@@ -1487,6 +1693,10 @@
         "name": "CAMOUFLAGE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -1518,6 +1728,11 @@
         "keyword": "Rush",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Mentor",
+      "Sorcerer"
     ]
   },
   {
@@ -1541,7 +1756,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-056",
@@ -1570,6 +1789,11 @@
         "name": "I SUMMON THEE",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Queen"
     ]
   },
   {
@@ -1593,7 +1817,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-058",
@@ -1628,6 +1856,11 @@
         "name": "LOYAL AND DEVOTED",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally",
+      "Fairy"
     ]
   },
   {
@@ -1657,6 +1890,11 @@
         "name": "IT'S TOO EASY!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1686,6 +1924,11 @@
         "name": "YOU'RE EXCUSED",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -1722,6 +1965,10 @@
         "keywordValueNumber": 4,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Deity"
     ]
   },
   {
@@ -1785,6 +2032,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -1810,6 +2060,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -1913,6 +2166,11 @@
         "keyword": "Ward",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -1948,6 +2206,11 @@
         "name": "ROAR",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -1975,6 +2238,9 @@
         "name": "LOSE SOMETHING?",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn"
     ]
   },
   {
@@ -2003,6 +2269,10 @@
         "name": "YOU'LL BE SORRY!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -2026,7 +2296,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
+    ]
   },
   {
     "id": "001-074",
@@ -2055,6 +2329,11 @@
         "name": "HERE COMES THE SMOLDER",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -2089,6 +2368,10 @@
         "name": "DISAPPEAR",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -2129,6 +2412,10 @@
         "name": "PHENOMENAL COSMIC POWER!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -2152,7 +2439,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-078",
@@ -2176,7 +2467,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Prince"
+    ]
   },
   {
     "id": "001-079",
@@ -2199,7 +2495,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-080",
@@ -2227,6 +2527,10 @@
         "name": "YOU GOT A PROBLEM?",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -2255,6 +2559,10 @@
         "name": "PUPPYNAPPING",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -2286,6 +2594,13 @@
         "name": "PICK YOUR FIGHTS",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Alien",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -2310,7 +2625,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Alien",
+      "Inventor"
+    ]
   },
   {
     "id": "001-084",
@@ -2344,6 +2664,10 @@
         "name": "NO TOUCHY!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "King"
     ]
   },
   {
@@ -2372,6 +2696,10 @@
         "name": "DO IT AGAIN!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain"
     ]
   },
   {
@@ -2399,6 +2727,9 @@
         "name": "TEA PARTY",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn"
     ]
   },
   {
@@ -2427,6 +2758,10 @@
         "name": "WONDER BOY",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
     ]
   },
   {
@@ -2462,6 +2797,10 @@
         "name": "MISDIRECTION",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -2486,7 +2825,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Captain"
+    ]
   },
   {
     "id": "001-090",
@@ -2514,6 +2858,10 @@
         "name": "SKIP THE DRAMA, STAY WITH MAMA",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -2544,6 +2892,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
     ]
   },
   {
@@ -2566,7 +2918,10 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn"
+    ]
   },
   {
     "id": "001-093",
@@ -2601,6 +2956,11 @@
         "name": "PIXIE DUST",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally",
+      "Fairy"
     ]
   },
   {
@@ -2645,6 +3005,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -2708,6 +3071,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -2817,7 +3183,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-104",
@@ -2852,6 +3222,10 @@
         "name": "DARING EXPLOIT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -2880,6 +3254,10 @@
         "name": "IMPROVISE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
     ]
   },
   {
@@ -2904,7 +3282,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally",
+      "Captain"
+    ]
   },
   {
     "id": "001-107",
@@ -2940,6 +3323,12 @@
         "name": "YOU COWARD!",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -2962,7 +3351,10 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn"
+    ]
   },
   {
     "id": "001-109",
@@ -2992,6 +3384,12 @@
         "name": "THAT'S NO BLIZZARD",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
     ]
   },
   {
@@ -3022,6 +3420,10 @@
         "keyword": "Reckless",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -3052,6 +3454,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
     ]
   },
   {
@@ -3080,6 +3486,10 @@
         "name": "FAN THE FLAMES",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Ally"
     ]
   },
   {
@@ -3109,6 +3519,11 @@
         "name": "DRAGON FIRE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Dragon"
     ]
   },
   {
@@ -3145,6 +3560,11 @@
         "keyword": "Reckless",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Deity"
     ]
   },
   {
@@ -3175,6 +3595,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
     ]
   },
   {
@@ -3198,7 +3622,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
+    ]
   },
   {
     "id": "001-117",
@@ -3227,6 +3655,11 @@
         "name": "THIS IS NOT WHO YOU ARE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3256,6 +3689,11 @@
         "name": "LEAD BY EXAMPLE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3286,6 +3724,10 @@
         "keyword": "Rush",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
     ]
   },
   {
@@ -3316,6 +3758,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
     ]
   },
   {
@@ -3345,6 +3791,11 @@
         "name": "TANGLE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3368,7 +3819,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Villain"
+    ]
   },
   {
     "id": "001-123",
@@ -3404,6 +3859,11 @@
         "name": "ROUSING SPEECH",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Villain",
+      "King"
     ]
   },
   {
@@ -3427,7 +3887,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-125",
@@ -3451,7 +3915,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Alien"
+    ]
   },
   {
     "id": "001-126",
@@ -3482,6 +3951,11 @@
         "keyword": "Reckless",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Deity"
     ]
   },
   {
@@ -3512,6 +3986,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Tigger"
     ]
   },
   {
@@ -3537,6 +4015,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -3733,6 +4214,11 @@
         "name": "LOOK AT THIS STUFF",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3762,6 +4248,11 @@
         "name": "DISARMING BEAUTY",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3798,6 +4289,11 @@
         "name": "PROTECTIVE EMBRACE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3822,7 +4318,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
+    ]
   },
   {
     "id": "001-141",
@@ -3852,6 +4353,12 @@
         "name": "TINKER",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Princess",
+      "Inventor"
     ]
   },
   {
@@ -3885,6 +4392,11 @@
         "name": "MY FAVORITE PART!",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -3916,6 +4428,11 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Mentor",
+      "King"
     ]
   },
   {
@@ -3947,6 +4464,11 @@
         "keyword": "Ward",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Inventor"
     ]
   },
   {
@@ -3970,7 +4492,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-146",
@@ -3998,6 +4524,10 @@
         "name": "I WILL BE WITH YOU",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Mentor"
     ]
   },
   {
@@ -4027,6 +4557,11 @@
         "name": "IS THERE A DOWNSIDE TO THIS?",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Deity"
     ]
   },
   {
@@ -4050,7 +4585,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Princess"
+    ]
   },
   {
     "id": "001-149",
@@ -4087,6 +4626,12 @@
         "name": "CARETAKER",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Princess",
+      "Queen"
     ]
   },
   {
@@ -4111,7 +4656,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Sorcerer"
+    ]
   },
   {
     "id": "001-151",
@@ -4135,7 +4685,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
+    ]
   },
   {
     "id": "001-152",
@@ -4168,6 +4723,11 @@
         "name": "IT WORKS!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Mentor",
+      "Inventor"
     ]
   },
   {
@@ -4199,6 +4759,11 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Mentor",
+      "Sorcerer"
     ]
   },
   {
@@ -4228,6 +4793,11 @@
         "name": "GET A CLUE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Detective"
     ]
   },
   {
@@ -4252,7 +4822,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Mentor",
+      "King"
+    ]
   },
   {
     "id": "001-156",
@@ -4282,6 +4857,10 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Mentor"
     ]
   },
   {
@@ -4314,6 +4893,10 @@
         "name": "GOOD SHOT",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
     ]
   },
   {
@@ -4342,6 +4925,10 @@
         "name": "INSIDIOUS PLOT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -4374,6 +4961,10 @@
         "name": "GLAM",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -4397,7 +4988,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "King"
+    ]
   },
   {
     "id": "001-161",
@@ -4460,6 +5055,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -4485,6 +5083,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -4647,7 +5248,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
+    ]
   },
   {
     "id": "001-172",
@@ -4676,6 +5281,11 @@
         "name": "BREAK",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -4706,6 +5316,12 @@
         "name": "DOUBLE THE POWDER!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -4739,6 +5355,12 @@
         "keywordValueNumber": 2,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -4782,6 +5404,12 @@
         "name": "STOLEN DUST",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Villain",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -4804,7 +5432,10 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn"
+    ]
   },
   {
     "id": "001-177",
@@ -4839,6 +5470,11 @@
         "name": "STAY ALERT!",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -4868,6 +5504,11 @@
         "name": "UNDER ARREST",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Alien",
+      "Captain"
     ]
   },
   {
@@ -4891,7 +5532,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-180",
@@ -4920,6 +5565,11 @@
         "name": "STAGE A LITTLE ACCIDENT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Prince"
     ]
   },
   {
@@ -4951,6 +5601,11 @@
         "keyword": "Bodyguard",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -4974,7 +5629,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-183",
@@ -4997,7 +5656,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
+    ]
   },
   {
     "id": "001-184",
@@ -5020,7 +5683,11 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
+    ]
   },
   {
     "id": "001-185",
@@ -5044,7 +5711,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Deity"
+    ]
   },
   {
     "id": "001-186",
@@ -5079,6 +5751,11 @@
         "name": "ALL FOR ONE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -5111,6 +5788,11 @@
         "keywordValueNumber": 2,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -5140,6 +5822,11 @@
         "name": "GUESS WHAT?",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -5176,6 +5863,11 @@
         "name": "POUNCE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "King"
     ]
   },
   {
@@ -5205,6 +5897,11 @@
         "name": "I KNOW WHAT I HAVE TO DO",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Prince"
     ]
   },
   {
@@ -5234,6 +5931,11 @@
         "name": "AYE AYE, CAPTAIN",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally",
+      "Pirate"
     ]
   },
   {
@@ -5263,6 +5965,11 @@
         "name": "SEEK THE HEART",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Deity"
     ]
   },
   {
@@ -5303,6 +6010,11 @@
         "name": "PUNY PIRATE!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Ally",
+      "Fairy"
     ]
   },
   {
@@ -5332,6 +6044,11 @@
         "name": "BATTLE PLANS",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Ally",
+      "Fairy"
     ]
   },
   {
@@ -5357,6 +6074,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -5420,6 +6140,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -5591,6 +6314,12 @@
         "name": "SINISTER PLOT",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Villain",
+      "King",
+      "Deity"
     ]
   },
   {
@@ -5620,6 +6349,11 @@
         "name": "OHANA",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Alien"
     ]
   },
   {
@@ -5657,6 +6391,12 @@
         "name": "DEEP FREEZE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
     ]
   },
   {
@@ -5689,6 +6429,10 @@
         "name": "CEASELESS WORKER",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Sorcerer"
     ]
   },
   {
@@ -5723,6 +6467,10 @@
         "name": "DISAPPEAR",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -5758,6 +6506,10 @@
         "name": "MISDIRECTION",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -5793,6 +6545,10 @@
         "name": "DARING EXPLOIT",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -5829,6 +6585,11 @@
         "keyword": "Reckless",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Deity"
     ]
   },
   {
@@ -5865,6 +6626,11 @@
         "name": "PROTECTIVE EMBRACE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -5898,6 +6664,11 @@
         "name": "MY FAVORITE PART!",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -5934,6 +6705,11 @@
         "name": "POUNCE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "King"
     ]
   },
   {
@@ -5974,6 +6750,11 @@
         "name": "PUNY PIRATE!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Ally",
+      "Fairy"
     ]
   },
   {
@@ -6004,6 +6785,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
     ]
   },
   {
@@ -6040,6 +6825,11 @@
         "name": "ADORING FANS",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero",
+      "Alien"
     ]
   },
   {
@@ -6070,6 +6860,12 @@
         "name": "FREEZE",
         "type": "activated"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Queen",
+      "Sorcerer"
     ]
   },
   {
@@ -6098,6 +6894,10 @@
         "name": "YOU'LL BE SORRY!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -6127,6 +6927,11 @@
         "name": "DRAGON FIRE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain",
+      "Dragon"
     ]
   },
   {
@@ -6159,6 +6964,10 @@
         "name": "GOOD SHOT",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero"
     ]
   },
   {
@@ -6192,6 +7001,12 @@
         "keywordValueNumber": 2,
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Pirate",
+      "Captain"
     ]
   },
   {
@@ -6221,6 +7036,11 @@
         "name": "GET A CLUE",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Detective"
     ]
   },
   {
@@ -6251,6 +7071,10 @@
         "keyword": "Support",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Ally"
     ]
   },
   {
@@ -6280,6 +7104,11 @@
         "name": "YOU'RE EXCUSED",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
     ]
   },
   {
@@ -6315,6 +7144,11 @@
         "name": "ALL FOR ONE",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -6350,6 +7184,11 @@
         "name": "AND TWO FOR TEA!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -6385,6 +7224,11 @@
         "name": "STAY ALERT!",
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero",
+      "Musketeer"
     ]
   },
   {
@@ -6425,6 +7269,10 @@
         "name": "PHENOMENAL COSMIC POWER!",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Floodborn",
+      "Hero"
     ]
   },
   {
@@ -6449,7 +7297,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Alien"
+    ]
   },
   {
     "id": "001-680",
@@ -6473,7 +7326,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Dreamborn",
+      "Villain",
+      "Sorcerer"
+    ]
   },
   {
     "id": "001-681",
@@ -6497,7 +7355,12 @@
     "damage": 0,
     "readied": true,
     "canBeReadiedDuringReadyPhase": false,
-    "abilities": []
+    "abilities": [],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Deity"
+    ]
   },
   {
     "id": "001-682",
@@ -6527,6 +7390,10 @@
         "keyword": "Reckless",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Villain"
     ]
   },
   {
@@ -6571,6 +7438,9 @@
       {
         "type": "static"
       }
+    ],
+    "subTypes": [
+      "Song"
     ]
   },
   {
@@ -6600,6 +7470,11 @@
         "name": "GLEAM AND GLOW",
         "type": "triggered"
       }
+    ],
+    "subTypes": [
+      "Storyborn",
+      "Hero",
+      "Princess"
     ]
   },
   {
@@ -6630,6 +7505,10 @@
         "keyword": "Evasive",
         "type": "keyword"
       }
+    ],
+    "subTypes": [
+      "Dreamborn",
+      "Hero"
     ]
   }
 ]

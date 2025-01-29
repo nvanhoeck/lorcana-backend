@@ -1,7 +1,7 @@
 import {Game} from "lorcana-shared/model/Game";
 import {writeFile} from "./fileWriter";
 import {readFile} from "./fileReader";
-import {Card, isTriggeredAbility} from "lorcana-shared/model/Card";
+import {Card, isActivatedAbility, isTriggeredAbility} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
@@ -15,7 +15,7 @@ import {
     quest
 } from "./playerManager";
 import {singASongCard} from 'lorcana-shared/utils/singASong'
-import {musicalDebut} from 'lorcana-shared/model/abilities'
+import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
@@ -141,11 +141,6 @@ export function printGameDetails(players: Player[]) {
     console.groupEnd();
 }
 
-
-function doCardEffect(card: Card, cardIdx: number | undefined, player: Player, opposingPlayer: Player) {
-    // TODO
-}
-
 export const executeAction = (action: Actions, player: Player, opposingPlayer: Player, cardIdx?: number, targetIndex?: number) => {
     const card = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
     // console.log(action, card?.name, card?.subName)
@@ -184,21 +179,39 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
                 player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
             }
             // TODO ship to different place when bigger, maybe in a redux middleware style way
-            if(card!.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
+            if (card!.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
                 const stepsAndCondition = musicalDebut(player.deck);
                 const revealedCards = stepsAndCondition[0];
                 const chosenCard = revealedCards.find(stepsAndCondition.conditionToPick)
-                stepsAndCondition[1](revealedCards, player.hand, chosenCard ? revealedCards.indexOf(chosenCard): -1)
+                stepsAndCondition[1](revealedCards, player.hand, chosenCard ? revealedCards.indexOf(chosenCard) : -1)
                 stepsAndCondition[2](revealedCards, player.deck)
             }
             break;
         case "SING":
-            if(card!.type === 'Song') {
+            if (card!.type === 'Song') {
                 player.inkTotal = singASongCard(player.hand, player.activeRow, cardIdx!, player.inkTotal, player.banishedPile)
-                doCardEffect(card, cardIdx, player, opposingPlayer)
             } else {
                 throw new Error('Cannot sing a non-song card')
             }
+        case "CARD_EFFECT_ACTIVATION":
+            if (card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
+                throw new Error("Has multiple effects, which is not yet developed")
+            } else if (card!.abilities.find((a) => isActivatedAbility(a))) {
+                const ability = card!.abilities.find((a) => isActivatedAbility(a))!;
+                // TODO when extended, improve code
+                if (ability.name === 'A WONDERFUL DREAM') {
+                    const optimalTarget = aWonderfulDreamOptimalTarget(player.activeRow);
+                    if (optimalTarget) {
+                        aWonderfulDream(optimalTarget)
+                        card!.readied = false
+                    } else {
+                        throw new Error("Performing A Wonderfull dream on non legitimate targets")
+                    }
+                }
+            } else {
+                throw new Error("Trying to trigger a card effect activation where there is none")
+            }
+            return {activePlayer: player, opposingPlayer: opposingPlayer}
         case "END_TURN":
             // Do nothing
             break;

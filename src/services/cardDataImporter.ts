@@ -4,7 +4,7 @@ import {
     CardType, isActivatedAbility, isKeywordAbility, isStaticAbility, isTriggeredAbility,
     KeywordAbility,
     Keywords,
-    StaticAbility,
+    StaticAbility, SubType,
     TriggeredAbility
 } from "lorcana-shared/model/Card";
 import {Sphere} from "lorcana-shared/model/Sphere";
@@ -81,7 +81,8 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
         damage: 0,
         readied: true,
         canBeReadiedDuringReadyPhase: false,
-        abilities: mapAbilities(card)
+        abilities: mapAbilities(card),
+        subTypes: card.subtypes as SubType[]
     }));
 }
 
