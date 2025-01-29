@@ -172,7 +172,7 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             break;
         case "PLAY_CARD":
             if (card!.type === 'Character') {
-                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal)
+                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal, player.activeRow)
             } else if (card!.type === 'Action') {
                 player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
             } else {

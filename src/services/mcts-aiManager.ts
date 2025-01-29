@@ -16,7 +16,7 @@ import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
 import {sumByProperty} from "../functions/sumByProperty";
 import {deepClone} from "../functions/deepClone";
-import {aWonderfulDreamNextState, aWonderfulDreamOptimalTarget} from "lorcana-shared/model/abilities";
+import {aWonderfulDreamNextState, aWonderfulDreamOptimalTarget, isBodyguard} from "lorcana-shared/model/abilities";
 
 const defineLoreCountRangeReward = (loreCount: number) => {
     if (loreCount > 0 && loreCount < 5) {
@@ -320,7 +320,7 @@ export const serializeOptimalAction = (optimalAction: {
     action: Actions,
     stats?: { power: number } | undefined
 }) => {
-    if(optimalAction.action === 'CARD_EFFECT_ACTIVATION') {
+    if (optimalAction.action === 'CARD_EFFECT_ACTIVATION') {
         return `${optimalAction.action}-${optimalAction.card!.id}-${optimalAction.cardIdx}`
     }
     if (optimalAction.stats && optimalAction.card?.id) {
@@ -479,7 +479,7 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
             totalLore: clonedPlayerState.fieldState.totalLore + card.lore,
             totalWillpower: clonedPlayerState.fieldState.totalWillpower + card.willpower,
             totalStrength: clonedPlayerState.fieldState.totalStrength + card.strength,
-            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + 1),
+            totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + (isBodyguard(card) ? 0 : 1)),
         }
     }
     return cardEffectWrapperByPlayingCard(player, card, opposingActiveRow, newPlayerState)
