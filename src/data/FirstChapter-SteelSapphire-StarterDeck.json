@@ -1,38 +1,38 @@
 {
   "state": {
     "player": {
-      "deckCount": "21-30",
+      "deckCount": "30+",
       "fieldState": {
         "totalReadiedCards": "0",
-        "totalLore": 4,
-        "totalStrength": 7,
-        "totalWillpower": 10
+        "totalLore": 3,
+        "totalStrength": 5,
+        "totalWillpower": 6
       },
       "hand": {
-        "handSizeRange": "0"
+        "handSizeRange": "3-4"
       },
-      "inkTotal": 4,
-      "loreCount": 10
+      "inkTotal": 1,
+      "loreCount": 3
     },
     "hostilePlayer": {
-      "deckCount": "21-30",
+      "deckCount": "30+",
       "fieldState": {
         "totalReadiedCards": "0",
-        "totalLore": 1,
-        "totalStrength": 2,
-        "totalWillpower": 3
+        "totalLore": 0,
+        "totalStrength": 0,
+        "totalWillpower": 0
       },
       "hand": {
-        "handSizeRange": "0"
+        "handSizeRange": "5-7"
       },
-      "inkTotal": 4,
-      "loreCount": 3
+      "inkTotal": 1,
+      "loreCount": 1
     }
   },
-  "serializedState": "{\"player\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":4,\"totalStrength\":7,\"totalWillpower\":10},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":4,\"loreCount\":10},\"hostilePlayer\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":1,\"totalStrength\":2,\"totalWillpower\":3},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":4,\"loreCount\":3}}",
+  "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":3,\"totalStrength\":5,\"totalWillpower\":6},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":1,\"loreCount\":3},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":1,\"loreCount\":1}}",
   "children": [],
   "visits": 1,
-  "totalReward": 44,
+  "totalReward": 19,
   "action": {
     "id": "END_TURN",
     "action": {
