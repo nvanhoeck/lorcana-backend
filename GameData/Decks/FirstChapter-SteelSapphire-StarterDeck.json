@@ -3,9 +3,6 @@
   "firstDeckType": "Steel",
   "secondDeckType": "Sapphire",
   "cards": [
-    {"id": "001-001", "count": 20},
-    {"id": "001-002", "count": 20},
-    {"id": "001-025", "count": 20},
     {"id": "001-174", "count": 3},
     {"id": "001-179", "count": 2},
     {"id": "001-140", "count": 3},

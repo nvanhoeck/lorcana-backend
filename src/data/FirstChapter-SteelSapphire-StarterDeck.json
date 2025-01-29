@@ -1,38 +1,38 @@
 {
   "state": {
     "player": {
-      "deckCount": "30+",
+      "deckCount": "21-30",
+      "fieldState": {
+        "totalReadiedCards": "0",
+        "totalLore": 4,
+        "totalStrength": 7,
+        "totalWillpower": 10
+      },
+      "hand": {
+        "handSizeRange": "0"
+      },
+      "inkTotal": 4,
+      "loreCount": 10
+    },
+    "hostilePlayer": {
+      "deckCount": "21-30",
       "fieldState": {
         "totalReadiedCards": "0",
         "totalLore": 1,
-        "totalStrength": 1,
-        "totalWillpower": 2
+        "totalStrength": 2,
+        "totalWillpower": 3
       },
       "hand": {
-        "handSizeRange": "3-4"
+        "handSizeRange": "0"
       },
-      "inkTotal": 0,
-      "loreCount": 1
-    },
-    "hostilePlayer": {
-      "deckCount": "30+",
-      "fieldState": {
-        "totalReadiedCards": "0",
-        "totalLore": 0,
-        "totalStrength": 0,
-        "totalWillpower": 0
-      },
-      "hand": {
-        "handSizeRange": "5-7"
-      },
-      "inkTotal": 2,
-      "loreCount": 0
+      "inkTotal": 4,
+      "loreCount": 3
     }
   },
-  "serializedState": "{\"player\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":1,\"totalStrength\":1,\"totalWillpower\":2},\"hand\":{\"handSizeRange\":\"3-4\"},\"inkTotal\":0,\"loreCount\":1},\"hostilePlayer\":{\"deckCount\":\"30+\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":0,\"totalStrength\":0,\"totalWillpower\":0},\"hand\":{\"handSizeRange\":\"5-7\"},\"inkTotal\":2,\"loreCount\":0}}",
+  "serializedState": "{\"player\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":4,\"totalStrength\":7,\"totalWillpower\":10},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":4,\"loreCount\":10},\"hostilePlayer\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":1,\"totalStrength\":2,\"totalWillpower\":3},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":4,\"loreCount\":3}}",
   "children": [],
   "visits": 1,
-  "totalReward": 11,
+  "totalReward": 44,
   "action": {
     "id": "END_TURN",
     "action": {
