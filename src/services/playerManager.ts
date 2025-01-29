@@ -44,6 +44,7 @@ export const playCharacterCard = (hand: Card[], waitingRow: Card[], cardToBePlay
         const indexOfCard = hand.findIndex((c) => c.id === cardToBePlayed.id)
         if (isBodyguard(cardToBePlayed)) {
             cardToBePlayed.readied = false
+            cardToBePlayed.canBeReadiedDuringReadyPhase = true
             transferElement(hand, activeRow, indexOfCard)
         } else {
             transferElement(hand, waitingRow, indexOfCard)
