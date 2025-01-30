@@ -16,7 +16,13 @@ import {MCTSNode} from "../agent/MCTS-Node";
 import {executeAction} from "./gameManager";
 import {sumByProperty} from "../functions/sumByProperty";
 import {deepClone} from "../functions/deepClone";
-import {aWonderfulDreamNextState, aWonderfulDreamOptimalTarget, isBodyguard} from "lorcana-shared/model/abilities";
+import {
+    aWonderfulDreamNextState,
+    aWonderfulDreamOptimalTarget,
+    defineNextStateByShifting,
+    isBodyguard
+} from "lorcana-shared/model/abilities";
+import card from "../controller/card";
 
 const defineLoreCountRangeReward = (loreCount: number) => {
     if (loreCount > 0 && loreCount < 5) {
@@ -164,6 +170,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
 
 const defineNextState = (action: {
     card?: Card;
+    cardTarget?: Card;
     action: Actions;
     stats?: { power: number } | undefined
 }, player: Player, hostilePlayer: Player) => {
@@ -180,6 +187,11 @@ const defineNextState = (action: {
                 defineState(deepClone(player), deepClone(hostilePlayer.activeRow)),
                 defineState(deepClone(hostilePlayer), deepClone(player.activeRow)),
                 hostilePlayer.activeRow)
+        case "SHIFT":
+            return {
+                player: defineNextStateByShifting(action.card!, action.cardTarget!, player, defineState(deepClone(player), deepClone(hostilePlayer.activeRow))),
+                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
+            }
         case "QUEST":
             return {
                 player: defineNextStateByQuesting(deepClone(player), defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), action.card!),
@@ -268,6 +280,12 @@ export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]
             cardIdx: player.activeRow.indexOf(cardForAction),
             card: cardForAction,
             action: "CARD_EFFECT_ACTIVATION" as Actions,
+        })),
+        ...possibleActions.SHIFT.map((cardForAction) => ({
+            cardIdx: player.hand.indexOf(cardForAction),
+            targetIdx: player.activeRow.indexOf(player.activeRow.find((c) => c.name === (cardForAction as Card).name)!),
+            card: cardForAction,
+            action: "SHIFT" as Actions,
         }))
     ];
 

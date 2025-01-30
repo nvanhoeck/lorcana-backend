@@ -17,6 +17,7 @@ import {
 import {singASongCard} from 'lorcana-shared/utils/singASong'
 import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
+import { shiftCharacterCard } from "lorcana-shared/utils";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -142,7 +143,7 @@ export function printGameDetails(players: Player[]) {
 }
 
 export const executeAction = (action: Actions, player: Player, opposingPlayer: Player, cardIdx?: number, targetIndex?: number) => {
-    const card = action === 'INK_CARD' || action === 'PLAY_CARD' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
+    const card = action === 'INK_CARD' || action === 'PLAY_CARD' || action === 'SHIFT' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
     // console.log(action, card?.name, card?.subName)
     switch (action) {
         case "INK_CARD":
@@ -170,6 +171,12 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
                 throw new Error('Not properly updated')
             }
             break;
+
+        case "SHIFT": {
+            if (card!.type === 'Character') {
+                player.inkTotal = shiftCharacterCard(player.hand, player.activeRow, player.banishedPile, cardIdx!, targetIndex!, player.inkTotal)
+            }
+        }
         case "PLAY_CARD":
             if (card!.type === 'Character') {
                 player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal, player.activeRow)

@@ -2,7 +2,7 @@ import {Player} from "lorcana-shared/model/Player";
 import {Card, isActivatedAbility} from "lorcana-shared/model/Card";
 import {Actions} from "lorcana-shared/model/actions";
 import {eligibleTargets} from "lorcana-shared/utils/eligibleTargets";
-import {aWonderfulDreamCanBeExecuted} from "lorcana-shared/model/abilities";
+import {aWonderfulDreamCanBeExecuted, canShift, shiftCost} from "lorcana-shared/model/abilities";
 
 type PossibleActions = Record<Actions, any[]>; // Create a type where keys are from 'Actions' and values are arrays of any type.
 
@@ -28,7 +28,8 @@ export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlay
         INK_CARD: [],
         END_TURN: [],
         SING: [],
-        CARD_EFFECT_ACTIVATION: []
+        CARD_EFFECT_ACTIVATION: [],
+        SHIFT: []
     }
     if (!player.alreadyInkedThisTurn) {
         possibleActions.INK_CARD.push(...definePossibleInkableCards(player.hand))
@@ -40,6 +41,7 @@ export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlay
     possibleActions.QUEST.push(...definePossibleQuestingCards(player.activeRow))
     possibleActions.SING.push(...definePossibleSingCards(player.hand))
     possibleActions.CARD_EFFECT_ACTIVATION.push(...definePossibleCardEffectActions(player.activeRow, player, opposingPlayerActiveRow))
+    possibleActions.SHIFT.push(...definePossibleShiftableCards(player.hand, player.activeRow, player.inkTotal))
 
     return possibleActions
 }
@@ -62,4 +64,7 @@ const definePossibleQuestingCards = (activeRow: Card[]) => {
 
 const definePossibleSingCards = (hand: Card[]) => {
     return hand.filter((c) => c.type === 'Song')
+}
+const definePossibleShiftableCards = (hand: Card[], activeRow: Card[], inkTotal: number) => {
+    return hand.filter((c) => canShift(c, activeRow) && shiftCost(c) <= inkTotal)
 }
