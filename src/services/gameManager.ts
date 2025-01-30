@@ -17,7 +17,7 @@ import {
 import {singASongCard} from 'lorcana-shared/utils/singASong'
 import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
-import { shiftCharacterCard } from "lorcana-shared/utils";
+import {reviseAllCardsInPlay, shiftCharacterCard} from "lorcana-shared/utils";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -151,6 +151,7 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             player.inkTotal = result.inkwell
             player.cardInInkRow = result.cardInInkRow
             player.alreadyInkedThisTurn = true
+            reviseAllCardsInPlay(player, opposingPlayer)
             break;
         case "CHALLENGE":
             // TODO do not make predefined choices (agent as well?)
@@ -164,17 +165,18 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             }
             banishIfSuccumbed(cardIdx!, player.activeRow, player.banishedPile)
             banishIfSuccumbed(targetIndex!, opposingPlayer.activeRow, opposingPlayer.banishedPile)
+            reviseAllCardsInPlay(player, opposingPlayer)
             break;
         case "QUEST":
             quest(player.activeRow, cardIdx!, player)
             if (card!.readied) {
                 throw new Error('Not properly updated')
             }
+            reviseAllCardsInPlay(player, opposingPlayer)
             break;
-
         case "SHIFT": {
             if (card!.type === 'Character') {
-                player.inkTotal = shiftCharacterCard(player.hand, player.activeRow, player.banishedPile, cardIdx!, targetIndex!, player.inkTotal)
+                player.inkTotal = shiftCharacterCard(player, player.hand, player.activeRow, player.banishedPile, cardIdx!, targetIndex!, player.inkTotal)
             }
         }
         case "PLAY_CARD":
@@ -193,6 +195,7 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
                 stepsAndCondition[1](revealedCards, player.hand, chosenCard ? revealedCards.indexOf(chosenCard) : -1)
                 stepsAndCondition[2](revealedCards, player.deck)
             }
+            reviseAllCardsInPlay(player, opposingPlayer)
             break;
         case "SING":
             if (card!.type === 'Song') {
@@ -200,6 +203,8 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             } else {
                 throw new Error('Cannot sing a non-song card')
             }
+            reviseAllCardsInPlay(player, opposingPlayer)
+            break;
         case "CARD_EFFECT_ACTIVATION":
             if (card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
                 throw new Error("Has multiple effects, which is not yet developed")
@@ -218,9 +223,10 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             } else {
                 throw new Error("Trying to trigger a card effect activation where there is none")
             }
-            return {activePlayer: player, opposingPlayer: opposingPlayer}
+            reviseAllCardsInPlay(player, opposingPlayer)
         case "END_TURN":
             // Do nothing
             break;
+
     }
 }

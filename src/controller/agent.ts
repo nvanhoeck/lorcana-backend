@@ -19,7 +19,6 @@ router.post('/determine-action', async (req: express.Request<{}, {}, DetermineAg
         const currentActivePlayer = game.playerOne.name === game.playerTurn ? game.playerOne : game.playerTwo
         const currentHostilePlayer = game.playerOne.name === game.playerTurn ? game.playerTwo : game.playerOne
         const chosenNode = await determineNextActionBasedByCurrentGameState({...currentActivePlayer}, {...currentHostilePlayer});
-        console.log(chosenNode)
         await writeFile(['..', 'data', 'FirstChapter-SteelSapphire-StarterDeck.json'], chosenNode.toJSON())
         if (chosenNode.action!.action.action === 'CHALLENGE') {
             const activeRow = game.playerTurn === game.playerOne.name ? game.playerTwo.activeRow : game.playerOne.activeRow;

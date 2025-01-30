@@ -77,14 +77,12 @@ export const trainAgent = async () => {
             await doTurn(agentOne, agentTwo)
             // printGameDetails([game.playerOne, game.playerTwo])
             if (hasEnded(game)) {
-                console.log(game)
                 break
             }
             game.playerTurn = playerTwo
             await doTurn(agentTwo, agentOne)
             turnCount++
             printGameDetails([game.playerOne, game.playerTwo])
-            console.log(turnCount)
             if (hasEnded(game)) {
                 break
             }
@@ -102,7 +100,6 @@ export const trainAgent = async () => {
 
         // TODO end game reward?
         console.log('cycle ' + i)
-        console.log(turnCount)
         printGameDetails([game.playerOne, game.playerTwo])
         await writeFile(['..', 'data', 'FirstChapter-SteelSapphire-StarterDeck.json'], agentOne.turnRootNodes)
 

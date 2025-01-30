@@ -23,6 +23,7 @@ import {
     isBodyguard
 } from "lorcana-shared/model/abilities";
 import card from "../controller/card";
+import {reviseAllCardsInPlay} from "lorcana-shared/utils";
 
 const defineLoreCountRangeReward = (loreCount: number) => {
     if (loreCount > 0 && loreCount < 5) {
@@ -168,6 +169,22 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
     }
 };
 
+function defineNextStateBasedByStats(playerGameState: PlayerGameState, player: Player, hostilePlayer: Player): PlayerGameState {
+    reviseAllCardsInPlay(player, hostilePlayer)
+    const totalLore = player.activeRow.map((c) => c.statChanges.lore + c.lore).reduce((c, n) => c + n, 0) + player.waitRow.map((c) => c.statChanges.lore + c.lore).reduce((c, n) => c + n, 0)
+    const totalWillpower = player.activeRow.map((c) => c.statChanges.willpower + c.willpower).reduce((c, n) => c + n, 0) + player.waitRow.map((c) => c.statChanges.willpower + c.willpower).reduce((c, n) => c + n, 0)
+    const totalStrength = player.activeRow.map((c) => c.statChanges.strength + c.strength).reduce((c, n) => c + n, 0) + player.waitRow.map((c) => c.statChanges.strength + c.strength).reduce((c, n) => c + n, 0)
+    return {
+        ...playerGameState,
+        fieldState: {
+            ...playerGameState.fieldState,
+            totalLore,
+            totalWillpower,
+            totalStrength
+        }
+    }
+}
+
 const defineNextState = (action: {
     card?: Card;
     cardTarget?: Card;
@@ -177,8 +194,8 @@ const defineNextState = (action: {
     switch (action.action) {
         case "INK_CARD":
             return {
-                player: defineNextStatesByInkingCard(deepClone(player), deepClone(hostilePlayer.activeRow)),
-                hostilePlayer: defineState(deepClone(player), deepClone(hostilePlayer.activeRow))
+                player: defineNextStateBasedByStats(defineNextStatesByInkingCard(deepClone(player), deepClone(hostilePlayer.activeRow)), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), player, hostilePlayer)
             }
         case "CHALLENGE":
             return defineNextStatesByChallengingCards(
@@ -186,31 +203,31 @@ const defineNextState = (action: {
                 action,
                 defineState(deepClone(player), deepClone(hostilePlayer.activeRow)),
                 defineState(deepClone(hostilePlayer), deepClone(player.activeRow)),
-                hostilePlayer.activeRow)
+                deepClone(hostilePlayer))
         case "SHIFT":
             return {
-                player: defineNextStateByShifting(action.card!, action.cardTarget!, player, defineState(deepClone(player), deepClone(hostilePlayer.activeRow))),
-                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
+                player: defineNextStateBasedByStats(defineNextStateByShifting(action.card!, action.cardTarget!, player, defineState(deepClone(player), deepClone(hostilePlayer.activeRow))), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "QUEST":
             return {
-                player: defineNextStateByQuesting(deepClone(player), defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), action.card!),
-                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
+                player: defineNextStateBasedByStats(defineNextStateByQuesting(deepClone(player), defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), action.card!), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "PLAY_CARD":
             return {
-                player: defineNextStateByPlayingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)),
-                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
+                player: defineNextStateBasedByStats(defineNextStateByPlayingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "END_TURN":
             return {
-                player: defineState(player, hostilePlayer.activeRow),
-                hostilePlayer: defineState(hostilePlayer, player.activeRow)
+                player: defineNextStateBasedByStats(defineState(player, hostilePlayer.activeRow), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(hostilePlayer, player.activeRow), player, hostilePlayer)
             }
         case "SING":
             return {
-                player: defineNextStateBySingingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)),
-                hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(player.activeRow))
+                player: defineNextStateBasedByStats(defineNextStateBySingingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)), player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "CARD_EFFECT_ACTIVATION":
             if (action.card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
@@ -224,8 +241,8 @@ const defineNextState = (action: {
                         const clonedNextActiveRowState = deepClone(player.activeRow)
                         clonedNextActiveRowState.find((c) => c.id === action.card?.id)!.readied = false
                         return {
-                            player: aWonderfulDreamNextState(defineState(player, hostilePlayer.activeRow), deepClone(player)),
-                            hostilePlayer: defineState(deepClone(hostilePlayer), deepClone(clonedNextActiveRowState))
+                            player: defineNextStateBasedByStats(aWonderfulDreamNextState(defineState(player, hostilePlayer.activeRow), deepClone(player)), player, hostilePlayer),
+                            hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(clonedNextActiveRowState)), player, hostilePlayer)
                         }
                     } else {
                         throw new Error("Performing A Wonderfull dream on non legitimate targets")
@@ -368,7 +385,8 @@ function defineNextStatesByChallengingCards(
     action: {
         card?: Card,
         action: Actions
-    }, clonedPlayerState: PlayerGameState, clonedHostileState: PlayerGameState, opposingRow: Card[]) {
+    }, clonedPlayerState: PlayerGameState, clonedHostileState: PlayerGameState, hostilePlayer: Player) {
+    const opposingRow = hostilePlayer.activeRow
     if (eligibleTargets(opposingRow)) {
         const target = optimalChallengeTarget(opposingRow, action.card!)!;
         const card = deepClone(action.card!)
@@ -402,8 +420,8 @@ function defineNextStatesByChallengingCards(
             }
         }
         return {
-            player: newPlayerState,
-            hostilePlayer: newHostilePlayerState
+            player: defineNextStateBasedByStats(newPlayerState, player, hostilePlayer),
+            hostilePlayer: defineNextStateBasedByStats(newHostilePlayerState, hostilePlayer, player)
         }
     } else {
         return {player: clonedPlayerState, hostilePlayer: clonedHostileState}
