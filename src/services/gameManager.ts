@@ -18,6 +18,7 @@ import {singASongCard} from 'lorcana-shared/utils/singASong'
 import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 import {reviseAllCardsInPlay, shiftCharacterCard} from "lorcana-shared/utils";
+import {runOverAllTriggeredAbilities} from "./abilitiesManager";
 
 const ROOT_FILE_PATH = ['..', '..', 'GameData']
 
@@ -187,13 +188,8 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             } else {
                 player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
             }
-            // TODO ship to different place when bigger, maybe in a redux middleware style way
-            if (card!.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
-                const stepsAndCondition = musicalDebut(player.deck);
-                const revealedCards = stepsAndCondition[0];
-                const chosenCard = revealedCards.find(stepsAndCondition.conditionToPick)
-                stepsAndCondition[1](revealedCards, player.hand, chosenCard ? revealedCards.indexOf(chosenCard) : -1)
-                stepsAndCondition[2](revealedCards, player.deck)
+            if (card!.abilities.find((a) => isTriggeredAbility(a))) {
+                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(player, opposingPlayer, a))
             }
             reviseAllCardsInPlay(player, opposingPlayer)
             break;

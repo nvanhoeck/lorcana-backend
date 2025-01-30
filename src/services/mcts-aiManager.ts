@@ -24,6 +24,7 @@ import {
 } from "lorcana-shared/model/abilities";
 import card from "../controller/card";
 import {reviseAllCardsInPlay} from "lorcana-shared/utils";
+import {runOverAllTriggeredAbilitiesForNextState} from "./abilitiesNextStateManager";
 
 const defineLoreCountRangeReward = (loreCount: number) => {
     if (loreCount > 0 && loreCount < 5) {
@@ -492,13 +493,12 @@ function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGame
 }
 
 function cardEffectWrapperByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState) {
-    // TODO extend when expanded with a middleware redux style way
-    if (card.abilities.find((a) => isTriggeredAbility(a) && a.name === 'MUSICAL DEBUT')) {
-        return {
-            ...newPlayerGameState,
-            deckCount: defineDeckAmountRange(player.deck.length - 1),
-            hand: {...newPlayerGameState.hand, handSizeRange: defineCardAmountRange(player.hand.length + 1)},
+    if (card.abilities.find((a) => isTriggeredAbility(a))) {
+        if (card.abilities.filter((a) => isTriggeredAbility(a)).length > 1) {
+            throw new Error('Found multiple trigger abilities which has not been implemented')
         }
+        const ability = card.abilities.find((a) => isTriggeredAbility(a))!;
+        return runOverAllTriggeredAbilitiesForNextState(player, card, opposingActiveRow, ability, newPlayerGameState).newPlayerGameState
     } else {
         return newPlayerGameState
     }
