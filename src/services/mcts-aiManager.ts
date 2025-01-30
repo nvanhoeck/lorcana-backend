@@ -326,9 +326,9 @@ export const defineFieldState = (activeRow: Card[]): FieldState => {
     // console.log('readied', activeRow.filter((c) => c.readied).length)
     return {
         totalReadiedCards: defineCardAmountRange(activeRow.filter((c) => c.readied).length),
-        totalLore: activeRow.map((c) => c.lore).reduce((c, n) => c + n, 0),
-        totalStrength: activeRow.map((c) => c.strength).reduce((c, n) => c + n, 0),
-        totalWillpower: activeRow.map((c) => c.willpower).reduce((c, n) => c + n, 0)
+        totalLore: activeRow.map((c) => c.lore + c.statChanges.lore).reduce((c, n) => c + n, 0),
+        totalStrength: activeRow.map((c) => c.strength + c.statChanges.strength).reduce((c, n) => c + n, 0),
+        totalWillpower: activeRow.map((c) => c.willpower + c.statChanges.willpower).reduce((c, n) => c + n, 0)
     };
 }
 
@@ -392,17 +392,17 @@ function defineNextStatesByChallengingCards(
         const card = deepClone(action.card!)
         const newPlayerState = deepClone(clonedPlayerState)
         const newHostilePlayerState = deepClone(clonedHostileState)
-        if (card.strength >= target.willpower - target.damage) {
+        if (card.strength + card.statChanges.strength >= target.willpower + target.statChanges.willpower - target.damage) {
             newHostilePlayerState.fieldState = {
-                totalLore: newHostilePlayerState.fieldState.totalLore - target.lore,
+                totalLore: -newHostilePlayerState.fieldState.totalLore - target.lore - target.statChanges.lore,
                 totalReadiedCards: target.readied ? defineCardAmountRange(player.activeRow.filter((c) => c.readied).length - 1) : defineCardAmountRange(player.activeRow.filter((c) => c.readied).length),
-                totalStrength: newHostilePlayerState.fieldState.totalStrength - target.strength,
-                totalWillpower: newHostilePlayerState.fieldState.totalWillpower - target.willpower
+                totalStrength: -newHostilePlayerState.fieldState.totalStrength - target.strength - target.statChanges.strength,
+                totalWillpower: -newHostilePlayerState.fieldState.totalWillpower - target.willpower - target.statChanges.willpower
             }
         } else {
             newHostilePlayerState.fieldState = {
                 ...newHostilePlayerState.fieldState,
-                totalWillpower: newHostilePlayerState.fieldState.totalWillpower - card.strength
+                totalWillpower: newHostilePlayerState.fieldState.totalWillpower - card.strength - card.statChanges.strength
             }
         }
 
@@ -435,17 +435,17 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
     if (eligibleTarget.length === 0) {
         return undefined
     }
-    const targetsWhereOwnTargetDies = eligibleTarget.filter((target) => target.strength >= (attackingCard.willpower - attackingCard.damage))
-    const targetsWhereYourTargetDoesNotDie = eligibleTarget.filter((target) => target.strength <= (attackingCard.willpower - attackingCard.damage))
-    const targetsWhereItDies = eligibleTarget.filter((target) => attackingCard.strength >= (target.willpower - target.damage))
-    const targetsWhereItDiesButNotYourCard = targetsWhereItDies.filter((target) => target.strength < (attackingCard.willpower - attackingCard.damage))
-    const targetsWhereItDiesAndYourCard = targetsWhereItDies.filter((target) => target.strength >= (attackingCard.willpower - attackingCard.damage))
+    const targetsWhereOwnTargetDies = eligibleTarget.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+    const targetsWhereYourTargetDoesNotDie = eligibleTarget.filter((target) => target.strength + target.statChanges.strength <= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+    const targetsWhereItDies = eligibleTarget.filter((target) => attackingCard.strength + attackingCard.statChanges.strength >= (target.willpower + target.statChanges.willpower - target.damage))
+    const targetsWhereItDiesButNotYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength < (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+    const targetsWhereItDiesAndYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
 
     if (targetsWhereItDiesButNotYourCard.length > 0) {
         if (targetsWhereItDiesButNotYourCard.length > 1) {
             return targetsWhereItDiesButNotYourCard.reduce((currentCard, nextCard) => {
                 if (!currentCard) return nextCard
-                if (currentCard.lore < nextCard.lore) return nextCard
+                if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
                 return currentCard
             })
         } else {
@@ -455,7 +455,7 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
         if (targetsWhereItDiesAndYourCard.length > 1) {
             return targetsWhereItDiesAndYourCard.reduce((currentCard, nextCard) => {
                 if (!currentCard) return nextCard
-                if (currentCard.lore < nextCard.lore) return nextCard
+                if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
                 return currentCard
             })
         } else {
@@ -465,7 +465,7 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
         if (targetsWhereYourTargetDoesNotDie.length > 1) {
             return targetsWhereYourTargetDoesNotDie.reduce((currentCard, nextCard) => {
                 if (!currentCard) return nextCard
-                if (currentCard.lore < nextCard.lore) return nextCard
+                if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
                 return currentCard
             })
         } else {
@@ -474,7 +474,7 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
     } else {
         return targetsWhereOwnTargetDies.reduce((currentCard, nextCard) => {
             if (!currentCard) return nextCard
-            if (currentCard.lore < nextCard.lore) return nextCard
+            if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
             return currentCard
         }, targetsWhereOwnTargetDies[0])
     }
@@ -512,9 +512,9 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
         hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
         fieldState: {
             ...clonedPlayerState.fieldState,
-            totalLore: clonedPlayerState.fieldState.totalLore + card.lore,
-            totalWillpower: clonedPlayerState.fieldState.totalWillpower + card.willpower,
-            totalStrength: clonedPlayerState.fieldState.totalStrength + card.strength,
+            totalLore: clonedPlayerState.fieldState.totalLore + card.lore + card.statChanges.lore,
+            totalWillpower: clonedPlayerState.fieldState.totalWillpower + card.willpower + card.statChanges.willpower,
+            totalStrength: clonedPlayerState.fieldState.totalStrength + card.strength + card.statChanges.strength,
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + (isBodyguard(card) ? 0 : 1)),
         }
     }

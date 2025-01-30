@@ -75,7 +75,7 @@ export const moveFromWaitingToActiveZone = (waitingZone: Card[], activeZone: Car
 export const quest = (activeRow: Card[], cardToBeQuestIdx: number, player: Player) => {
     const cardToBeQuest = activeRow[cardToBeQuestIdx]
     if (cardToBeQuest.type === "Character" && cardToBeQuest.readied) {
-        player.loreCount += cardToBeQuest.lore
+        player.loreCount += cardToBeQuest.lore + cardToBeQuest.statChanges.lore
         cardToBeQuest.readied = false
     } else {
         throw new Error(`Character ${cardToBeQuest.name} ${cardToBeQuest.subName} can not quest`)
@@ -93,8 +93,8 @@ export const challengeCharacter = (attackingActiveRow: Card[], attackingCardIdx:
     // console.log(defendingCard.name, defendingCard.subName)
     if (attackingCard.type === 'Character' && defendingCard.type === 'Character') {
         if (attackingCard.readied && !defendingCard.readied) {
-            defendingCard.damage += attackingCard.strength
-            attackingCard.damage += defendingCard.strength
+            defendingCard.damage += attackingCard.strength + attackingCard.statChanges.strength
+            attackingCard.damage += defendingCard.strength + defendingCard.statChanges.strength
             attackingCard.readied = false
         }
     } else {
@@ -102,13 +102,9 @@ export const challengeCharacter = (attackingActiveRow: Card[], attackingCardIdx:
     }
 }
 
-export const isSuccumbed = (card: Card) => {
-    return card.damage >= card.willpower
-}
-
 export const banishIfSuccumbed = (cardIdx: number, originalRow: Card[], banishedPile: Card[]) => {
     const card: Card = originalRow[cardIdx]
-    if (card.damage >= card.willpower) {
+    if (card.damage >= card.willpower + card.statChanges.willpower) {
         const indexOfCard = originalRow.findIndex((c) => c.id === card.id)
         transferElement(originalRow, banishedPile, indexOfCard)
     }
