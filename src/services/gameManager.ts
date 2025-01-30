@@ -1,7 +1,13 @@
 import {Game} from "lorcana-shared/model/Game";
 import {writeFile} from "./fileWriter";
 import {readFile} from "./fileReader";
-import {Card, isActivatedAbility, isTriggeredAbility} from "lorcana-shared/model/Card";
+import {
+    Card,
+    isActivatedAbility,
+    isKeywordAbility,
+    isStaticAbility,
+    isTriggeredAbility
+} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
@@ -15,7 +21,7 @@ import {
     quest
 } from "./playerManager";
 import {singASongCard} from 'lorcana-shared/utils/singASong'
-import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut} from 'lorcana-shared/model/abilities'
+import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut, support} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 import {reviseAllCardsInPlay, shiftCharacterCard} from "lorcana-shared/utils";
 import {runOverAllTriggeredAbilities} from "./abilitiesManager";
@@ -173,6 +179,7 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             if (card!.readied) {
                 throw new Error('Not properly updated')
             }
+            support(card!, player)
             reviseAllCardsInPlay(player, opposingPlayer)
             break;
         case "SHIFT": {

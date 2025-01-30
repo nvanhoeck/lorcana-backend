@@ -7,7 +7,7 @@ import {
     determineNextActionBasedByCurrentGameState,
 } from "../services/mcts-aiManager";
 import {Card} from "lorcana-shared/model/Card";
-import {drawCard, readyAllCards} from "../services/playerManager";
+import {drawCard, readyAllCards, resetAllTurnStats} from "../services/playerManager";
 import {executeAction} from "../services/gameManager";
 import {MCTSNode} from "./MCTS-Node";
 import {resetInkTotal} from 'lorcana-shared/utils/resetInktotal'
@@ -87,6 +87,7 @@ export class Agent {
             this.turnRootNodes.push([])
             resetInkTotal(this.player)
             readyAllCards(this.player.activeRow, this.player.waitRow)
+            resetAllTurnStats(this.player, this.getHostilePlayer())
         }
         if (newTurn) {
             if (!firstPlayerFirstTurn) {

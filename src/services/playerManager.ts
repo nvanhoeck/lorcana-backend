@@ -1,12 +1,45 @@
 import {Card} from "lorcana-shared/model/Card";
 import {transferElement, transferLastElements} from "lorcana-shared/utils/transferElements";
 import {Player} from "lorcana-shared/model/Player";
-import {isBodyguard} from 'lorcana-shared/model/abilities/index'
+import {isBodyguard, support} from 'lorcana-shared/model/abilities/index'
 
 export const drawCard = (deck: Card[], hand: Card[]) => {
     transferLastElements(deck, hand, 1)
 }
-
+export const resetAllTurnStats = (player: Player, oppositePlayer: Player) => {
+    player.activeRow.forEach((c) => {
+        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
+        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
+        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
+        c.subtractStatsAtEndOfTurn.strength = 0
+        c.subtractStatsAtEndOfTurn.willpower = 0
+        c.subtractStatsAtEndOfTurn.lore = 0
+    })
+    player.waitRow.forEach((c) => {
+        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
+        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
+        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
+        c.subtractStatsAtEndOfTurn.strength = 0
+        c.subtractStatsAtEndOfTurn.willpower = 0
+        c.subtractStatsAtEndOfTurn.lore = 0
+    })
+    oppositePlayer.activeRow.forEach((c) => {
+        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
+        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
+        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
+        c.subtractStatsAtEndOfTurn.strength = 0
+        c.subtractStatsAtEndOfTurn.willpower = 0
+        c.subtractStatsAtEndOfTurn.lore = 0
+    })
+    oppositePlayer.waitRow.forEach((c) => {
+        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
+        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
+        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
+        c.subtractStatsAtEndOfTurn.strength = 0
+        c.subtractStatsAtEndOfTurn.willpower = 0
+        c.subtractStatsAtEndOfTurn.lore = 0
+    })
+}
 export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {
     transferLastElements(waitingRow, activeRow, waitingRow.length)
     activeRow.forEach((c) => {
@@ -77,6 +110,7 @@ export const quest = (activeRow: Card[], cardToBeQuestIdx: number, player: Playe
     if (cardToBeQuest.type === "Character" && cardToBeQuest.readied) {
         player.loreCount += cardToBeQuest.lore + cardToBeQuest.statChanges.lore
         cardToBeQuest.readied = false
+        support(cardToBeQuest, player)
     } else {
         throw new Error(`Character ${cardToBeQuest.name} ${cardToBeQuest.subName} can not quest`)
     }
