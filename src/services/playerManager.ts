@@ -18,6 +18,7 @@ function updateStats(c: Card) {
     c.subtractStatsAtEndOfTurn.ink = 0
     c.statChanges.applied = []
     c.subtractStatsAtEndOfTurn.applied = []
+    c.providesEffects = []
 }
 
 export const resetAllTurnStats = (player: Player, oppositePlayer: Player) => {

@@ -83,6 +83,7 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
         canBeReadiedDuringReadyPhase: false,
         abilities: mapAbilities(card),
         subTypes: card.subtypes as SubType[],
+        providesEffects: [],
         statChanges: {
             strength: 0,
             willpower: 0,
