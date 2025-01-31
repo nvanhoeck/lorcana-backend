@@ -6,38 +6,32 @@ import {isBodyguard, support} from 'lorcana-shared/model/abilities/index'
 export const drawCard = (deck: Card[], hand: Card[]) => {
     transferLastElements(deck, hand, 1)
 }
+
+function updateStats(c: Card) {
+    c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
+    c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
+    c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
+    c.statChanges.ink = c.statChanges.ink - c.subtractStatsAtEndOfTurn.ink
+    c.subtractStatsAtEndOfTurn.strength = 0
+    c.subtractStatsAtEndOfTurn.willpower = 0
+    c.subtractStatsAtEndOfTurn.lore = 0
+    c.subtractStatsAtEndOfTurn.ink = 0
+    c.statChanges.applied = []
+    c.subtractStatsAtEndOfTurn.applied = []
+}
+
 export const resetAllTurnStats = (player: Player, oppositePlayer: Player) => {
     player.activeRow.forEach((c) => {
-        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
-        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
-        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
-        c.subtractStatsAtEndOfTurn.strength = 0
-        c.subtractStatsAtEndOfTurn.willpower = 0
-        c.subtractStatsAtEndOfTurn.lore = 0
+        updateStats(c);
     })
     player.waitRow.forEach((c) => {
-        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
-        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
-        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
-        c.subtractStatsAtEndOfTurn.strength = 0
-        c.subtractStatsAtEndOfTurn.willpower = 0
-        c.subtractStatsAtEndOfTurn.lore = 0
+        updateStats(c);
     })
     oppositePlayer.activeRow.forEach((c) => {
-        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
-        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
-        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
-        c.subtractStatsAtEndOfTurn.strength = 0
-        c.subtractStatsAtEndOfTurn.willpower = 0
-        c.subtractStatsAtEndOfTurn.lore = 0
+        updateStats(c);
     })
     oppositePlayer.waitRow.forEach((c) => {
-        c.statChanges.strength = c.statChanges.strength - c.subtractStatsAtEndOfTurn.strength
-        c.statChanges.willpower = c.statChanges.willpower - c.subtractStatsAtEndOfTurn.willpower
-        c.statChanges.lore = c.statChanges.lore - c.subtractStatsAtEndOfTurn.lore
-        c.subtractStatsAtEndOfTurn.strength = 0
-        c.subtractStatsAtEndOfTurn.willpower = 0
-        c.subtractStatsAtEndOfTurn.lore = 0
+        updateStats(c);
     })
 }
 export const readyAllCards = (activeRow: Card[], waitingRow: Card[]) => {

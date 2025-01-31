@@ -35,12 +35,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -86,12 +90,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -137,12 +145,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -187,12 +199,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -240,12 +256,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -284,12 +304,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -328,12 +352,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -370,12 +398,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -407,12 +439,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -456,12 +492,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -498,12 +538,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -535,12 +579,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -572,12 +620,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -616,12 +668,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -655,12 +711,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -699,12 +759,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -736,12 +800,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -780,12 +848,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -825,12 +897,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -871,12 +947,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -915,12 +995,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -954,12 +1038,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1005,12 +1093,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1047,12 +1139,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1085,12 +1181,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1114,12 +1214,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1152,12 +1256,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1181,12 +1289,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1210,12 +1322,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1248,12 +1364,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1277,12 +1397,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1311,12 +1435,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1345,12 +1473,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1379,12 +1511,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1423,12 +1559,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1460,12 +1600,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1511,12 +1655,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1558,12 +1706,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1602,12 +1754,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1643,12 +1799,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1689,12 +1849,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1742,12 +1906,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1790,12 +1958,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1834,12 +2006,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1881,12 +2057,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1929,12 +2109,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -1971,12 +2155,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2010,12 +2198,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2054,12 +2246,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2096,12 +2292,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2142,12 +2342,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2179,12 +2383,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2221,12 +2429,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2267,12 +2479,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2304,12 +2520,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2348,12 +2568,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2385,12 +2609,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2435,12 +2663,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2479,12 +2711,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2523,12 +2759,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2573,12 +2813,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2602,12 +2846,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2631,12 +2879,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2669,12 +2921,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2707,12 +2963,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2741,12 +3001,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2775,12 +3039,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2809,12 +3077,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2855,12 +3127,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2905,12 +3181,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2945,12 +3225,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -2987,12 +3271,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3024,12 +3312,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3068,12 +3360,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3116,12 +3412,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3170,12 +3470,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3207,12 +3511,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3246,12 +3554,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3283,12 +3595,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3325,12 +3641,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3367,12 +3687,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3415,12 +3739,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3454,12 +3782,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3502,12 +3834,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3544,12 +3880,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3584,12 +3924,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3626,12 +3970,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3675,12 +4023,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3714,12 +4066,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3756,12 +4112,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3800,12 +4160,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3835,12 +4199,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3885,12 +4253,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3914,12 +4286,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3952,12 +4328,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -3981,12 +4361,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4010,12 +4394,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4048,12 +4436,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4077,12 +4469,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4106,12 +4502,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4140,12 +4540,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4174,12 +4578,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4211,12 +4619,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4260,12 +4672,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4302,12 +4718,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4341,12 +4761,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4393,12 +4817,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4428,12 +4856,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4474,12 +4906,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4518,12 +4954,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4562,12 +5002,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4604,12 +5048,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4648,12 +5096,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4699,12 +5151,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4743,12 +5199,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4780,12 +5240,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4824,12 +5288,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4868,12 +5336,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4912,12 +5384,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -4956,12 +5432,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5000,12 +5480,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5037,12 +5521,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5088,12 +5576,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5125,12 +5617,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5164,12 +5660,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5210,12 +5710,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5254,12 +5758,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5292,12 +5800,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5321,12 +5833,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5350,12 +5866,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5379,12 +5899,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5408,12 +5932,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5437,12 +5965,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5471,12 +6003,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5505,12 +6041,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5539,12 +6079,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5583,12 +6127,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5627,12 +6175,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5678,12 +6230,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5717,12 +6273,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5763,12 +6323,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5811,12 +6375,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5857,12 +6425,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5903,12 +6475,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5940,12 +6516,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -5982,12 +6562,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6026,12 +6610,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6063,12 +6651,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6116,12 +6708,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6155,12 +6751,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6194,12 +6794,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6242,12 +6846,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6288,12 +6896,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6332,12 +6944,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6371,12 +6987,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6415,12 +7035,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6461,12 +7085,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6503,12 +7131,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6549,12 +7181,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6586,12 +7222,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6615,12 +7255,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6644,12 +7288,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6682,12 +7330,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6720,12 +7372,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6749,12 +7405,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6783,12 +7443,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6817,12 +7481,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6851,12 +7519,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6885,12 +7557,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6919,12 +7595,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -6956,12 +7636,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7000,12 +7684,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7046,12 +7734,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7095,12 +7787,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7154,12 +7850,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7189,12 +7889,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7239,12 +7943,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7283,12 +7991,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7320,12 +8032,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7364,12 +8080,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7410,12 +8130,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7447,12 +8171,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7484,12 +8212,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7521,12 +8253,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7560,12 +8296,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7610,12 +8350,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7657,12 +8401,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7701,12 +8449,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7752,12 +8504,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7796,12 +8552,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7840,12 +8600,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7884,12 +8648,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7939,12 +8707,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -7983,12 +8755,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8021,12 +8797,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8050,12 +8830,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8079,12 +8863,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8117,12 +8905,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8146,12 +8938,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8175,12 +8971,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8209,12 +9009,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8243,12 +9047,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8277,12 +9085,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8311,12 +9123,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8364,12 +9180,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8408,12 +9228,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8461,12 +9285,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8507,12 +9335,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8555,12 +9387,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8604,12 +9440,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8653,12 +9493,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8704,12 +9548,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8755,12 +9603,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8803,12 +9655,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8854,12 +9710,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8909,12 +9769,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -8953,12 +9817,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9004,12 +9872,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9050,12 +9922,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9092,12 +9968,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9136,12 +10016,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9182,12 +10066,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9231,12 +10119,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9275,12 +10167,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9319,12 +10215,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9363,12 +10263,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9413,12 +10317,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9463,12 +10371,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9513,12 +10425,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9567,12 +10483,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9606,12 +10526,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9645,12 +10569,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9684,12 +10612,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9728,12 +10660,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9757,12 +10693,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9795,12 +10735,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9839,12 +10783,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   },
   {
@@ -9883,12 +10831,16 @@
     "statChanges": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     },
     "subtractStatsAtEndOfTurn": {
       "strength": 0,
       "willpower": 0,
-      "lore": 0
+      "lore": 0,
+      "ink": 0,
+      "applied": []
     }
   }
 ]

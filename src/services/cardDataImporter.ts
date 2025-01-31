@@ -87,11 +87,15 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
             strength: 0,
             willpower: 0,
             lore: 0,
+            ink: 0,
+            applied: []
         },
         subtractStatsAtEndOfTurn: {
             strength: 0,
             willpower: 0,
             lore: 0,
+            ink: 0,
+            applied: []
         }
     }));
 }
