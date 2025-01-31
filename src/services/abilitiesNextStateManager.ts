@@ -8,13 +8,37 @@ type ChainedMethodInput = {
     opposingActiveRow: Card[]
     ability: TriggeredAbility,
     newPlayerGameState: PlayerGameState
+    newHostilePlayerGameState: PlayerGameState
 }
+const horseKickChain = ({
+                            player,
+                            card,
+                            opposingActiveRow,
+                            ability,
+                            newPlayerGameState,
+                            newHostilePlayerGameState
+                        }: ChainedMethodInput): ChainedMethodInput => {
+    if (ability.name === 'HORSE KICK') {
+        return {
+            player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState: {
+                ...newHostilePlayerGameState,
+                fieldState: {
+                    ...newHostilePlayerGameState.fieldState,
+                    totalStrength: newHostilePlayerGameState.fieldState.totalStrength - 2
+                }
+            }
+        }
+    }
+    return {player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState}
+}
+
 const musicalDebutChain = ({
                                player,
                                card,
                                opposingActiveRow,
                                ability,
-                               newPlayerGameState
+                               newPlayerGameState,
+                               newHostilePlayerGameState
                            }: ChainedMethodInput): ChainedMethodInput => {
     if (ability.name === 'MUSICAL DEBUT') {
         return {
@@ -22,10 +46,10 @@ const musicalDebutChain = ({
                 ...newPlayerGameState,
                 deckCount: defineDeckAmountRange(player.deck.length - 1),
                 hand: {...newPlayerGameState.hand, handSizeRange: defineCardAmountRange(player.hand.length + 1)},
-            }
+            }, newHostilePlayerGameState
         }
     }
-    return {player, card, opposingActiveRow, ability, newPlayerGameState}
+    return {player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState}
 }
 
 const wellOfSoulsChain = ({
@@ -33,22 +57,30 @@ const wellOfSoulsChain = ({
                               card,
                               opposingActiveRow,
                               ability,
-                              newPlayerGameState
+                              newPlayerGameState,
+                              newHostilePlayerGameState
                           }: ChainedMethodInput): ChainedMethodInput => {
     if (ability.name === 'WELL OF SOULS') {
         return {
             player, card, opposingActiveRow, ability, newPlayerGameState: {
                 ...newPlayerGameState,
                 hand: {...newPlayerGameState.hand, handSizeRange: defineCardAmountRange(player.hand.length + 1)},
-            }
+            }, newHostilePlayerGameState
         }
     }
-    return {player, card, opposingActiveRow, ability, newPlayerGameState}
+    return {player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState}
 }
 
 
-export const runOverAllTriggeredAbilitiesForNextState = (player: Player, card: Card, opposingActiveRow: Card[], ability: TriggeredAbility, newPlayerGameState: PlayerGameState) => {
-    return wellOfSoulsChain(musicalDebutChain({player, card, opposingActiveRow, ability, newPlayerGameState}))
+export const runOverAllTriggeredAbilitiesForNextState = (player: Player, card: Card, opposingActiveRow: Card[], ability: TriggeredAbility, newPlayerGameState: PlayerGameState, newHostilePlayerGameState: PlayerGameState) => {
+    return horseKickChain(wellOfSoulsChain(musicalDebutChain({
+        player,
+        card,
+        opposingActiveRow,
+        ability,
+        newPlayerGameState,
+        newHostilePlayerGameState
+    })))
 
 }
 

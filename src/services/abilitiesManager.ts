@@ -1,6 +1,23 @@
-import {musicalDebut, wellOfSouls} from "lorcana-shared/model/abilities";
+import {horseKick, musicalDebut, wellOfSouls} from "lorcana-shared/model/abilities";
 import {TriggeredAbility} from "lorcana-shared/model/Card";
 import {Player} from "lorcana-shared/model/Player";
+
+const horseKickChain = (player: Player, hostilePlayer: Player, ability: TriggeredAbility) => {
+    if (ability.name === 'HORSE KICK') {
+        const stepsAndCondition = horseKick();
+        const pickACard = stepsAndCondition[0];
+        if (hostilePlayer.activeRow.length > 0) {
+            const strongestCard = hostilePlayer.activeRow.reduce((c, n) => {
+                if (c.strength + c.statChanges.strength > n.strength + n.statChanges.strength) {
+                    return c
+                } else {
+                    return n
+                }
+            });
+            pickACard(hostilePlayer.activeRow, hostilePlayer.activeRow.indexOf(strongestCard))
+        }
+    }
+}
 
 const musicalDebutChain = (player: Player, hostilePlayer: Player, ability: TriggeredAbility) => {
     if (ability.name === 'MUSICAL DEBUT') {
@@ -26,7 +43,8 @@ const wellOfSoulsChain = (player: Player, hostilePlayer: Player, ability: Trigge
 export const runOverAllTriggeredAbilities = (player: Player, hostilePlayer: Player, ability: TriggeredAbility) => {
     [
         musicalDebutChain,
-        wellOfSoulsChain
+        wellOfSoulsChain,
+        horseKickChain
     ]
         .forEach((method) => method(player, hostilePlayer, ability))
 }

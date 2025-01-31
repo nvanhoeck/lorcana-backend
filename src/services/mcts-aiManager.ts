@@ -216,10 +216,7 @@ const defineNextState = (action: {
                 hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "PLAY_CARD":
-            return {
-                player: defineNextStateBasedByStats(defineNextStateByPlayingCard(deepClone(player), action.card!, deepClone(hostilePlayer.activeRow)), player, hostilePlayer),
-                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
-            }
+            return defineNextStateByPlayingCard(player, action.card!, hostilePlayer)
         case "END_TURN":
             return {
                 player: defineNextStateBasedByStats(defineState(player, hostilePlayer.activeRow), player, hostilePlayer),
@@ -492,21 +489,29 @@ function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGame
     }
 }
 
-function cardEffectWrapperByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState) {
+function cardEffectWrapperByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState, newHostilePlayerGameState: PlayerGameState) {
     if (card.abilities.find((a) => isTriggeredAbility(a))) {
         if (card.abilities.filter((a) => isTriggeredAbility(a)).length > 1) {
             throw new Error('Found multiple trigger abilities which has not been implemented')
         }
         const ability = card.abilities.find((a) => isTriggeredAbility(a))!;
-        return runOverAllTriggeredAbilitiesForNextState(player, card, opposingActiveRow, ability, newPlayerGameState).newPlayerGameState
+        const resultAfterAllAbilitiyChecks = runOverAllTriggeredAbilitiesForNextState(player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState);
+        return {
+            player: resultAfterAllAbilitiyChecks.newPlayerGameState,
+            hostilePlayer: resultAfterAllAbilitiyChecks.newHostilePlayerGameState
+        }
     } else {
-        return newPlayerGameState
+        return {player: newPlayerGameState, hostilePlayer: newHostilePlayerGameState}
     }
 }
 
 // TODO card effect
-function defineNextStateByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
-    const clonedPlayerState = defineState(player, opposingActiveRow)
+function defineNextStateByPlayingCard(player: Player, card: Card, hostilePlayer: Player): {
+    player: PlayerGameState,
+    hostilePlayer: PlayerGameState
+} {
+    const clonedPlayerState = defineState(player, hostilePlayer.activeRow)
+    const clonedHostilePlayerState = defineState(player, hostilePlayer.activeRow)
     const newPlayerState: PlayerGameState = {
         ...clonedPlayerState,
         hand: {...clonedPlayerState.hand, handSizeRange: defineCardAmountRange(player.hand.length - 1)},
@@ -518,7 +523,7 @@ function defineNextStateByPlayingCard(player: Player, card: Card, opposingActive
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + (isBodyguard(card) ? 0 : 1)),
         }
     }
-    return cardEffectWrapperByPlayingCard(player, card, opposingActiveRow, newPlayerState)
+    return cardEffectWrapperByPlayingCard(player, card, hostilePlayer.activeRow, newPlayerState, clonedHostilePlayerState);
 }
 
 function defineNextStateBySingingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {
