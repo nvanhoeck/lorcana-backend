@@ -97,7 +97,9 @@ function mapToCard(inputCards: InputCard[], setId: number): Card[] {
             lore: 0,
             ink: 0,
             applied: []
-        }
+        },
+        disabled: [],
+        resetDisabledAtEndOfTurn: []
     }));
 }
 

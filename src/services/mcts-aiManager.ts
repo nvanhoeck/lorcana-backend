@@ -211,9 +211,10 @@ const defineNextState = (action: {
                 hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
             }
         case "QUEST":
+            const newStateAfterQuesting = defineNextStateByQuesting(deepClone(player), deepClone(hostilePlayer), defineState(deepClone(player), hostilePlayer.activeRow), action.card!)
             return {
-                player: defineNextStateBasedByStats(defineNextStateByQuesting(deepClone(player), defineState(deepClone(player), deepClone(hostilePlayer.activeRow)), action.card!), player, hostilePlayer),
-                hostilePlayer: defineNextStateBasedByStats(defineState(deepClone(hostilePlayer), deepClone(player.activeRow)), player, hostilePlayer)
+                player: defineNextStateBasedByStats(newStateAfterQuesting.player, player, hostilePlayer),
+                hostilePlayer: defineNextStateBasedByStats(newStateAfterQuesting.hostilePlayer, player, hostilePlayer)
             }
         case "PLAY_CARD":
             return defineNextStateByPlayingCard(player, action.card!, hostilePlayer)
@@ -478,8 +479,9 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
     }
 }
 
-function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGameState, card: Card) {
-    return {
+function defineNextStateByQuesting(player: Player, hostilePlayer: Player, clonedPlayerState: PlayerGameState, card: Card) {
+    const clonedHostilePlayerState = deepClone(defineState(hostilePlayer, player.activeRow))
+    const newState = {
         ...clonedPlayerState,
         loreCount: clonedPlayerState.loreCount + card.lore,
         fieldState: {
@@ -487,15 +489,16 @@ function defineNextStateByQuesting(player: Player, clonedPlayerState: PlayerGame
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length - 1)
         }
     }
+    return cardEffectWrapperByAction('QUEST', player, card, hostilePlayer.activeRow, newState, clonedHostilePlayerState);
 }
 
-function cardEffectWrapperByPlayingCard(player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState, newHostilePlayerGameState: PlayerGameState) {
+function cardEffectWrapperByAction(action: Actions, player: Player, card: Card, opposingActiveRow: Card[], newPlayerGameState: PlayerGameState, newHostilePlayerGameState: PlayerGameState) {
     if (card.abilities.find((a) => isTriggeredAbility(a))) {
         if (card.abilities.filter((a) => isTriggeredAbility(a)).length > 1) {
             throw new Error('Found multiple trigger abilities which has not been implemented')
         }
         const ability = card.abilities.find((a) => isTriggeredAbility(a))!;
-        const resultAfterAllAbilitiyChecks = runOverAllTriggeredAbilitiesForNextState(player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState);
+        const resultAfterAllAbilitiyChecks = runOverAllTriggeredAbilitiesForNextState(player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState, action);
         return {
             player: resultAfterAllAbilitiyChecks.newPlayerGameState,
             hostilePlayer: resultAfterAllAbilitiyChecks.newHostilePlayerGameState
@@ -523,7 +526,7 @@ function defineNextStateByPlayingCard(player: Player, card: Card, hostilePlayer:
             totalReadiedCards: defineCardAmountRange(player.activeRow.filter(c => c.readied).length + (isBodyguard(card) ? 0 : 1)),
         }
     }
-    return cardEffectWrapperByPlayingCard(player, card, hostilePlayer.activeRow, newPlayerState, clonedHostilePlayerState);
+    return cardEffectWrapperByAction('PLAY_CARD', player, card, hostilePlayer.activeRow, newPlayerState, clonedHostilePlayerState);
 }
 
 function defineNextStateBySingingCard(player: Player, card: Card, opposingActiveRow: Card[]): PlayerGameState {

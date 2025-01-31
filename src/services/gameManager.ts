@@ -180,6 +180,9 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
                 throw new Error('Not properly updated')
             }
             support(card!, player)
+            if (card!.abilities.find((a) => isTriggeredAbility(a))) {
+                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.activeRow, player, opposingPlayer, a, 'QUEST'))
+            }
             reviseAllCardsInPlay(player, opposingPlayer)
             break;
         case "SHIFT": {
@@ -196,7 +199,7 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
                 player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
             }
             if (card!.abilities.find((a) => isTriggeredAbility(a))) {
-                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(player, opposingPlayer, a))
+                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.hand,player, opposingPlayer, a, 'PLAY_CARD'))
             }
             reviseAllCardsInPlay(player, opposingPlayer)
             break;

@@ -19,6 +19,8 @@ function updateStats(c: Card) {
     c.statChanges.applied = []
     c.subtractStatsAtEndOfTurn.applied = []
     c.providesEffects = []
+    c.disabled = []
+    c.resetDisabledAtEndOfTurn = []
 }
 
 export const resetAllTurnStats = (player: Player, oppositePlayer: Player) => {

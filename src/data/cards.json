@@ -46,7 +46,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-002",
@@ -102,7 +104,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-003",
@@ -158,7 +162,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-004",
@@ -213,7 +219,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-005",
@@ -271,7 +279,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-006",
@@ -320,7 +330,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-007",
@@ -369,7 +381,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-008",
@@ -416,7 +430,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-009",
@@ -458,7 +474,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-010",
@@ -512,7 +530,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-011",
@@ -559,7 +579,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-012",
@@ -601,7 +623,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-013",
@@ -643,7 +667,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-014",
@@ -692,7 +718,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-015",
@@ -736,7 +764,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-016",
@@ -785,7 +815,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-017",
@@ -827,7 +859,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-018",
@@ -876,7 +910,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-019",
@@ -926,7 +962,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-020",
@@ -977,7 +1015,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-021",
@@ -1026,7 +1066,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-022",
@@ -1070,7 +1112,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-023",
@@ -1126,7 +1170,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-024",
@@ -1173,7 +1219,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-025",
@@ -1216,7 +1264,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-026",
@@ -1250,7 +1300,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-027",
@@ -1293,7 +1345,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-028",
@@ -1327,7 +1381,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-029",
@@ -1361,7 +1417,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-030",
@@ -1404,7 +1462,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-031",
@@ -1438,7 +1498,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-032",
@@ -1477,7 +1539,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-033",
@@ -1516,7 +1580,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-034",
@@ -1555,7 +1621,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-035",
@@ -1604,7 +1672,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-036",
@@ -1646,7 +1716,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-037",
@@ -1702,7 +1774,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-038",
@@ -1754,7 +1828,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-039",
@@ -1803,7 +1879,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-040",
@@ -1849,7 +1927,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-041",
@@ -1900,7 +1980,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-042",
@@ -1958,7 +2040,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-043",
@@ -2011,7 +2095,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-044",
@@ -2060,7 +2146,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-045",
@@ -2112,7 +2200,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-046",
@@ -2165,7 +2255,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-047",
@@ -2212,7 +2304,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-048",
@@ -2256,7 +2350,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-049",
@@ -2305,7 +2401,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-050",
@@ -2352,7 +2450,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-051",
@@ -2403,7 +2503,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-052",
@@ -2445,7 +2547,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-053",
@@ -2492,7 +2596,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-054",
@@ -2543,7 +2649,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-055",
@@ -2585,7 +2693,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-056",
@@ -2634,7 +2744,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-057",
@@ -2676,7 +2788,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-058",
@@ -2731,7 +2845,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-059",
@@ -2780,7 +2896,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-060",
@@ -2829,7 +2947,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-061",
@@ -2884,7 +3004,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-062",
@@ -2918,7 +3040,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-063",
@@ -2952,7 +3076,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-064",
@@ -2995,7 +3121,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-065",
@@ -3038,7 +3166,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-066",
@@ -3077,7 +3207,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-067",
@@ -3116,7 +3248,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-068",
@@ -3155,7 +3289,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-069",
@@ -3206,7 +3342,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-070",
@@ -3261,7 +3399,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-071",
@@ -3306,7 +3446,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-072",
@@ -3353,7 +3495,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-073",
@@ -3395,7 +3539,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-074",
@@ -3444,7 +3590,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-075",
@@ -3497,7 +3645,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-076",
@@ -3556,7 +3706,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-077",
@@ -3598,7 +3750,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-078",
@@ -3642,7 +3796,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-079",
@@ -3684,7 +3840,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-080",
@@ -3731,7 +3889,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-081",
@@ -3778,7 +3938,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-082",
@@ -3831,7 +3993,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-083",
@@ -3875,7 +4039,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-084",
@@ -3928,7 +4094,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-085",
@@ -3975,7 +4143,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-086",
@@ -4020,7 +4190,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-087",
@@ -4067,7 +4239,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-088",
@@ -4121,7 +4295,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-089",
@@ -4165,7 +4341,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-090",
@@ -4212,7 +4390,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-091",
@@ -4261,7 +4441,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-092",
@@ -4301,7 +4483,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-093",
@@ -4356,7 +4540,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-094",
@@ -4390,7 +4576,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-095",
@@ -4433,7 +4621,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-096",
@@ -4467,7 +4657,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-097",
@@ -4501,7 +4693,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-098",
@@ -4544,7 +4738,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-099",
@@ -4578,7 +4774,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-100",
@@ -4612,7 +4810,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-101",
@@ -4651,7 +4851,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-102",
@@ -4690,7 +4892,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-103",
@@ -4732,7 +4936,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-104",
@@ -4786,7 +4992,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-105",
@@ -4833,7 +5041,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-106",
@@ -4877,7 +5087,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-107",
@@ -4934,7 +5146,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-108",
@@ -4974,7 +5188,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-109",
@@ -5025,7 +5241,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-110",
@@ -5074,7 +5292,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-111",
@@ -5123,7 +5343,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-112",
@@ -5170,7 +5392,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-113",
@@ -5219,7 +5443,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-114",
@@ -5275,7 +5501,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-115",
@@ -5324,7 +5552,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-116",
@@ -5366,7 +5596,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-117",
@@ -5415,7 +5647,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-118",
@@ -5464,7 +5698,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-119",
@@ -5513,7 +5749,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-120",
@@ -5562,7 +5800,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-121",
@@ -5611,7 +5851,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-122",
@@ -5653,7 +5895,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-123",
@@ -5709,7 +5953,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-124",
@@ -5751,7 +5997,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-125",
@@ -5795,7 +6043,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-126",
@@ -5846,7 +6096,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-127",
@@ -5895,7 +6147,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-128",
@@ -5938,7 +6192,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-129",
@@ -5972,7 +6228,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-130",
@@ -6006,7 +6264,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-131",
@@ -6040,7 +6300,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-132",
@@ -6074,7 +6336,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-133",
@@ -6108,7 +6372,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-134",
@@ -6147,7 +6413,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-135",
@@ -6186,7 +6454,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-136",
@@ -6225,7 +6495,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-137",
@@ -6274,7 +6546,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-138",
@@ -6323,7 +6597,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-139",
@@ -6379,7 +6655,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-140",
@@ -6423,7 +6701,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-141",
@@ -6474,7 +6754,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-142",
@@ -6527,7 +6809,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-143",
@@ -6578,7 +6862,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-144",
@@ -6629,7 +6915,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-145",
@@ -6671,7 +6959,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-146",
@@ -6718,7 +7008,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-147",
@@ -6767,7 +7059,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-148",
@@ -6809,7 +7103,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-149",
@@ -6867,7 +7163,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-150",
@@ -6911,7 +7209,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-151",
@@ -6955,7 +7255,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-152",
@@ -7008,7 +7310,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-153",
@@ -7059,7 +7363,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-154",
@@ -7108,7 +7414,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-155",
@@ -7152,7 +7460,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-156",
@@ -7201,7 +7511,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-157",
@@ -7252,7 +7564,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-158",
@@ -7299,7 +7613,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-159",
@@ -7350,7 +7666,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-160",
@@ -7392,7 +7710,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-161",
@@ -7426,7 +7746,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-162",
@@ -7460,7 +7782,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-163",
@@ -7503,7 +7827,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-164",
@@ -7546,7 +7872,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-165",
@@ -7580,7 +7908,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-166",
@@ -7619,7 +7949,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-167",
@@ -7658,7 +7990,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-168",
@@ -7697,7 +8031,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-169",
@@ -7736,7 +8072,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-170",
@@ -7775,7 +8113,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-171",
@@ -7817,7 +8157,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-172",
@@ -7866,7 +8208,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-173",
@@ -7917,7 +8261,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-174",
@@ -7971,7 +8317,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-175",
@@ -8035,7 +8383,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-176",
@@ -8075,7 +8425,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-177",
@@ -8130,7 +8482,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-178",
@@ -8179,7 +8533,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-179",
@@ -8221,7 +8577,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-180",
@@ -8270,7 +8628,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-181",
@@ -8321,7 +8681,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-182",
@@ -8363,7 +8725,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-183",
@@ -8405,7 +8769,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-184",
@@ -8447,7 +8813,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-185",
@@ -8491,7 +8859,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-186",
@@ -8546,7 +8916,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-187",
@@ -8598,7 +8970,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-188",
@@ -8647,7 +9021,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-189",
@@ -8703,7 +9079,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-190",
@@ -8752,7 +9130,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-191",
@@ -8801,7 +9181,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-192",
@@ -8850,7 +9232,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-193",
@@ -8910,7 +9294,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-194",
@@ -8959,7 +9345,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-195",
@@ -9002,7 +9390,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-196",
@@ -9036,7 +9426,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-197",
@@ -9070,7 +9462,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-198",
@@ -9113,7 +9507,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-199",
@@ -9147,7 +9543,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-200",
@@ -9181,7 +9579,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-201",
@@ -9220,7 +9620,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-202",
@@ -9259,7 +9661,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-203",
@@ -9298,7 +9702,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-204",
@@ -9337,7 +9743,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-205",
@@ -9395,7 +9803,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-206",
@@ -9444,7 +9854,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-207",
@@ -9502,7 +9914,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-208",
@@ -9553,7 +9967,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-209",
@@ -9606,7 +10022,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-210",
@@ -9660,7 +10078,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-211",
@@ -9714,7 +10134,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-212",
@@ -9770,7 +10192,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-213",
@@ -9826,7 +10250,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-214",
@@ -9879,7 +10305,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-215",
@@ -9935,7 +10363,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-216",
@@ -9995,7 +10425,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-659",
@@ -10044,7 +10476,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-660",
@@ -10100,7 +10534,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-661",
@@ -10151,7 +10587,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-662",
@@ -10198,7 +10636,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-663",
@@ -10247,7 +10687,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-664",
@@ -10298,7 +10740,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-665",
@@ -10352,7 +10796,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-666",
@@ -10401,7 +10847,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-667",
@@ -10450,7 +10898,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-668",
@@ -10499,7 +10949,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-669",
@@ -10554,7 +11006,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-670",
@@ -10609,7 +11063,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-671",
@@ -10664,7 +11120,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-678",
@@ -10723,7 +11181,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-679",
@@ -10767,7 +11227,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-680",
@@ -10811,7 +11273,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-681",
@@ -10855,7 +11319,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-682",
@@ -10904,7 +11370,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-1187",
@@ -10938,7 +11406,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-1188",
@@ -10981,7 +11451,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-1190",
@@ -11030,7 +11502,9 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   },
   {
     "id": "001-1191",
@@ -11079,6 +11553,8 @@
       "lore": 0,
       "ink": 0,
       "applied": []
-    }
+    },
+    "disabled": [],
+    "resetDisabledAtEndOfTurn": []
   }
 ]
