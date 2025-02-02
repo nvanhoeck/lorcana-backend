@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "import-data": "ts-node src/functions/importData.ts",
+    "import-data": "set NODE_OPTIONS=--max-old-space-size=4096 && ts-node src/functions/importData.ts",
     "test": "ts-node src/functions/startGame.ts",
     "test:mcts": "ts-node test/testMCTS.ts",
     "train": "ts-node src/agent/trainAgent.ts",
