@@ -99,7 +99,6 @@ export const trainAgent = async () => {
         const agentTwoScore = (agentTwo.player.deck.length === 0 ? -5 : 0) + (agentOne.player.loreCount >= 20 ? +5 : 0)
 
         // TODO end game reward?
-        console.log('cycle ' + i)
         printGameDetails([game.playerOne, game.playerTwo])
         await writeFile(['..', 'data', 'FirstChapter-SteelSapphire-StarterDeck.json'], agentOne.turnRootNodes)
 

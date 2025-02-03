@@ -109,22 +109,27 @@ export const determineNextActionBasedByCurrentGameState = async (player: Player,
         hostilePlayer: defineState(hostilePlayer, player.activeRow)
     })
     // We select the best option
-    select(root, player, hostilePlayer)
+    select(root, player, hostilePlayer, 0)
+    // console.log(root.visits)
     const bestChild = root.bestChild();
     return bestChild
 }
 
-const select = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+const select = (node: MCTSNode, player: Player, hostilePlayer: Player, level: number) => {
     // console.log('Selecting...')
+    if(level > 100) {
+        console.log('threshold breached')
+    }
     let current = node
     // We iterate over all the options available and simulate them
     // By expanding, we add all options as children to the current node
-    expand(current, player, hostilePlayer)
+    // console.log(level + 1)
+    expand(current, player, hostilePlayer, level + 1)
     // Once this is done, we return the best child
     return current.bestChild()
 };
 
-const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
+const expand = (node: MCTSNode, player: Player, hostilePlayer: Player, level: number) => {
     // console.log('Expanding...')
     // We get all the actions
     const allActions = flatMapPossibleActions(player, hostilePlayer.activeRow);
@@ -147,7 +152,7 @@ const expand = (node: MCTSNode, player: Player, hostilePlayer: Player) => {
             const clonedHostilePlayer = deepClone(hostilePlayer)
             simulate(clonedPlayer, clonedHostilePlayer, childNode)
             // Now we select and expand all the children of the next node
-            select(childNode, clonedPlayer, clonedHostilePlayer)
+            select(childNode, clonedPlayer, clonedHostilePlayer, level)
         })
 
     // console.log('All actions performed, doing an end_turn')
@@ -257,55 +262,64 @@ const defineNextState = (action: {
 
 
 export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]) => {
-    const possibleActions = definePossibleActionsWithoutEndTurn(player, opposingActiveRow);
+    try {
+        const possibleActions = definePossibleActionsWithoutEndTurn(player, opposingActiveRow);
 
-    const allActions: {
-        targetIdx?: number
-        card?: Card,
-        cardIdx?: number,
-        action: Actions,
-        stats?: {
-            power: number
-        } | undefined
-    }[] = [{
-        action: "END_TURN" as Actions,
-        stats: undefined,
-    },
-        ...possibleActions.QUEST.map(cardForAction => ({
-            cardIdx: player.activeRow.indexOf(cardForAction),
-            card: cardForAction,
-            action: "QUEST" as Actions,
-        })),
-        ...possibleActions.CHALLENGE.map(cardForAction => ({
-            cardIdx: player.activeRow.indexOf(cardForAction),
-            card: cardForAction,
-            action: "CHALLENGE" as Actions,
-            targetIdx: opposingActiveRow.indexOf(optimalChallengeTarget(opposingActiveRow, cardForAction)!)
-        })),
-        ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
-            cardIdx: player.hand.indexOf(cardForAction),
-            card: cardForAction,
-            action: "INK_CARD" as Actions
-        })),
-        ...possibleActions.PLAY_CARD.map(cardForAction => ({
-            cardIdx: player.hand.indexOf(cardForAction),
-            card: cardForAction,
-            action: "PLAY_CARD" as Actions,
-        })),
-        ...possibleActions.CARD_EFFECT_ACTIVATION.map((cardForAction) => ({
-            cardIdx: player.activeRow.indexOf(cardForAction),
-            card: cardForAction,
-            action: "CARD_EFFECT_ACTIVATION" as Actions,
-        })),
-        ...possibleActions.SHIFT.map((cardForAction) => ({
-            cardIdx: player.hand.indexOf(cardForAction),
-            targetIdx: player.activeRow.indexOf(player.activeRow.find((c) => c.name === (cardForAction as Card).name)!),
-            card: cardForAction,
-            action: "SHIFT" as Actions,
-        }))
-    ];
+        const allActions: {
+            targetIdx?: number
+            card?: Card,
+            cardIdx?: number,
+            action: Actions,
+            stats?: {
+                power: number
+            } | undefined
+        }[] = [{
+            action: "END_TURN" as Actions,
+            stats: undefined,
+        },
+            ...possibleActions.QUEST.map(cardForAction => ({
+                cardIdx: player.activeRow.indexOf(cardForAction),
+                card: cardForAction,
+                action: "QUEST" as Actions,
+            })),
+            ...possibleActions.CHALLENGE.map(cardForAction => ({
+                cardIdx: player.activeRow.indexOf(cardForAction),
+                card: cardForAction,
+                action: "CHALLENGE" as Actions,
+                targetIdx: opposingActiveRow.indexOf(optimalChallengeTarget(opposingActiveRow, cardForAction)!)
+            })),
+            ...possibleActions.INK_CARD.map((cardForAction: Card) => ({
+                cardIdx: player.hand.indexOf(cardForAction),
+                card: cardForAction,
+                action: "INK_CARD" as Actions
+            })),
+            ...possibleActions.PLAY_CARD.map(cardForAction => ({
+                cardIdx: player.hand.indexOf(cardForAction),
+                card: cardForAction,
+                action: "PLAY_CARD" as Actions,
+            })),
+            ...possibleActions.CARD_EFFECT_ACTIVATION.map((cardForAction) => ({
+                cardIdx: player.activeRow.indexOf(cardForAction),
+                card: cardForAction,
+                action: "CARD_EFFECT_ACTIVATION" as Actions,
+            })),
+            ...possibleActions.SHIFT.map((cardForAction) => ({
+                cardIdx: player.hand.indexOf(cardForAction),
+                targetIdx: player.activeRow.indexOf(player.activeRow.find((c) => c.name === (cardForAction as Card).name)!),
+                card: cardForAction,
+                action: "SHIFT" as Actions,
+            }))
+        ];
 
-    return allActions
+        return allActions
+    } catch (e) {
+        debugger
+        console.log('reached catch endpoint')
+        return [{
+            action: "END_TURN" as Actions,
+            stats: undefined,
+        }]
+    }
 }
 
 
@@ -429,53 +443,58 @@ function defineNextStatesByChallengingCards(
 
 // TODO index based
 export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard: Card) => {
-    //TODO take into consideration ward, evasive, bodyguard,... (gameMamanger, eligbleTargets)
-    const eligibleTarget = eligibleTargets(opposingActiveRow)
-    if (eligibleTarget.length === 0) {
-        return undefined
-    }
-    const targetsWhereOwnTargetDies = eligibleTarget.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
-    const targetsWhereYourTargetDoesNotDie = eligibleTarget.filter((target) => target.strength + target.statChanges.strength <= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
-    const targetsWhereItDies = eligibleTarget.filter((target) => attackingCard.strength + attackingCard.statChanges.strength >= (target.willpower + target.statChanges.willpower - target.damage))
-    const targetsWhereItDiesButNotYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength < (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
-    const targetsWhereItDiesAndYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+    try {
+        //TODO take into consideration ward, evasive, bodyguard,... (gameMamanger, eligbleTargets)
+        const eligibleTarget = eligibleTargets(opposingActiveRow)
+        if (eligibleTarget.length === 0) {
+            return undefined
+        }
+        const targetsWhereOwnTargetDies = eligibleTarget.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+        const targetsWhereYourTargetDoesNotDie = eligibleTarget.filter((target) => target.strength + target.statChanges.strength <= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+        const targetsWhereItDies = eligibleTarget.filter((target) => attackingCard.strength + attackingCard.statChanges.strength >= (target.willpower + target.statChanges.willpower - target.damage))
+        const targetsWhereItDiesButNotYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength < (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
+        const targetsWhereItDiesAndYourCard = targetsWhereItDies.filter((target) => target.strength + target.statChanges.strength >= (attackingCard.willpower + attackingCard.statChanges.willpower - attackingCard.damage))
 
-    if (targetsWhereItDiesButNotYourCard.length > 0) {
-        if (targetsWhereItDiesButNotYourCard.length > 1) {
-            return targetsWhereItDiesButNotYourCard.reduce((currentCard, nextCard) => {
+        if (targetsWhereItDiesButNotYourCard.length > 0) {
+            if (targetsWhereItDiesButNotYourCard.length > 1) {
+                return targetsWhereItDiesButNotYourCard.reduce((currentCard, nextCard) => {
+                    if (!currentCard) return nextCard
+                    if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
+                    return currentCard
+                })
+            } else {
+                return targetsWhereItDiesButNotYourCard[0]
+            }
+        } else if (targetsWhereItDiesAndYourCard.length > 0) {
+            if (targetsWhereItDiesAndYourCard.length > 1) {
+                return targetsWhereItDiesAndYourCard.reduce((currentCard, nextCard) => {
+                    if (!currentCard) return nextCard
+                    if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
+                    return currentCard
+                })
+            } else {
+                return targetsWhereItDiesAndYourCard[0]
+            }
+        } else if (targetsWhereYourTargetDoesNotDie.length > 0) {
+            if (targetsWhereYourTargetDoesNotDie.length > 1) {
+                return targetsWhereYourTargetDoesNotDie.reduce((currentCard, nextCard) => {
+                    if (!currentCard) return nextCard
+                    if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
+                    return currentCard
+                })
+            } else {
+                return targetsWhereYourTargetDoesNotDie[0]
+            }
+        } else {
+            return targetsWhereOwnTargetDies.reduce((currentCard, nextCard) => {
                 if (!currentCard) return nextCard
                 if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
                 return currentCard
-            })
-        } else {
-            return targetsWhereItDiesButNotYourCard[0]
+            }, targetsWhereOwnTargetDies[0])
         }
-    } else if (targetsWhereItDiesAndYourCard.length > 0) {
-        if (targetsWhereItDiesAndYourCard.length > 1) {
-            return targetsWhereItDiesAndYourCard.reduce((currentCard, nextCard) => {
-                if (!currentCard) return nextCard
-                if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
-                return currentCard
-            })
-        } else {
-            return targetsWhereItDiesAndYourCard[0]
-        }
-    } else if (targetsWhereYourTargetDoesNotDie.length > 0) {
-        if (targetsWhereYourTargetDoesNotDie.length > 1) {
-            return targetsWhereYourTargetDoesNotDie.reduce((currentCard, nextCard) => {
-                if (!currentCard) return nextCard
-                if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
-                return currentCard
-            })
-        } else {
-            return targetsWhereYourTargetDoesNotDie[0]
-        }
-    } else {
-        return targetsWhereOwnTargetDies.reduce((currentCard, nextCard) => {
-            if (!currentCard) return nextCard
-            if (currentCard.lore + currentCard.statChanges.lore < nextCard.lore + nextCard.statChanges.lore) return nextCard
-            return currentCard
-        }, targetsWhereOwnTargetDies[0])
+    } catch (e) {
+        console.log('reached catch endpoint')
+        debugger
     }
 }
 

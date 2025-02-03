@@ -1,4 +1,4 @@
-import {weCanFixItNextState} from "lorcana-shared/model/abilities";
+import {andTwoForTeaState, weCanFixItNextState} from "lorcana-shared/model/abilities";
 import {Actions} from "lorcana-shared/model/Actions";
 import {defineCardAmountRange, defineDeckAmountRange, PlayerGameState} from "lorcana-shared/model/ai/State";
 import {Card, TriggeredAbility} from "lorcana-shared/model/Card";
@@ -13,6 +13,32 @@ type ChainedMethodInput = {
     newHostilePlayerGameState: PlayerGameState
     cause: Actions
 }
+
+
+const andTwoForTeaChain = ({
+                          cause,
+                          player,
+                          card,
+                          opposingActiveRow,
+                          ability,
+                          newPlayerGameState,
+                          newHostilePlayerGameState
+                      }: ChainedMethodInput): ChainedMethodInput => {
+    if (ability.name === 'AND TWO FOR TEA!') {
+        return {
+            cause,
+            player,
+            card,
+            opposingActiveRow,
+            ability,
+            newPlayerGameState: andTwoForTeaState(newPlayerGameState, player),
+            newHostilePlayerGameState
+        }
+    }
+    return {cause, player, card, opposingActiveRow, ability, newPlayerGameState, newHostilePlayerGameState}
+}
+
+
 const weCanFixItChain = ({
                              cause,
                              player,
@@ -105,7 +131,7 @@ const wellOfSoulsChain = ({
 
 
 export const runOverAllTriggeredAbilitiesForNextState = (player: Player, card: Card, opposingActiveRow: Card[], ability: TriggeredAbility, newPlayerGameState: PlayerGameState, newHostilePlayerGameState: PlayerGameState, cause: Actions) => {
-    return weCanFixItChain(horseKickChain(wellOfSoulsChain(musicalDebutChain({
+    return andTwoForTeaChain(weCanFixItChain(horseKickChain(wellOfSoulsChain(musicalDebutChain({
         cause,
         player,
         card,
@@ -113,7 +139,7 @@ export const runOverAllTriggeredAbilitiesForNextState = (player: Player, card: C
         ability,
         newPlayerGameState,
         newHostilePlayerGameState
-    }))))
+    })))))
 
 }
 

@@ -1,4 +1,5 @@
 import {
+    andTwoForTea, andTwoForTeaCondition,
     horseKick,
     musicalDebut,
     weCanFixIt,
@@ -9,6 +10,13 @@ import {Actions} from "lorcana-shared/model/Actions";
 import {Card, TriggeredAbility} from "lorcana-shared/model/Card";
 import {Player} from "lorcana-shared/model/Player";
 
+const twoForTeaChain = (card: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
+    if (ability.name === 'AND TWO FOR TEA!' && cause === 'PLAY_CARD') {
+        player.activeRow.filter(andTwoForTeaCondition).forEach(andTwoForTea)
+        player.waitRow.filter(andTwoForTeaCondition).forEach(andTwoForTea)
+    }
+}
+
 const weCanFixItChain = (card: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
     if (ability.name === 'WE CAN FIX IT' && cause === 'QUEST') {
         if (weCanFixItCanBeExecuted(player.activeRow, origin.indexOf(card))) {
@@ -17,7 +25,7 @@ const weCanFixItChain = (card: Card, origin: Card[], player: Player, hostilePlay
     }
 }
 
-const horseKickChain = (card: Card, origin: Card[],player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
+const horseKickChain = (card: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
     if (ability.name === 'HORSE KICK' && cause === 'PLAY_CARD') {
         const stepsAndCondition = horseKick();
         const pickACard = stepsAndCondition[0];
@@ -34,7 +42,7 @@ const horseKickChain = (card: Card, origin: Card[],player: Player, hostilePlayer
     }
 }
 
-const musicalDebutChain = (card: Card, origin: Card[],player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
+const musicalDebutChain = (card: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
     if (ability.name === 'MUSICAL DEBUT' && cause === 'PLAY_CARD') {
         const stepsAndCondition = musicalDebut(player.deck);
         const revealedCards = stepsAndCondition[0];
@@ -44,7 +52,7 @@ const musicalDebutChain = (card: Card, origin: Card[],player: Player, hostilePla
     }
 }
 
-const wellOfSoulsChain = (card: Card, origin: Card[],player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
+const wellOfSoulsChain = (card: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
     if (ability.name === 'WELL OF SOULS' && cause === 'PLAY_CARD') {
         const stepsAndCondition = wellOfSouls(player.banishedPile);
         const revealedCards = stepsAndCondition[0];
@@ -57,6 +65,7 @@ const wellOfSoulsChain = (card: Card, origin: Card[],player: Player, hostilePlay
 
 export const runOverAllTriggeredAbilities = (c: Card, origin: Card[], player: Player, hostilePlayer: Player, ability: TriggeredAbility, cause: Actions) => {
     [
+        twoForTeaChain,
         musicalDebutChain,
         wellOfSoulsChain,
         horseKickChain,

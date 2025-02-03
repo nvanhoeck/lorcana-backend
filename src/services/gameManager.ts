@@ -40,7 +40,7 @@ export const getAllCards = async () => {
     return await readFile(['..', 'data', 'cards.json']) as Card[]
 }
 
-const createCard = async (cardId: string) => {
+export const createCard = async (cardId: string) => {
     let card = (await getAllCards()).find((c) => c.id === cardId);
     if (!card) throw new Error(`Card not found: ${cardId}`)
     return card
