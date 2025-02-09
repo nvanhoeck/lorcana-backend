@@ -1,13 +1,7 @@
 import {Game} from "lorcana-shared/model/Game";
 import {writeFile} from "./fileWriter";
 import {readFile} from "./fileReader";
-import {
-    Card,
-    isActivatedAbility,
-    isKeywordAbility,
-    isStaticAbility,
-    isTriggeredAbility
-} from "lorcana-shared/model/Card";
+import {Card, isActivatedAbility, isTriggeredAbility} from "lorcana-shared/model/Card";
 import {v4 as uuidv4} from 'uuid';
 import {SimpleDeck} from "lorcana-shared/model/PlayableDeck";
 import {Player} from "lorcana-shared/model/Player";
@@ -21,7 +15,7 @@ import {
     quest
 } from "./playerManager";
 import {singASongCard} from 'lorcana-shared/utils/singASong'
-import {aWonderfulDream, aWonderfulDreamOptimalTarget, musicalDebut, support} from 'lorcana-shared/model/abilities'
+import {aWonderfulDream, aWonderfulDreamOptimalTarget, support} from 'lorcana-shared/model/abilities'
 import {optimalChallengeTarget} from "./mcts-aiManager";
 import {reviseAllCardsInPlay, shiftCharacterCard} from "lorcana-shared/utils";
 import {runOverAllTriggeredAbilities} from "./abilitiesManager";
@@ -149,41 +143,97 @@ export function printGameDetails(players: Player[]) {
     console.groupEnd();
 }
 
+const inkCardExecution = (player: Player, cardIdx: number | undefined, opposingPlayer: Player) => {
+    const result = inkCard(player.hand, cardIdx!, player.inkTotal, player.cardInInkRow);
+    player.inkTotal = result.inkwell
+    player.cardInInkRow = result.cardInInkRow
+    player.alreadyInkedThisTurn = true
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
+const challengeExecution = (opposingPlayer: Player, card: Card, player: Player, cardIdx: number | undefined, targetIndex: number | undefined) => {
+    // TODO do not make predefined choices (agent as well?)
+    const challengeTarget = optimalChallengeTarget(opposingPlayer.activeRow, card!);
+    if (!challengeTarget) {
+        throw new Error('Defending character is undefined for challenge')
+    }
+    challengeCharacter(player.activeRow, cardIdx!, opposingPlayer.activeRow, targetIndex!)
+    if (card!.readied) {
+        throw new Error('Not properly updated')
+    }
+    banishIfSuccumbed(cardIdx!, player.activeRow, player.banishedPile)
+    banishIfSuccumbed(targetIndex!, opposingPlayer.activeRow, opposingPlayer.banishedPile)
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
+const questExecution = (player: Player, cardIdx: number | undefined, card: Card, opposingPlayer: Player) => {
+    quest(player.activeRow, cardIdx!, player)
+    if (card!.readied) {
+        throw new Error('Not properly updated')
+    }
+    support(card!, player)
+    if (card!.abilities.find((a) => isTriggeredAbility(a))) {
+        card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.activeRow, player, opposingPlayer, a, 'QUEST'))
+    }
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
+const playerCardExecution = (card: Card, player: Player, cardIdx: number | undefined, opposingPlayer: Player) => {
+    if (card!.type === 'Character') {
+        player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal, player.activeRow)
+    } else if (card!.type === 'Action') {
+        player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
+    } else {
+        player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
+    }
+    if (card!.abilities.find((a) => isTriggeredAbility(a))) {
+        card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.hand, player, opposingPlayer, a, 'PLAY_CARD'))
+    }
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
+const singExecution = (card: Card, player: Player, cardIdx: number | undefined, opposingPlayer: Player) => {
+    if (card!.type === 'Song') {
+        player.inkTotal = singASongCard(player.hand, player.activeRow, cardIdx!, player.inkTotal, player.banishedPile)
+    } else {
+        throw new Error('Cannot sing a non-song card')
+    }
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
+const cardEffectActivation = (card: Card, player: Player, opposingPlayer: Player) => {
+    if (card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
+        throw new Error("Has multiple effects, which is not yet developed")
+    } else if (card!.abilities.find((a) => isActivatedAbility(a))) {
+        const ability = card!.abilities.find((a) => isActivatedAbility(a))!;
+        // TODO when extended, improve code
+        if (ability.name === 'A WONDERFUL DREAM') {
+            const optimalTarget = aWonderfulDreamOptimalTarget(player.activeRow);
+            if (optimalTarget) {
+                aWonderfulDream(optimalTarget)
+                card!.readied = false
+            } else {
+                throw new Error("Performing A Wonderfull dream on non legitimate targets")
+            }
+        }
+    } else {
+        throw new Error("Trying to trigger a card effect activation where there is none")
+    }
+    reviseAllCardsInPlay(player, opposingPlayer)
+};
+
 export const executeAction = (action: Actions, player: Player, opposingPlayer: Player, cardIdx?: number, targetIndex?: number) => {
     const card = action === 'INK_CARD' || action === 'PLAY_CARD' || action === 'SHIFT' ? player.hand[cardIdx!] : player.activeRow[cardIdx!]
     // console.log(action, card?.name, card?.subName)
     switch (action) {
         case "INK_CARD":
-            const result = inkCard(player.hand, cardIdx!, player.inkTotal, player.cardInInkRow);
-            player.inkTotal = result.inkwell
-            player.cardInInkRow = result.cardInInkRow
-            player.alreadyInkedThisTurn = true
-            reviseAllCardsInPlay(player, opposingPlayer)
+            inkCardExecution(player, cardIdx, opposingPlayer);
             break;
         case "CHALLENGE":
-            // TODO do not make predefined choices (agent as well?)
-            const challengeTarget = optimalChallengeTarget(opposingPlayer.activeRow, card!);
-            if (!challengeTarget) {
-                throw new Error('Defending character is undefined for challenge')
-            }
-            challengeCharacter(player.activeRow, cardIdx!, opposingPlayer.activeRow, targetIndex!)
-            if (card!.readied) {
-                throw new Error('Not properly updated')
-            }
-            banishIfSuccumbed(cardIdx!, player.activeRow, player.banishedPile)
-            banishIfSuccumbed(targetIndex!, opposingPlayer.activeRow, opposingPlayer.banishedPile)
-            reviseAllCardsInPlay(player, opposingPlayer)
+            challengeExecution(opposingPlayer, card, player, cardIdx, targetIndex);
             break;
         case "QUEST":
-            quest(player.activeRow, cardIdx!, player)
-            if (card!.readied) {
-                throw new Error('Not properly updated')
-            }
-            support(card!, player)
-            if (card!.abilities.find((a) => isTriggeredAbility(a))) {
-                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.activeRow, player, opposingPlayer, a, 'QUEST'))
-            }
-            reviseAllCardsInPlay(player, opposingPlayer)
+            questExecution(player, cardIdx, card, opposingPlayer);
             break;
         case "SHIFT": {
             if (card!.type === 'Character') {
@@ -191,45 +241,13 @@ export const executeAction = (action: Actions, player: Player, opposingPlayer: P
             }
         }
         case "PLAY_CARD":
-            if (card!.type === 'Character') {
-                player.inkTotal = playCharacterCard(player.hand, player.waitRow, cardIdx!, player.inkTotal, player.activeRow)
-            } else if (card!.type === 'Action') {
-                player.inkTotal = playNonCharacterCard(player.hand, player.banishedPile, cardIdx!, player.inkTotal)
-            } else {
-                player.inkTotal = playNonCharacterCard(player.hand, player.activeRow, cardIdx!, player.inkTotal)
-            }
-            if (card!.abilities.find((a) => isTriggeredAbility(a))) {
-                card.abilities.filter((a) => isTriggeredAbility(a)).forEach((a) => runOverAllTriggeredAbilities(card, player.hand,player, opposingPlayer, a, 'PLAY_CARD'))
-            }
-            reviseAllCardsInPlay(player, opposingPlayer)
+            playerCardExecution(card, player, cardIdx, opposingPlayer);
             break;
         case "SING":
-            if (card!.type === 'Song') {
-                player.inkTotal = singASongCard(player.hand, player.activeRow, cardIdx!, player.inkTotal, player.banishedPile)
-            } else {
-                throw new Error('Cannot sing a non-song card')
-            }
-            reviseAllCardsInPlay(player, opposingPlayer)
+            singExecution(card, player, cardIdx, opposingPlayer);
             break;
         case "CARD_EFFECT_ACTIVATION":
-            if (card!.abilities.filter((a) => isActivatedAbility(a)).length > 1) {
-                throw new Error("Has multiple effects, which is not yet developed")
-            } else if (card!.abilities.find((a) => isActivatedAbility(a))) {
-                const ability = card!.abilities.find((a) => isActivatedAbility(a))!;
-                // TODO when extended, improve code
-                if (ability.name === 'A WONDERFUL DREAM') {
-                    const optimalTarget = aWonderfulDreamOptimalTarget(player.activeRow);
-                    if (optimalTarget) {
-                        aWonderfulDream(optimalTarget)
-                        card!.readied = false
-                    } else {
-                        throw new Error("Performing A Wonderfull dream on non legitimate targets")
-                    }
-                }
-            } else {
-                throw new Error("Trying to trigger a card effect activation where there is none")
-            }
-            reviseAllCardsInPlay(player, opposingPlayer)
+            cardEffectActivation(card, player, opposingPlayer);
         case "END_TURN":
             // Do nothing
             break;

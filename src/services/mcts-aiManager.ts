@@ -22,7 +22,6 @@ import {
     defineNextStateByShifting,
     isBodyguard
 } from "lorcana-shared/model/abilities";
-import card from "../controller/card";
 import {reviseAllCardsInPlay} from "lorcana-shared/utils";
 import {runOverAllTriggeredAbilitiesForNextState} from "./abilitiesNextStateManager";
 
@@ -64,10 +63,6 @@ const defineDeckPenalty = (deckCount: DeckAmountRange) => {
     }
 };
 
-const defineRewardByHandSizeDifference = (playerLength: number, hostilePlayerLength: number) => {
-    return playerLength - hostilePlayerLength
-};
-
 const defineReward = (player: Player, hostilePlayer: Player) => {
     const playerGameState = defineState(player, hostilePlayer.activeRow)
     const loreCount = defineLoreCountRangeReward(playerGameState.loreCount)
@@ -75,12 +70,9 @@ const defineReward = (player: Player, hostilePlayer: Player) => {
     const inkDifference = player.cardInInkRow - hostilePlayer.cardInInkRow
     const playerStatTotal = sumByProperty(player.activeRow, 'lore') + sumByProperty(player.activeRow, 'willpower') + sumByProperty(player.activeRow, 'strength') + sumByProperty(player.waitRow, 'lore') + sumByProperty(player.waitRow, 'willpower') + sumByProperty(player.waitRow, 'strength')
     const hostilePlayerStatTotal = sumByProperty(hostilePlayer.activeRow, 'lore') + sumByProperty(hostilePlayer.activeRow, 'willpower') + sumByProperty(hostilePlayer.activeRow, 'strength') + sumByProperty(hostilePlayer.waitRow, 'lore') + sumByProperty(hostilePlayer.waitRow, 'willpower') + sumByProperty(hostilePlayer.waitRow, 'strength')
+    const activeCards = player.activeRow.length + player.waitRow.length - hostilePlayer.activeRow.length - hostilePlayer.waitRow.length
 
-    const handSizeDifference = defineRewardByHandSizeDifference(player.hand.length, hostilePlayer.hand.length)
-    const activeCards = player.activeRow.length - hostilePlayer.activeRow.length
-    // return loreCount + deckPenalty + handSizeDifference + hostileLoreCountDifference + activeCards + inkDifference
-
-    return loreCount + deckPenalty + inkDifference + playerStatTotal - hostilePlayerStatTotal;
+    return loreCount + deckPenalty + inkDifference + playerStatTotal + activeCards - hostilePlayerStatTotal;
 };
 
 const simulate = (player: Player, hostilePlayer: Player, node: MCTSNode) => {
