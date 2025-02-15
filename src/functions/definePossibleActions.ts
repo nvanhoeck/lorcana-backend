@@ -46,8 +46,6 @@ export const definePossibleActionsWithoutEndTurn = (player: Player, opposingPlay
 
         return possibleActions
     } catch (e) {
-        debugger
-        console.log('reached catch endpoint')
         return {
             PLAY_CARD: [],
             CHALLENGE: [],

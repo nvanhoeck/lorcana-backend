@@ -4,8 +4,6 @@
   "secondDeckType": "Sapphire",
   "cards": [
     {"id": "001-174", "count": 20},
-    {"id": "001-001", "count": 10},
-    {"id": "001-002", "count": 10},
-    {"id": "001-025", "count": 10}
+    {"id": "001-003", "count": 10}
   ]
 }

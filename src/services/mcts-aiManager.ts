@@ -305,7 +305,6 @@ export const flatMapPossibleActions = (player: Player, opposingActiveRow: Card[]
 
         return allActions
     } catch (e) {
-        debugger
         console.log('reached catch endpoint')
         return [{
             action: "END_TURN" as Actions,
@@ -486,7 +485,6 @@ export const optimalChallengeTarget = (opposingActiveRow: Card[], attackingCard:
         }
     } catch (e) {
         console.log('reached catch endpoint')
-        debugger
     }
 }
 
