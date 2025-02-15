@@ -19,6 +19,7 @@ function updateStats(c: Card) {
     c.statChanges.applied = []
     c.subtractStatsAtEndOfTurn.applied = []
     c.providesEffects = []
+    c.triggeredAbilities = []
     c.disabled = []
     c.resetDisabledAtEndOfTurn = []
 }
