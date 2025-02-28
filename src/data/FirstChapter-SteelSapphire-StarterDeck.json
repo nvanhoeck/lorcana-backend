@@ -1,38 +1,38 @@
 {
   "state": {
     "player": {
-      "deckCount": "11-20",
+      "deckCount": "21-30",
       "fieldState": {
         "totalReadiedCards": "0",
-        "totalLore": 3,
-        "totalStrength": 3,
-        "totalWillpower": 6
+        "totalLore": 4,
+        "totalStrength": 4,
+        "totalWillpower": 10
       },
       "hand": {
         "handSizeRange": "0"
       },
-      "inkTotal": 3,
-      "loreCount": 12
+      "inkTotal": 1,
+      "loreCount": 18
     },
     "hostilePlayer": {
-      "deckCount": "11-20",
+      "deckCount": "21-30",
       "fieldState": {
-        "totalReadiedCards": "0",
-        "totalLore": 3,
-        "totalStrength": 3,
-        "totalWillpower": 6
+        "totalReadiedCards": "3-4",
+        "totalLore": 4,
+        "totalStrength": 4,
+        "totalWillpower": 10
       },
       "hand": {
         "handSizeRange": "0"
       },
-      "inkTotal": 4,
-      "loreCount": 1
+      "inkTotal": 5,
+      "loreCount": 19
     }
   },
-  "serializedState": "{\"player\":{\"deckCount\":\"11-20\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":3,\"totalStrength\":3,\"totalWillpower\":6},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":3,\"loreCount\":12},\"hostilePlayer\":{\"deckCount\":\"11-20\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":3,\"totalStrength\":3,\"totalWillpower\":6},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":4,\"loreCount\":1}}",
+  "serializedState": "{\"player\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"0\",\"totalLore\":4,\"totalStrength\":4,\"totalWillpower\":10},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":1,\"loreCount\":18},\"hostilePlayer\":{\"deckCount\":\"21-30\",\"fieldState\":{\"totalReadiedCards\":\"3-4\",\"totalLore\":4,\"totalStrength\":4,\"totalWillpower\":10},\"hand\":{\"handSizeRange\":\"0\"},\"inkTotal\":5,\"loreCount\":19}}",
   "children": [],
   "visits": 1,
-  "totalReward": 13,
+  "totalReward": 30,
   "action": {
     "id": "END_TURN",
     "action": {
